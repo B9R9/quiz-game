@@ -7,7 +7,7 @@ const serveStaticMiddleware = async (context, next) => {
   if (filePath.startsWith("/css") || filePath.startsWith("/js")) {
     try {
       await send(context, filePath, {
-        root: `${Deno.cwd()}/src/assets`,
+        root: `${Deno.cwd()}/assets`,
       });
     } catch (error) {
       console.error("Error serving static file:", error);
