@@ -2,7 +2,10 @@
   "deploy": {
     "project": "c2495af1-50e0-48ad-a2f1-1ca52c1864ea",
     "exclude": ["**/node_modules"],
-    "include": ["views/**/*", "assets/**/*"],
+    "include": [
+      "drill-and-pratice/views/**/*",
+      "drill-and-pratice/assets/**/*"
+    ],
     "entrypoint": "run-locally.js"
   }
 }
