@@ -1,0 +1,37 @@
+# Cache et modules Deno
+/.deno/
+/deno-dir/
+/.cache/
+*.log
+
+# Cache du module Deno pour les importations
+deno_modules/
+
+# Fichiers de compilation et artefacts temporaires
+*.tsbuildinfo
+
+# Environnement et configuration local
+.env
+.env.local
+
+# Dossier des configurations locales
+.vscode/
+.idea/
+
+# Docker, si vous utilisez Docker dans le projet
+docker-compose.override.yml
+.dockerignore
+
+# Fichiers de sortie spécifiques à l'application
+dist/
+target/
+out/
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+
+# Tests
+coverage/
+*.test.ts.snap
+test-results/
