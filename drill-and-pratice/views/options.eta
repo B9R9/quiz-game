@@ -1,0 +1,105 @@
+<% layout("./layouts/layout.eta") %>
+<section>
+  <div class="topics__header">
+    <h2>Question <%= it.question.id %>: <%= it.question.question_text %></h2>
+  </div>
+
+  <div class="topics__container">
+    <div class="topics__form" id="answer_form">
+      <h2 id="answer_title">Add Options</h2>
+      <form action="/topics/<%= it.topicId %>/questions/<%= it.questionId%>/options" method="POST" id="answerForm">
+        <div class="answer__input">
+          <input class="form__input" type="textarea" name="option_text[]" placeholder="Enter a New Option..." required>
+          <button type="button" class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+          <div class="answer__label">
+            <label for="is_correct">Correct Option</label>
+            <input type="checkbox" name="is_correct[0]" title="Correct Answer">
+            </div>
+        </div>
+        <div class="answer__input">
+          <input class="form__input" type="textarea" name="option_text[]" placeholder="Enter a New Option..." required>
+          <button type="button" class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+          <div class="answer__label">
+            <label for="is_correct">Correct Option</label>
+            <input type="checkbox" name="is_correct[1]" title="Correct Answer">
+        </div>
+        </div>
+        <button type="button" class="add-btn"><i class="fa-solid fa-plus"> Add a new option</i></button>
+        <input class="form__button" id="answer_submit" type="submit" value="Submit Options">
+      </form>
+    </div>
+    <div class="topics__list">
+        <h2>Options List</h2>
+      <div class="topics__list__content">
+        <ul>
+          <% if (it.options) { %>
+            <% it.options.forEach(option => { %>
+              <li>
+              <div class="option_text">
+                <p><%= option.option_text %></p>
+                </div>
+                <div class="solution-mark">
+                <% if (!option.is_correct) {%>
+                <i class="fa-regular fa-circle-xmark"></i>
+                <% } else { %>
+                <i class="fa-regular fa-circle-check"></i>
+                <% } %>
+                </div>
+                 <form action="/topics/<%= it.topicId %>/questions/<%= it.questionId %>/options/<%= option.id%>/delete" method="POST" class="delete-form">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="delete-button">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </form>
+              </li>
+            <% }) %>
+          <% } %>
+        </ul>
+      </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("answerForm");
+  const addButton = document.querySelector(".add-btn");
+
+  function addAnswerInput() {
+    const answerInput = document.createElement("div");
+    answerInput.classList.add("answer__input");
+
+    const index = form.querySelectorAll(".answer__input").length;
+
+
+    answerInput.innerHTML = `
+      <input class="form__input" type="textarea" name="option_text[]" placeholder="Enter a New Option..." required>
+      <button type="button" class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+          <div class="answer__label">
+            <label for="is_correct">Correct Answer</label>
+            <input type="checkbox" name="is_correct[${index}]" title="Correct Answer">
+        </div>
+    `;
+
+    answerInput.querySelector(".remove-btn").addEventListener("click", () => removeAnswerInput(answerInput));
+    form.insertBefore(answerInput, addButton);
+  }
+
+  function removeAnswerInput(inputDiv) {
+    const inputs = form.querySelectorAll(".answer__input");
+    if (inputs.length > 2) {
+      inputDiv.remove();
+    }
+  }
+
+  // Ajouter deux inputs au minimum
+  addButton.addEventListener("click", addAnswerInput);
+
+  // Initialisation : ajout des events de suppression aux boutons déjà présents
+  document.querySelectorAll(".remove-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      removeAnswerInput(btn.parentElement);
+    });
+  });
+});
+
+</script>

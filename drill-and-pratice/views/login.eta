@@ -1,0 +1,26 @@
+<% layout("./layouts/authLayout.eta") %>
+<section class="login__form">
+<h1>Login</h1>
+<form action="/auth/login" method="POST">
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" value="<%= it.email%>" required>
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" required>
+  <button type="submit">Login</button>
+  <p>Don't have an account? <a href="/auth/register">Sign up</a></p>
+</form>
+    <div class="form__error" id="error-message">
+        <%~ includeFile("./partials/error.eta", { errors: it.errors }) %>
+    </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const errorMessage = document.getElementById("error-message");
+    if (errorMessage && errorMessage.innerHTML.trim() !== "") {
+      errorMessage.classList.add("active");
+      setTimeout(() => {
+        errorMessage.classList.remove("active");
+      }, 5000); // 5000 ms = 5 secondes
+    }
+  });
+</script>

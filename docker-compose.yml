@@ -1,0 +1,159 @@
+services:
+  app:
+    build:
+      context: ./drill-and-pratice
+      dockerfile: Dockerfile
+    image: app
+    restart: "no"
+    volumes:
+      - ./drill-and-pratice:/app
+      - ./app-cache:/app-cache
+    ports:
+      - 7777:7777
+    depends_on:
+      - postgres
+      - flyway
+    env_file:
+      - .env
+    environment:
+      - MODE=production
+      - PORT=7777
+      - BASE_URL=http://localhost:7777
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: ${PG_PROD_USER}
+      POSTGRES_PASSWORD: ${PG_PROD_PASSWORD}
+      POSTGRES_DB: ${PG_PROD_DB}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  flyway:
+    image: flyway/flyway:7.3.0-alpine
+    environment:
+      - FLYWAY_USER=${FLYWAY_USER}
+      - FLYWAY_PASSWORD=${FLYWAY_PASSWORD}
+      - FLYWAY_URL=jdbc:postgresql://postgres:5432/${PG_PROD_DB}
+    depends_on:
+      - postgres
+    volumes:
+      - .:/flyway/sql
+    command: -connectRetries=60 -baselineOnMigrate=true migrate
+    env_file:
+      - .env
+
+  flyway_repair:
+    image: flyway/flyway:7.3.0-alpine
+    environment:
+      - FLYWAY_USER=${FLYWAY_USER}
+      - FLYWAY_PASSWORD=${FLYWAY_PASSWORD}
+      - FLYWAY_URL=jdbc:postgresql://postgres:5432/${PG_PROD_DB}
+    depends_on:
+      - postgres
+    volumes:
+      - ./flyway/sql:/flyway/sql
+    command: repair
+    env_file:
+      - .env
+
+  adminer:
+    image: adminer
+    container_name: adminer_Project_II
+    ports:
+      - 8080:8080
+
+  # test:
+  #   build:
+  #     context: ./drill-and-pratice
+  #     dockerfile: Dockerfile
+  #   image: app
+  #   restart: "no"
+  #   volumes:
+  #     - ./drill-and-pratice:/app
+  #     - ./app-cache:/app-cache
+  #   ports:
+  #     - 7777:7777
+  #   depends_on:
+  #     - mock-db
+  #     - flyway_test
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - MODE=test
+  #     - PORT=7777
+  #     - BASE_URL=http://localhost:7777
+  #     # - DATABASE_URL=jdbc:postgresql://mock-db:5432/testdb
+
+  # e2e-playwright:
+  #   build:
+  #     context: ./e2e-playwright
+  #     dockerfile: Dockerfile
+  #   image: e2e-playwright
+  #   network_mode: host
+  #   depends_on:
+  #     - test
+  #   volumes:
+  #     - ./e2e-playwright/tests:/e2e-tests/tests
+  #   environment:
+  #     - BASE_URL=http://localhost:7777
+
+  # mock-db:
+  #   image: postgres:latest
+  #   environment:
+  #     POSTGRES_USER: admin
+  #     POSTGRES_PASSWORD: abc
+  #     POSTGRES_DB: testdb
+  #   ports:
+  #     - "5433:5432"
+  #   # healthcheck:
+  #   #   test: ["CMD-SHELL", "pg_isready -U admin"]
+  #   #   interval: 10s
+  #   #   timeout: 5s
+  #   #   retries: 5
+
+  # flyway_test:
+  #   image: flyway/flyway:7.3.0-alpine
+  #   environment:
+  #     - FLYWAY_USER=admin
+  #     - FLYWAY_PASSWORD=abc
+  #     - FLYWAY_URL=jdbc:postgresql://mock-db:5432/testdb
+  #   depends_on:
+  #     - mock-db
+  #   volumes:
+  #     - .:/flyway/sql
+  #   command: -connectRetries=60 -baselineOnMigrate=true migrate
+
+  # flyway_repair_test:
+  #   image: flyway/flyway:7.3.0-alpine
+  #   environment:
+  #     - FLYWAY_USER=admin
+  #     - FLYWAY_PASSWORD=abc
+  #     - FLYWAY_URL=jdbc:postgresql://mock-db:5432/testdb
+  #   depends_on:
+  #     - mock-db
+  #   volumes:
+  #     - ./flyway/sql:/flyway/sql
+  #   command: repair
+
+  # unit-test:
+  #   build:
+  #     context: .
+  #     dockerfile: ./tests/Dockerfile
+  #   image: app
+  #   restart: "no"
+  #   volumes:
+  #     - ./shopping-list:/app/shopping-list
+  #     - ./tests:/app/test
+  #   depends_on:
+  #     - mock-db
+  #     - flyway_test
+  #   command: ["deno", "test", "--allow-net", "--allow-read", "--allow-env", "/app/test"]
+  #   env_file:
+  #     - .env
+
+volumes:
+  pgdata:

@@ -1,0 +1,59 @@
+<% layout("./layouts/layout.eta") %>  
+  <section class="description">
+    <h1>Welcome to Drill and Pratice</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptate.</p>
+  </section>
+
+<section class="stats">
+      <h2>Application Statistics</h2>
+      <div class="stats-container">
+        <div class="stat">
+          <span class="stat-number" data-target="<%= it.ttTopics%>">0</span>
+          <% /* <span class="stat-number" data-target="2000">0</span> */ %>
+          <span class="stat-label">Topics</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="<%= it.ttQuestions%>">0</span>
+          <% /* <span class="stat-number" data-target="4000">0</span> */ %>
+          <span class="stat-label">Questions</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="<%= it.ttAnswers%>">0</span>
+          <% /* <span class="stat-number" data-target="10000">0</span> */ %>
+          <span class="stat-label">Answers</span>
+        </div>
+      </div>
+    </section>
+
+  <script>
+    function animateCounter(element, target, duration = 2000) {
+        let startTime = null;
+
+        function updateCounter(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const currentNumber = Math.floor(progress * target);
+
+            element.textContent = currentNumber;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = target; // Set final target value
+            }
+        }
+
+        requestAnimationFrame(updateCounter);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".stat-number").forEach((element) => {
+            const target = parseInt(element.getAttribute("data-target"));
+            animateCounter(element, target);
+        });
+    });
+  </script>
+
+
+
+

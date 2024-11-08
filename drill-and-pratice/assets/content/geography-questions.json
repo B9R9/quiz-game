@@ -1,0 +1,282 @@
+{
+  "questions": [
+    {
+      "topic": "GEOGRAPHY",
+      "question": "What is the largest desert in the world?",
+      "answer": [
+        {
+          "answerText": "Sahara Desert",
+          "solution": false
+        },
+        {
+          "answerText": "Antarctic Desert",
+          "solution": true
+        },
+        {
+          "answerText": "Arctic Desert",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "Which country has the most islands in the world?",
+      "answer": [
+        {
+          "answerText": "Indonesia",
+          "solution": false
+        },
+        {
+          "answerText": "Sweden",
+          "solution": true
+        },
+        {
+          "answerText": "Philippines",
+          "solution": false
+        },
+        {
+          "answerText": "Japan",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "What is the deepest point in the ocean?",
+      "answer": [
+        {
+          "answerText": "Puerto Rico Trench",
+          "solution": false
+        },
+        {
+          "answerText": "Mariana Trench",
+          "solution": true
+        },
+        {
+          "answerText": "Java Trench",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "Which country is both in Europe and Asia?",
+      "answer": [
+        {
+          "answerText": "Russia",
+          "solution": false
+        },
+        {
+          "answerText": "Turkey",
+          "solution": true
+        },
+        {
+          "answerText": "Kazakhstan",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "What is the capital of Canada?",
+      "answer": [
+        {
+          "answerText": "Toronto",
+          "solution": false
+        },
+        {
+          "answerText": "Ottawa",
+          "solution": true
+        },
+        {
+          "answerText": "Montreal",
+          "solution": false
+        },
+        {
+          "answerText": "Vancouver",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "Which country has the highest population density?",
+      "answer": [
+        {
+          "answerText": "India",
+          "solution": false
+        },
+        {
+          "answerText": "Monaco",
+          "solution": true
+        },
+        {
+          "answerText": "Singapore",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "What is the largest active volcano on Earth?",
+      "answer": [
+        {
+          "answerText": "Mount Etna",
+          "solution": false
+        },
+        {
+          "answerText": "Mauna Loa",
+          "solution": true
+        },
+        {
+          "answerText": "Mount Vesuvius",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "Which African country was formerly known as Abyssinia?",
+      "answer": [
+        {
+          "answerText": "Sudan",
+          "solution": false
+        },
+        {
+          "answerText": "Ethiopia",
+          "solution": true
+        },
+        {
+          "answerText": "Somalia",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "What is the largest bay in the world?",
+      "answer": [
+        {
+          "answerText": "Hudson Bay",
+          "solution": false
+        },
+        {
+          "answerText": "Bay of Bengal",
+          "solution": true
+        },
+        {
+          "answerText": "Persian Gulf",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "Which country is known as the Land of Fire and Ice?",
+      "answer": [
+        {
+          "answerText": "Norway",
+          "solution": false
+        },
+        {
+          "answerText": "Iceland",
+          "solution": true
+        },
+        {
+          "answerText": "Greenland",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "What is the capital of Australia?",
+      "answer": [
+        {
+          "answerText": "Sydney",
+          "solution": false
+        },
+        {
+          "answerText": "Canberra",
+          "solution": true
+        },
+        {
+          "answerText": "Melbourne",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "Which river flows through Paris?",
+      "answer": [
+        {
+          "answerText": "Loire",
+          "solution": false
+        },
+        {
+          "answerText": "Seine",
+          "solution": true
+        },
+        {
+          "answerText": "Rhone",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "What is the smallest country in the world?",
+      "answer": [
+        {
+          "answerText": "Monaco",
+          "solution": false
+        },
+        {
+          "answerText": "Vatican City",
+          "solution": true
+        },
+        {
+          "answerText": "San Marino",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "What is the largest lake in Africa?",
+      "answer": [
+        {
+          "answerText": "Lake Tanganyika",
+          "solution": false
+        },
+        {
+          "answerText": "Lake Victoria",
+          "solution": true
+        },
+        {
+          "answerText": "Lake Malawi",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "GEOGRAPHY",
+      "question": "Which mountain range separates Europe from Asia?",
+      "answer": [
+        {
+          "answerText": "Alps",
+          "solution": false
+        },
+        {
+          "answerText": "Ural Mountains",
+          "solution": true
+        },
+        {
+          "answerText": "Caucasus Mountains",
+          "solution": false
+        }
+      ]
+    }
+  ]
+}

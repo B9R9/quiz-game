@@ -1,0 +1,21 @@
+<% layout("./layouts/layout.eta") %>
+<section class="question">
+<div class="question__header">
+<h2><%= it.question.questionText %></h2>
+</div>
+<div class="question__options">
+<h2>Choose an option</h2>
+<div class="question__options__list">
+<% if (it && it.question) { %>
+    <% it.question.answersOptions.forEach((option) => { %>
+        <form action="/quiz/<%= it.question.topicID %>/questions/<%= it.question.questionId %>/options/<%= option.optionId %>" method="POST">
+        <p><%= option.optionText %></p>
+        <input type="submit" value="Choose">
+        </form>
+    <% }) %>
+<% } %>
+</div>
+</div>
+</section>
+<script>
+</script>

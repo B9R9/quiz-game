@@ -1,0 +1,32 @@
+
+    <nav class="navbar__wrapper">
+        <div class="navbar__title">
+            <a href="https://fitech101.aalto.fi/web-software-development-1-0/35-course-project-ii/1-project-handout/#overview-and-database-schema"  target="_blank">Course Project II</a>
+        </div>
+        <div class="navbar__links">
+            <a href="/">Home</a>
+            <a href="/topics">Topics</a>
+            <a href="/quiz">Quiz</a>
+            <% if (it && it.authenticated){ %>
+            <a href="/">Statistics</a>
+            <a href="/">Account</a>
+            <% } %>
+        </div>
+
+        <% if (it && it.authenticated){ %>
+            <div class="authenticated__msg">
+                <p>Welcome <%= it.user.username %></p>
+                <form action="/auth/logout" method="POST" class="-form">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="delete-button">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                  </button>
+                </form>
+            </div>
+        <% } else { %>
+        <div class="navbar__register">
+            <a href="/auth/login" class="btn">Login</a>
+            <a href="/auth/register" class="btn">Sign Up</a>
+        </div>
+        <% } %>
+    </nav>

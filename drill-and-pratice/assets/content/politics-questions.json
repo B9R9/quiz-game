@@ -1,0 +1,274 @@
+{
+  "questions": [
+    {
+      "topic": "POLITICS",
+      "question": "Who was the first woman elected as a head of state in Africa?",
+      "answer": [
+        {
+          "answerText": "Ellen Johnson Sirleaf (Liberia)",
+          "solution": true
+        },
+        {
+          "answerText": "Joyce Banda (Malawi)",
+          "solution": false
+        },
+        {
+          "answerText": "Ngozi Okonjo-Iweala (Nigeria)",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "What is the longest serving political party still in existence?",
+      "answer": [
+        {
+          "answerText": "Democratic Party (USA)",
+          "solution": true
+        },
+        {
+          "answerText": "Conservative Party (UK)",
+          "solution": false
+        },
+        {
+          "answerText": "Labor Party (Australia)",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "How many permanent members are on the UN Security Council?",
+      "answer": [
+        {
+          "answerText": "3",
+          "solution": false
+        },
+        {
+          "answerText": "5",
+          "solution": true
+        },
+        {
+          "answerText": "7",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "Who wrote 'The Communist Manifesto'?",
+      "answer": [
+        {
+          "answerText": "Lenin and Trotsky",
+          "solution": false
+        },
+        {
+          "answerText": "Marx and Engels",
+          "solution": true
+        },
+        {
+          "answerText": "Stalin and Mao",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "What is the capital of the European Union?",
+      "answer": [
+        {
+          "answerText": "Paris",
+          "solution": false
+        },
+        {
+          "answerText": "Brussels",
+          "solution": true
+        },
+        {
+          "answerText": "Berlin",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "When did the Soviet Union dissolve?",
+      "answer": [
+        {
+          "answerText": "1989",
+          "solution": false
+        },
+        {
+          "answerText": "1991",
+          "solution": true
+        },
+        {
+          "answerText": "1993",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "What is the name of the French parliament's lower house?",
+      "answer": [
+        {
+          "answerText": "Sénat",
+          "solution": false
+        },
+        {
+          "answerText": "Assemblée nationale",
+          "solution": true
+        },
+        {
+          "answerText": "Conseil d'État",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "Which country has the world's oldest parliament?",
+      "answer": [
+        {
+          "answerText": "United Kingdom",
+          "solution": false
+        },
+        {
+          "answerText": "Iceland",
+          "solution": true
+        },
+        {
+          "answerText": "Greece",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "What does NATO stand for?",
+      "answer": [
+        {
+          "answerText": "North American Treaty Organization",
+          "solution": false
+        },
+        {
+          "answerText": "North Atlantic Treaty Organization",
+          "solution": true
+        },
+        {
+          "answerText": "Northern Alliance Treaty Organization",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "Who was the first female Prime Minister of the United Kingdom?",
+      "answer": [
+        {
+          "answerText": "Theresa May",
+          "solution": false
+        },
+        {
+          "answerText": "Margaret Thatcher",
+          "solution": true
+        },
+        {
+          "answerText": "Liz Truss",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "What is the political system of China?",
+      "answer": [
+        {
+          "answerText": "Parliamentary Democracy",
+          "solution": false
+        },
+        {
+          "answerText": "Single-party Socialist Republic",
+          "solution": true
+        },
+        {
+          "answerText": "Constitutional Monarchy",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "Which document begins with 'We the People'?",
+      "answer": [
+        {
+          "answerText": "Declaration of Independence",
+          "solution": false
+        },
+        {
+          "answerText": "U.S. Constitution",
+          "solution": true
+        },
+        {
+          "answerText": "Bill of Rights",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "What is the minimum age to become President of the United States?",
+      "answer": [
+        {
+          "answerText": "30",
+          "solution": false
+        },
+        {
+          "answerText": "35",
+          "solution": true
+        },
+        {
+          "answerText": "40",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "Which country has a unicameral parliament called the Knesset?",
+      "answer": [
+        {
+          "answerText": "Turkey",
+          "solution": false
+        },
+        {
+          "answerText": "Israel",
+          "solution": true
+        },
+        {
+          "answerText": "Egypt",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "POLITICS",
+      "question": "What is the term length for a U.S. Senator?",
+      "answer": [
+        {
+          "answerText": "2 years",
+          "solution": false
+        },
+        {
+          "answerText": "6 years",
+          "solution": true
+        },
+        {
+          "answerText": "4 years",
+          "solution": false
+        }
+      ]
+    }
+  ]
+}

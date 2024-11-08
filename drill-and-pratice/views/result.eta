@@ -1,0 +1,18 @@
+<% layout("./layouts/layout.eta") %>
+<section class="result">
+    <div class="result__text">
+<% if ( it && it.result) { %>
+        <h1>Correct!</h1>
+<% } else { %>
+        <h1>Incorrect!</h1>
+        <p>The correct answer is: <%= it.answer%></p>
+<% } %>
+    </div>
+    <div class="result__links">
+        <a href="/">Home</a>
+        <a href="/quiz">Topics</a>
+        <a href="/quiz/<%= it.topicID %>">Next Question</a>
+    </div>
+</section>
+<script>
+</script>

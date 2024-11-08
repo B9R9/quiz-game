@@ -1,0 +1,45 @@
+<% layout("./layouts/layout.eta") %>
+<section>
+    <div class="topic__header">
+        <h2>Topic <%= it.topic.id %>:</h2>
+        <h2 class="topic__title"><%= it.topic.name %></h2>
+    </div>
+     <div class="topics__container">
+    <div class="topics__form">
+      <h2>Create a Question</h2>
+      <form action="/topics/<%= it.topic.id %>/questions" method="POST">
+        <input class="form__input" type="textarea" name="question_text" placeholder="Enter a New Question..." value="<%= it.value %>">
+        <input class="form__button" type="submit" value="Add Question">
+      </form>
+      <div class="form__error" id="error-message">
+        <%~ includeFile("./partials/error.eta", { errors: it.errors }) %>
+      </div>
+    </div>
+    <div class="topics__list">
+      <div class="topics__list__title">
+        <h2>Question List</h2>
+      </div> 
+      <div class="topics__list__content">
+        <ul>
+          <% if (it.questions) { %>
+            <% it.questions.forEach(question => { %>
+              <li>
+                <a href="/topics/<%= it.topic.id %>/questions/<%= question.id%>"><%= question.id %>. <%= question.question_text %></a>
+                 <form action="/topics/<%= it.topic.id %>/questions/<%= question.id%>/delete" method="POST" class="delete-form">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="delete-button">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </form>
+              </li>
+            <% }) %>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+<script>
+
+</script>

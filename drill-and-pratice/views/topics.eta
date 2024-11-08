@@ -1,0 +1,56 @@
+<% layout("./layouts/layout.eta") %>
+<section class="topics">
+  <div class="topics__header">
+    <h1>Topics</h1>
+  </div>
+  <div class="topics__container">
+  <% if (it && it.user && it.user.admin) { %>
+    <div class="topics__form">
+      <h2>Create Topic</h2>
+      <form action="/topics" method="POST">
+        <input class="form__input" type="text" name="name" placeholder="Enter a New Topic ..." value="<%= it.value %>">
+        <input class="form__button" type="submit" value="Add Topic">
+      </form>
+      <div class="form__error" id="error-message">
+        <%~ includeFile("./partials/error.eta", { errors: it.errors }) %>
+      </div>
+    </div>
+    <% } %>
+    <div class="topics__list">
+      <div class="topics__list__title">
+        <h2>Topics List</h2>
+      </div>
+      <div class="topics__list__content">
+        <ul>
+          <% if (it.topics) { %>
+            <% it.topics.forEach(topic => { %>
+              <li>
+                <a href="/topics/<%= topic.id %>"><%= topic.name %></a>
+                <% if (it.user.admin) {%>
+                <form action="/topics/<%= topic.id %>/delete" method="POST" class="delete-form">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="delete-button">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </form>
+                <% } %>
+              </li>
+            <% }) %>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const errorMessage = document.getElementById("error-message");
+    if (errorMessage && errorMessage.innerHTML.trim() !== "") {
+      errorMessage.classList.add("active");
+      setTimeout(() => {
+        errorMessage.classList.remove("active");
+      }, 5000); // 5000 ms = 5 secondes
+    }
+  });
+</script>

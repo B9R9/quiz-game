@@ -1,0 +1,274 @@
+{
+  "questions": [
+    {
+      "topic": "HISTORY",
+      "question": "When did World War I begin?",
+      "answer": [
+        {
+          "answerText": "1914",
+          "solution": true
+        },
+        {
+          "answerText": "1916",
+          "solution": false
+        },
+        {
+          "answerText": "1912",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "Who was the first Emperor of China?",
+      "answer": [
+        {
+          "answerText": "Sun Yat-sen",
+          "solution": false
+        },
+        {
+          "answerText": "Qin Shi Huang",
+          "solution": true
+        },
+        {
+          "answerText": "Wu Zetian",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "When did the French Revolution begin?",
+      "answer": [
+        {
+          "answerText": "1789",
+          "solution": true
+        },
+        {
+          "answerText": "1799",
+          "solution": false
+        },
+        {
+          "answerText": "1779",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "Who discovered America in 1492?",
+      "answer": [
+        {
+          "answerText": "Vasco da Gama",
+          "solution": false
+        },
+        {
+          "answerText": "Christopher Columbus",
+          "solution": true
+        },
+        {
+          "answerText": "Amerigo Vespucci",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "When did the Roman Empire fall?",
+      "answer": [
+        {
+          "answerText": "476 AD",
+          "solution": true
+        },
+        {
+          "answerText": "410 AD",
+          "solution": false
+        },
+        {
+          "answerText": "500 AD",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "Who was the first woman to win a Nobel Prize?",
+      "answer": [
+        {
+          "answerText": "Mother Teresa",
+          "solution": false
+        },
+        {
+          "answerText": "Marie Curie",
+          "solution": true
+        },
+        {
+          "answerText": "Pearl Buck",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "Which ancient wonder of the world was located in Egypt?",
+      "answer": [
+        {
+          "answerText": "Hanging Gardens",
+          "solution": false
+        },
+        {
+          "answerText": "Great Pyramid of Giza",
+          "solution": true
+        },
+        {
+          "answerText": "Colossus of Rhodes",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "When was the Declaration of Independence signed?",
+      "answer": [
+        {
+          "answerText": "1775",
+          "solution": false
+        },
+        {
+          "answerText": "1776",
+          "solution": true
+        },
+        {
+          "answerText": "1777",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "Who painted the Sistine Chapel ceiling?",
+      "answer": [
+        {
+          "answerText": "Leonardo da Vinci",
+          "solution": false
+        },
+        {
+          "answerText": "Michelangelo",
+          "solution": true
+        },
+        {
+          "answerText": "Raphael",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "What was the capital of the Inca Empire?",
+      "answer": [
+        {
+          "answerText": "Machu Picchu",
+          "solution": false
+        },
+        {
+          "answerText": "Cusco",
+          "solution": true
+        },
+        {
+          "answerText": "Lima",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "Who was the first President of the United States to be impeached?",
+      "answer": [
+        {
+          "answerText": "Richard Nixon",
+          "solution": false
+        },
+        {
+          "answerText": "Andrew Johnson",
+          "solution": true
+        },
+        {
+          "answerText": "Bill Clinton",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "What year did the Berlin Wall fall?",
+      "answer": [
+        {
+          "answerText": "1987",
+          "solution": false
+        },
+        {
+          "answerText": "1989",
+          "solution": true
+        },
+        {
+          "answerText": "1991",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+      "answer": [
+        {
+          "answerText": "Bessie Coleman",
+          "solution": false
+        },
+        {
+          "answerText": "Amelia Earhart",
+          "solution": true
+        },
+        {
+          "answerText": "Harriet Quimby",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "Which civilization built the pyramids of Giza?",
+      "answer": [
+        {
+          "answerText": "Mesopotamians",
+          "solution": false
+        },
+        {
+          "answerText": "Ancient Egyptians",
+          "solution": true
+        },
+        {
+          "answerText": "Greeks",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "HISTORY",
+      "question": "When was the Magna Carta signed?",
+      "answer": [
+        {
+          "answerText": "1215",
+          "solution": true
+        },
+        {
+          "answerText": "1315",
+          "solution": false
+        },
+        {
+          "answerText": "1115",
+          "solution": false
+        }
+      ]
+    }
+  ]
+}

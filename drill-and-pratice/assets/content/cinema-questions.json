@@ -1,0 +1,274 @@
+{
+  "questions": [
+    {
+      "topic": "CINEMA",
+      "question": "Which film won the Academy Award for Best Picture in 2020?",
+      "answer": [
+        {
+          "answerText": "Parasite",
+          "solution": true
+        },
+        {
+          "answerText": "1917",
+          "solution": false
+        },
+        {
+          "answerText": "Joker",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Who directed 'The Godfather'?",
+      "answer": [
+        {
+          "answerText": "Martin Scorsese",
+          "solution": false
+        },
+        {
+          "answerText": "Francis Ford Coppola",
+          "solution": true
+        },
+        {
+          "answerText": "Steven Spielberg",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "In which year was 'Titanic' released?",
+      "answer": [
+        {
+          "answerText": "1995",
+          "solution": false
+        },
+        {
+          "answerText": "1997",
+          "solution": true
+        },
+        {
+          "answerText": "1999",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Who played Neo in 'The Matrix'?",
+      "answer": [
+        {
+          "answerText": "Keanu Reeves",
+          "solution": true
+        },
+        {
+          "answerText": "Brad Pitt",
+          "solution": false
+        },
+        {
+          "answerText": "Tom Cruise",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Which actor has won the most Academy Awards?",
+      "answer": [
+        {
+          "answerText": "Jack Nicholson",
+          "solution": false
+        },
+        {
+          "answerText": "Katharine Hepburn",
+          "solution": true
+        },
+        {
+          "answerText": "Meryl Streep",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "What was the first feature-length animated film?",
+      "answer": [
+        {
+          "answerText": "Snow White and the Seven Dwarfs",
+          "solution": true
+        },
+        {
+          "answerText": "Pinocchio",
+          "solution": false
+        },
+        {
+          "answerText": "Bambi",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Who directed 'Jurassic Park'?",
+      "answer": [
+        {
+          "answerText": "James Cameron",
+          "solution": false
+        },
+        {
+          "answerText": "Steven Spielberg",
+          "solution": true
+        },
+        {
+          "answerText": "George Lucas",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Which actor plays Iron Man in the Marvel Cinematic Universe?",
+      "answer": [
+        {
+          "answerText": "Chris Evans",
+          "solution": false
+        },
+        {
+          "answerText": "Robert Downey Jr.",
+          "solution": true
+        },
+        {
+          "answerText": "Chris Hemsworth",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "What is the highest-grossing film of all time (unadjusted for inflation)?",
+      "answer": [
+        {
+          "answerText": "Avatar",
+          "solution": true
+        },
+        {
+          "answerText": "Avengers: Endgame",
+          "solution": false
+        },
+        {
+          "answerText": "Titanic",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Who directed 'Inception'?",
+      "answer": [
+        {
+          "answerText": "Christopher Nolan",
+          "solution": true
+        },
+        {
+          "answerText": "Ridley Scott",
+          "solution": false
+        },
+        {
+          "answerText": "Martin Scorsese",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Which film features the character Luke Skywalker?",
+      "answer": [
+        {
+          "answerText": "Star Trek",
+          "solution": false
+        },
+        {
+          "answerText": "Star Wars",
+          "solution": true
+        },
+        {
+          "answerText": "Battlestar Galactica",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Who played Sherlock Holmes in the 2009 film?",
+      "answer": [
+        {
+          "answerText": "Benedict Cumberbatch",
+          "solution": false
+        },
+        {
+          "answerText": "Robert Downey Jr.",
+          "solution": true
+        },
+        {
+          "answerText": "Johnny Depp",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Which film won the first Academy Award for Best Animated Feature?",
+      "answer": [
+        {
+          "answerText": "Toy Story",
+          "solution": false
+        },
+        {
+          "answerText": "Shrek",
+          "solution": true
+        },
+        {
+          "answerText": "Finding Nemo",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Who directed 'E.T. the Extra-Terrestrial'?",
+      "answer": [
+        {
+          "answerText": "George Lucas",
+          "solution": false
+        },
+        {
+          "answerText": "Steven Spielberg",
+          "solution": true
+        },
+        {
+          "answerText": "James Cameron",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CINEMA",
+      "question": "Which actress played Katniss Everdeen in 'The Hunger Games'?",
+      "answer": [
+        {
+          "answerText": "Emma Watson",
+          "solution": false
+        },
+        {
+          "answerText": "Jennifer Lawrence",
+          "solution": true
+        },
+        {
+          "answerText": "Shailene Woodley",
+          "solution": false
+        }
+      ]
+    }
+  ]
+}
