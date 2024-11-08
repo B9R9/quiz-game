@@ -1,7 +1,7 @@
 import { configure, renderFile } from "../deps.js";
 
 configure({
-  views: `/drill-and-pratice/views/`,
+  views: `./src/drill-and-pratice/views/`,
 });
 
 const renderMiddleware = async (context, next) => {
