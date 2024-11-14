@@ -1,7 +1,9 @@
-name: Deploy
 
+name: Deploy
 on:
   push:
+    branches: deploy
+  pull_request:
     branches: deploy
 
 jobs:
@@ -10,23 +12,24 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      id-token: write
-      contents: read
+      id-token: write # Needed for auth with Deno Deploy
+      contents: read # Needed to clone the repository
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-          
-      - name: Install deployctl
-        run: deno install -A -f --no-check -r https://deno.land/x/deploy/deployctl.ts --global
 
-      - name: Deploy to Deno Deploy
-        env: 
-          DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
-        run: deployctl deploy --project=baptiste-quiz-game-44 --prod --token=$DENO_DEPLOY_TOKEN drill-and-pratice/run-locally.js
+      - name: Build step
+        run: "deno task build"
 
+      - name: Upload to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: "baptiste-quiz-game-44"
+          entrypoint: "run-locally.js"
+          root: "drill-and-pratice"
