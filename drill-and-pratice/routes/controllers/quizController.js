@@ -1,6 +1,7 @@
 import * as topicsService from "../../services/topicsService.js";
 import * as questionService from "../../services/questionService.js";
 import * as optionsService from "../../services/optionsService.js";
+import * as statsService from "../../services/statsService.js";
 import { getCookies } from "../../utils/cookiesHandler.js";
 
 let question = {
@@ -65,12 +66,15 @@ export const showQuestion = async ({ response, state, render, params }) => {
   render("question.eta", data);
 };
 
-export const checkAnswer = async ({ request, response, params }) => {
+export const checkAnswer = async ({ request, response, params, state }) => {
+  const user = await getCookies(state);
   const answer = Number(params.oid);
   const tID = Number(params.tid);
   const qID = Number(params.qid);
 
   const isCorrect = await optionsService.checkAnswer(answer, qID);
+
+  await statsService.addStat(user.user.id, qID, answer);
 
   if (isCorrect) {
     response.redirect(`/quiz/${params.tid}/questions/${params.qid}/correct`);
