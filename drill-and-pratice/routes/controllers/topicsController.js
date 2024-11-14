@@ -64,8 +64,15 @@ export const addTopic = async ({ request, response, render, state }) => {
   log(`Adding topic: ${topicName}`, "info", "topicsController.js-addTopic");
   const user = await getCookies(state);
 
-  if (topicName.lenght < 1 || !topicName || topicName === "") {
-    data.errors = ["Topic name must be at least 1 character long."];
+  const isTopics = await topicsService.getTopicByName(topicName);
+
+  if (topicName.lenght < 1 || !topicName || topicName === "" || isTopics[0]) {
+    if (isTopics[0]) {
+      data.errors = ["Topic name already exists."];
+    }
+    if (topicName === "" || !topicName || topicName.lenght < 1) {
+      data.errors = ["Topic name must be at least 1 character long."];
+    }
     data.value = topicName;
     render("topics.eta", data);
   } else {
