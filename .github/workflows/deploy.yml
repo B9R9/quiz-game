@@ -24,7 +24,9 @@ jobs:
           deno-version: v2.x
 
       - name: Build step
-        run: deno task build --config=./drill-and-pratice/deno.json
+        run: |
+          ls drill-and-pratice 
+          deno task build --config=./drill-and-pratice/deno.json
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
