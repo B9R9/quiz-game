@@ -34,10 +34,10 @@ export const showTopic = async ({ params, render, state, response }) => {
     return;
   }
 
-  const topicId = params.id;
+  const topicId = Number(params.id);
   const topic = await topicsService.getTopic(topicId);
   let questions = [];
-  if (user.user.authorisation === "admin") {
+  if (user.user.admin) {
     questions = await questionService.getAllQuestions(topicId);
   } else {
     questions = await questionService.getYourQuestions(topicId, user.user.id);

@@ -28,10 +28,10 @@ export const addQuestion = async ({ request, response, params, state }) => {
 
 export const showQuestions = async ({ render, params, state, response }) => {
   const user = await getCookies(state);
-  // if (!user.authenticated) {
-  //   response.redirect("/auth/login");
-  //   return;
-  // }
+  if (!user.authenticated) {
+    response.redirect("/auth/login");
+    return;
+  }
 
   const topicId = Number(params.tid);
   const questionId = Number(params.qid);
