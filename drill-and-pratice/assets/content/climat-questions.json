@@ -1,0 +1,535 @@
+{
+  "questions": [
+    {
+      "topic": "CLIMATE",
+      "question": "What is the primary cause of current global warming?",
+      "answer": [
+        { "answerText": "Increased solar activity", "solution": false },
+        { "answerText": "Natural climate cycles", "solution": false },
+        {
+          "answerText": "Greenhouse gas emissions from human activities",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major greenhouse gas?",
+      "answer": [
+        { "answerText": "Oxygen", "solution": false },
+        { "answerText": "Nitrogen", "solution": false },
+        { "answerText": "Carbon dioxide", "solution": true },
+        { "answerText": "Helium", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the primary effect of the greenhouse effect?",
+      "answer": [
+        { "answerText": "Cooling of the Earth's surface", "solution": false },
+        { "answerText": "Increased ultraviolet radiation", "solution": false },
+        { "answerText": "Warming of the Earth's surface", "solution": true }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the main cause of sea level rise?",
+      "answer": [
+        { "answerText": "Melting glaciers and ice sheets", "solution": true },
+        { "answerText": "Tectonic plate movement", "solution": false },
+        {
+          "answerText": "Increased evaporation from the oceans",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major impact of climate change?",
+      "answer": [
+        { "answerText": "Increased biodiversity", "solution": false },
+        { "answerText": "Reduced natural disasters", "solution": false },
+        { "answerText": "More extreme weather events", "solution": true },
+        { "answerText": "Colder global temperatures", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the Paris Agreement?",
+      "answer": [
+        {
+          "answerText": "A global agreement to reduce nuclear weapons",
+          "solution": false
+        },
+        {
+          "answerText": "A global agreement to limit climate change",
+          "solution": true
+        },
+        {
+          "answerText": "A global agreement to protect endangered species",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which renewable energy source is the fastest growing?",
+      "answer": [
+        { "answerText": "Solar power", "solution": true },
+        { "answerText": "Hydropower", "solution": false },
+        { "answerText": "Geothermal power", "solution": false },
+        { "answerText": "Wind power", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is carbon sequestration?",
+      "answer": [
+        {
+          "answerText": "Capturing and storing carbon dioxide",
+          "solution": true
+        },
+        {
+          "answerText": "Reducing greenhouse gas emissions",
+          "solution": false
+        },
+        { "answerText": "Increasing forest cover", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these contributes most to deforestation?",
+      "answer": [
+        { "answerText": "Logging for timber", "solution": false },
+        { "answerText": "Clearing land for agriculture", "solution": true },
+        { "answerText": "Forest fires", "solution": false },
+        { "answerText": "Mining activities", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is geoengineering?",
+      "answer": [
+        {
+          "answerText": "Developing new renewable energy technologies",
+          "solution": false
+        },
+        {
+          "answerText": "Capturing greenhouse gases from the atmosphere",
+          "solution": true
+        },
+        {
+          "answerText": "Improving energy efficiency in buildings",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a key driver of climate change?",
+      "answer": [
+        { "answerText": "Increased volcanic activity", "solution": false },
+        { "answerText": "Deforestation", "solution": true },
+        { "answerText": "Reduced solar activity", "solution": false },
+        {
+          "answerText": "Decreased greenhouse gas emissions",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the main purpose of carbon pricing?",
+      "answer": [
+        {
+          "answerText": "To generate revenue for governments",
+          "solution": false
+        },
+        {
+          "answerText": "To incentivize reductions in greenhouse gas emissions",
+          "solution": true
+        },
+        {
+          "answerText": "To promote the use of renewable energy",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a negative impact of climate change?",
+      "answer": [
+        {
+          "answerText": "Increased agricultural productivity",
+          "solution": false
+        },
+        {
+          "answerText": "Reduced risk of natural disasters",
+          "solution": false
+        },
+        { "answerText": "Spread of tropical diseases", "solution": true },
+        { "answerText": "Improved air quality", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the primary purpose of the Intergovernmental Panel on Climate Change (IPCC)?",
+      "answer": [
+        { "answerText": "To promote climate change denial", "solution": false },
+        {
+          "answerText": "To develop new technologies to combat climate change",
+          "solution": false
+        },
+        {
+          "answerText": "To assess the science of climate change",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a common method of carbon capture and storage?",
+      "answer": [
+        { "answerText": "Planting more trees", "solution": false },
+        { "answerText": "Burying waste underground", "solution": true },
+        { "answerText": "Increasing ocean acidification", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the primary purpose of the Montreal Protocol?",
+      "answer": [
+        {
+          "answerText": "To phase out the use of ozone-depleting substances",
+          "solution": true
+        },
+        {
+          "answerText": "To promote renewable energy development",
+          "solution": false
+        },
+        {
+          "answerText": "To establish global carbon pricing",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major contributor to methane emissions?",
+      "answer": [
+        { "answerText": "Deforestation", "solution": false },
+        { "answerText": "Livestock farming", "solution": true },
+        { "answerText": "Air travel", "solution": false },
+        { "answerText": "Renewable energy production", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the primary purpose of climate adaptation strategies?",
+      "answer": [
+        {
+          "answerText": "To reduce greenhouse gas emissions",
+          "solution": false
+        },
+        {
+          "answerText": "To make communities more resilient to climate change impacts",
+          "solution": true
+        },
+        { "answerText": "To increase global temperatures", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major effect of ocean acidification?",
+      "answer": [
+        { "answerText": "Increased coral reef growth", "solution": false },
+        { "answerText": "Improved marine biodiversity", "solution": false },
+        {
+          "answerText": "Damage to shellfish and coral ecosystems",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the primary purpose of climate mitigation strategies?",
+      "answer": [
+        {
+          "answerText": "To adapt to the impacts of climate change",
+          "solution": false
+        },
+        {
+          "answerText": "To increase greenhouse gas emissions",
+          "solution": false
+        },
+        { "answerText": "To reduce greenhouse gas emissions", "solution": true }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major impact of melting glaciers and ice sheets?",
+      "answer": [
+        {
+          "answerText": "Increased freshwater availability",
+          "solution": false
+        },
+        { "answerText": "Reduced risk of coastal flooding", "solution": false },
+        { "answerText": "Sea level rise", "solution": true },
+        { "answerText": "Improved ecosystem health", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the purpose of climate modeling?",
+      "answer": [
+        { "answerText": "To generate weather forecasts", "solution": false },
+        {
+          "answerText": "To assess the impacts of climate change",
+          "solution": true
+        },
+        { "answerText": "To increase global temperatures", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major source of renewable energy?",
+      "answer": [
+        { "answerText": "Natural gas", "solution": false },
+        { "answerText": "Coal", "solution": false },
+        { "answerText": "Solar power", "solution": true },
+        { "answerText": "Nuclear power", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the primary purpose of carbon offsets?",
+      "answer": [
+        {
+          "answerText": "To increase greenhouse gas emissions",
+          "solution": false
+        },
+        {
+          "answerText": "To generate revenue for governments",
+          "solution": false
+        },
+        {
+          "answerText": "To compensate for emissions that cannot be avoided",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major cause of urban heat islands?",
+      "answer": [
+        { "answerText": "Increased vegetation cover", "solution": false },
+        { "answerText": "Reduced energy use", "solution": false },
+        {
+          "answerText": "Extensive paved surfaces and buildings",
+          "solution": true
+        },
+        { "answerText": "Improved air quality", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the primary purpose of the Clean Development Mechanism?",
+      "answer": [
+        {
+          "answerText": "To promote renewable energy in developing countries",
+          "solution": true
+        },
+        {
+          "answerText": "To increase greenhouse gas emissions in developed countries",
+          "solution": false
+        },
+        {
+          "answerText": "To establish global carbon pricing",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major impact of climate change on agriculture?",
+      "answer": [
+        { "answerText": "Increased crop yields", "solution": false },
+        { "answerText": "Reduced water scarcity", "solution": false },
+        {
+          "answerText": "More frequent droughts and extreme weather",
+          "solution": true
+        },
+        { "answerText": "Reduced need for pesticides", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the purpose of climate finance?",
+      "answer": [
+        {
+          "answerText": "To generate revenue for fossil fuel companies",
+          "solution": false
+        },
+        {
+          "answerText": "To promote fossil fuel use in developing countries",
+          "solution": false
+        },
+        {
+          "answerText": "To support climate change mitigation and adaptation efforts",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major impact of climate change on biodiversity?",
+      "answer": [
+        {
+          "answerText": "Increased habitat loss and species extinction",
+          "solution": true
+        },
+        {
+          "answerText": "Improved conditions for invasive species",
+          "solution": true
+        },
+        {
+          "answerText": "Reduced threats to endangered species",
+          "solution": false
+        },
+        {
+          "answerText": "Expanded ranges for native species",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the purpose of climate justice movements?",
+      "answer": [
+        {
+          "answerText": "To deny the existence of climate change",
+          "solution": false
+        },
+        {
+          "answerText": "To promote the interests of fossil fuel companies",
+          "solution": false
+        },
+        {
+          "answerText": "To advocate for equitable solutions to climate change",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major impact of climate change on human health?",
+      "answer": [
+        {
+          "answerText": "Reduced risk of vector-borne diseases",
+          "solution": false
+        },
+        { "answerText": "Improved food security", "solution": false },
+        {
+          "answerText": "Increased incidence of heat-related illnesses",
+          "solution": true
+        },
+        { "answerText": "Decreased water-borne diseases", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the purpose of climate-smart agriculture?",
+      "answer": [
+        {
+          "answerText": "To increase greenhouse gas emissions from farming",
+          "solution": false
+        },
+        {
+          "answerText": "To promote sustainable and resilient agricultural practices",
+          "solution": true
+        },
+        {
+          "answerText": "To replace traditional farming with industrial monocultures",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major challenge for climate change adaptation?",
+      "answer": [
+        { "answerText": "Lack of political will", "solution": true },
+        {
+          "answerText": "Increased funding for renewable energy",
+          "solution": false
+        },
+        { "answerText": "Improved global cooperation", "solution": false },
+        {
+          "answerText": "Rapidly declining greenhouse gas emissions",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the primary purpose of carbon border adjustment mechanisms?",
+      "answer": [
+        {
+          "answerText": "To increase global carbon emissions",
+          "solution": false
+        },
+        {
+          "answerText": "To generate revenue for governments",
+          "solution": false
+        },
+        {
+          "answerText": "To prevent carbon leakage and maintain a level playing field",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major strategy for climate change mitigation?",
+      "answer": [
+        { "answerText": "Increasing fossil fuel use", "solution": false },
+        { "answerText": "Reducing energy efficiency", "solution": false },
+        { "answerText": "Transitioning to renewable energy", "solution": true },
+        { "answerText": "Promoting deforestation", "solution": false }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "What is the primary purpose of climate-related financial disclosures?",
+      "answer": [
+        {
+          "answerText": "To hide climate risks from investors",
+          "solution": false
+        },
+        {
+          "answerText": "To generate revenue for sustainability consulting firms",
+          "solution": false
+        },
+        {
+          "answerText": "To increase transparency around climate-related financial risks",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "CLIMATE",
+      "question": "Which of these is a major challenge for achieving net-zero emissions?",
+      "answer": [
+        {
+          "answerText": "Rapid phase-out of renewable energy",
+          "solution": false
+        },
+        { "answerText": "Lack of technological solutions", "solution": false },
+        {
+          "answerText": "Overreliance on carbon capture and storage",
+          "solution": true
+        }
+      ]
+    }
+  ]
+}

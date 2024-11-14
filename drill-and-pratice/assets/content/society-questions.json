@@ -1,0 +1,618 @@
+{
+  "questions": [
+    {
+      "topic": "SOCIETY",
+      "question": "Which social movement began in 2013 using the hashtag symbol?",
+      "answer": [
+        {
+          "answerText": "Black Lives Matter",
+          "solution": true
+        },
+        {
+          "answerText": "Me Too",
+          "solution": false
+        },
+        {
+          "answerText": "Fridays For Future",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for when people discriminate against others based on their age?",
+      "answer": [
+        {
+          "answerText": "Racism",
+          "solution": false
+        },
+        {
+          "answerText": "Ageism",
+          "solution": true
+        },
+        {
+          "answerText": "Sexism",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which generation is typically defined as being born between 1981 and 1996?",
+      "answer": [
+        {
+          "answerText": "Baby Boomers",
+          "solution": false
+        },
+        {
+          "answerText": "Generation X",
+          "solution": false
+        },
+        {
+          "answerText": "Millennials",
+          "solution": true
+        },
+        {
+          "answerText": "Generation Z",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for a society where men hold primary power?",
+      "answer": [
+        {
+          "answerText": "Patriarchy",
+          "solution": true
+        },
+        {
+          "answerText": "Matriarchy",
+          "solution": false
+        },
+        {
+          "answerText": "Monarchy",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which of these is considered a primary agent of socialization?",
+      "answer": [
+        {
+          "answerText": "Family",
+          "solution": true
+        },
+        {
+          "answerText": "Television",
+          "solution": false
+        },
+        {
+          "answerText": "Social Media",
+          "solution": false
+        },
+        {
+          "answerText": "Video Games",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What term describes the process of learning one's culture and how to live within it?",
+      "answer": [
+        {
+          "answerText": "Education",
+          "solution": false
+        },
+        {
+          "answerText": "Socialization",
+          "solution": true
+        },
+        {
+          "answerText": "Acculturation",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What percentage of the world's population lived in extreme poverty in 2021?",
+      "answer": [
+        {
+          "answerText": "About 9%",
+          "solution": true
+        },
+        {
+          "answerText": "About 25%",
+          "solution": false
+        },
+        {
+          "answerText": "About 40%",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which of these is considered a renewable resource?",
+      "answer": [
+        {
+          "answerText": "Coal",
+          "solution": false
+        },
+        {
+          "answerText": "Solar Energy",
+          "solution": true
+        },
+        {
+          "answerText": "Natural Gas",
+          "solution": false
+        },
+        {
+          "answerText": "Oil",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for a person who moves to another country seeking better economic opportunities?",
+      "answer": [
+        {
+          "answerText": "Tourist",
+          "solution": false
+        },
+        {
+          "answerText": "Refugee",
+          "solution": false
+        },
+        {
+          "answerText": "Economic Migrant",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which social class typically includes professionals, managers, and business owners?",
+      "answer": [
+        {
+          "answerText": "Working Class",
+          "solution": false
+        },
+        {
+          "answerText": "Middle Class",
+          "solution": true
+        },
+        {
+          "answerText": "Upper Class",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for prejudice against people with disabilities?",
+      "answer": [
+        {
+          "answerText": "Ableism",
+          "solution": true
+        },
+        {
+          "answerText": "Racism",
+          "solution": false
+        },
+        {
+          "answerText": "Sexism",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which of these is an example of a social institution?",
+      "answer": [
+        {
+          "answerText": "Marriage",
+          "solution": true
+        },
+        {
+          "answerText": "Friendship",
+          "solution": false
+        },
+        {
+          "answerText": "Hobby",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for a group that someone belongs to and identifies with?",
+      "answer": [
+        {
+          "answerText": "Out-group",
+          "solution": false
+        },
+        {
+          "answerText": "Reference group",
+          "solution": false
+        },
+        {
+          "answerText": "In-group",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the name for the study of population trends and changes?",
+      "answer": [
+        {
+          "answerText": "Sociology",
+          "solution": false
+        },
+        {
+          "answerText": "Demographics",
+          "solution": true
+        },
+        {
+          "answerText": "Anthropology",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which of these is considered a push factor for migration?",
+      "answer": [
+        {
+          "answerText": "Better job opportunities",
+          "solution": false
+        },
+        {
+          "answerText": "War",
+          "solution": true
+        },
+        {
+          "answerText": "Better education",
+          "solution": false
+        },
+        {
+          "answerText": "Family reunification",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for a belief or attitude that helps maintain social inequality?",
+      "answer": [
+        {
+          "answerText": "Social mobility",
+          "solution": false
+        },
+        {
+          "answerText": "Social ideology",
+          "solution": true
+        },
+        {
+          "answerText": "Social contract",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which type of family consists of parents and children only?",
+      "answer": [
+        {
+          "answerText": "Extended family",
+          "solution": false
+        },
+        {
+          "answerText": "Nuclear family",
+          "solution": true
+        },
+        {
+          "answerText": "Blended family",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for the movement of people from rural to urban areas?",
+      "answer": [
+        {
+          "answerText": "Suburbanization",
+          "solution": false
+        },
+        {
+          "answerText": "Urbanization",
+          "solution": true
+        },
+        {
+          "answerText": "Gentrification",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which of these is an example of cultural diffusion?",
+      "answer": [
+        {
+          "answerText": "Learning your native language",
+          "solution": false
+        },
+        {
+          "answerText": "Eating sushi in America",
+          "solution": true
+        },
+        {
+          "answerText": "Celebrating your own religious holidays",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for a person's position in society based on income, education, and occupation?",
+      "answer": [
+        {
+          "answerText": "Social mobility",
+          "solution": false
+        },
+        {
+          "answerText": "Social status",
+          "solution": true
+        },
+        {
+          "answerText": "Social role",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which term describes the increasing interconnectedness of the world?",
+      "answer": [
+        {
+          "answerText": "Industrialization",
+          "solution": false
+        },
+        {
+          "answerText": "Modernization",
+          "solution": false
+        },
+        {
+          "answerText": "Globalization",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for unequal access to resources and opportunities?",
+      "answer": [
+        {
+          "answerText": "Social inequality",
+          "solution": true
+        },
+        {
+          "answerText": "Social mobility",
+          "solution": false
+        },
+        {
+          "answerText": "Social stratification",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which of these is an example of a achieved status?",
+      "answer": [
+        {
+          "answerText": "Age",
+          "solution": false
+        },
+        {
+          "answerText": "Gender",
+          "solution": false
+        },
+        {
+          "answerText": "Occupation",
+          "solution": true
+        },
+        {
+          "answerText": "Race",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for a large group of people who share a common culture?",
+      "answer": [
+        {
+          "answerText": "Community",
+          "solution": false
+        },
+        {
+          "answerText": "Society",
+          "solution": true
+        },
+        {
+          "answerText": "Population",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which generation comes after Generation Z?",
+      "answer": [
+        {
+          "answerText": "Generation Alpha",
+          "solution": true
+        },
+        {
+          "answerText": "Generation Beta",
+          "solution": false
+        },
+        {
+          "answerText": "Generation Omega",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for the improvement in one's social status?",
+      "answer": [
+        {
+          "answerText": "Social equality",
+          "solution": false
+        },
+        {
+          "answerText": "Social mobility",
+          "solution": true
+        },
+        {
+          "answerText": "Social justice",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which of these is an example of a social norm?",
+      "answer": [
+        {
+          "answerText": "Wearing clothes in public",
+          "solution": true
+        },
+        {
+          "answerText": "Having brown hair",
+          "solution": false
+        },
+        {
+          "answerText": "Being tall",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for a society where women hold primary power?",
+      "answer": [
+        {
+          "answerText": "Patriarchy",
+          "solution": false
+        },
+        {
+          "answerText": "Matriarchy",
+          "solution": true
+        },
+        {
+          "answerText": "Monarchy",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which of these is a characteristic of sustainable development?",
+      "answer": [
+        {
+          "answerText": "Maximum resource exploitation",
+          "solution": false
+        },
+        {
+          "answerText": "Environmental protection",
+          "solution": true
+        },
+        {
+          "answerText": "Short-term profit focus",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for a person who has fled their country due to persecution?",
+      "answer": [
+        {
+          "answerText": "Tourist",
+          "solution": false
+        },
+        {
+          "answerText": "Immigrant",
+          "solution": false
+        },
+        {
+          "answerText": "Refugee",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which of these is an example of cultural capital?",
+      "answer": [
+        {
+          "answerText": "Money in the bank",
+          "solution": false
+        },
+        {
+          "answerText": "Knowledge of fine arts",
+          "solution": true
+        },
+        {
+          "answerText": "Physical strength",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "What is the term for a person's biological sex characteristics?",
+      "answer": [
+        {
+          "answerText": "Gender",
+          "solution": false
+        },
+        {
+          "answerText": "Sex",
+          "solution": true
+        },
+        {
+          "answerText": "Identity",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "SOCIETY",
+      "question": "Which of these is a characteristic of a developed country?",
+      "answer": [
+        {
+          "answerText": "High birth rate",
+          "solution": false
+        },
+        {
+          "answerText": "Low life expectancy",
+          "solution": false
+        },
+        {
+          "answerText": "High literacy rate",
+          "solution": true
+        }
+      ]
+    }
+  ]
+}

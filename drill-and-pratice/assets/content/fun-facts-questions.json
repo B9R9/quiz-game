@@ -1,0 +1,562 @@
+{
+  "questions": [
+    {
+      "topic": "FUN FACT",
+      "question": "In which country is it considered polite to slurp your noodles?",
+      "answer": [
+        {
+          "answerText": "Japan",
+          "solution": true
+        },
+        {
+          "answerText": "Italy",
+          "solution": false
+        },
+        {
+          "answerText": "Thailand",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which animal can't jump?",
+      "answer": [
+        {
+          "answerText": "Elephant",
+          "solution": true
+        },
+        {
+          "answerText": "Kangaroo",
+          "solution": false
+        },
+        {
+          "answerText": "Frog",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which country has a unicorn as its national animal?",
+      "answer": [
+        {
+          "answerText": "Scotland",
+          "solution": true
+        },
+        {
+          "answerText": "Iceland",
+          "solution": false
+        },
+        {
+          "answerText": "Norway",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "How many hearts does an octopus have?",
+      "answer": [
+        {
+          "answerText": "Two",
+          "solution": false
+        },
+        {
+          "answerText": "Three",
+          "solution": true
+        },
+        {
+          "answerText": "Four",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which country has the most islands in the world?",
+      "answer": [
+        {
+          "answerText": "Indonesia",
+          "solution": false
+        },
+        {
+          "answerText": "Sweden",
+          "solution": true
+        },
+        {
+          "answerText": "Philippines",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "What is the only food that never spoils?",
+      "answer": [
+        {
+          "answerText": "Honey",
+          "solution": true
+        },
+        {
+          "answerText": "Salt",
+          "solution": false
+        },
+        {
+          "answerText": "Sugar",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which animal's fingerprints are almost indistinguishable from humans?",
+      "answer": [
+        {
+          "answerText": "Gorilla",
+          "solution": false
+        },
+        {
+          "answerText": "Koala",
+          "solution": true
+        },
+        {
+          "answerText": "Chimpanzee",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "In which country is it illegal to own just one guinea pig?",
+      "answer": [
+        {
+          "answerText": "Switzerland",
+          "solution": true
+        },
+        {
+          "answerText": "Austria",
+          "solution": false
+        },
+        {
+          "answerText": "Germany",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "What percentage of the world's oxygen is produced by the Amazon rainforest?",
+      "answer": [
+        {
+          "answerText": "20%",
+          "solution": true
+        },
+        {
+          "answerText": "50%",
+          "solution": false
+        },
+        {
+          "answerText": "10%",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which country has square watermelons?",
+      "answer": [
+        {
+          "answerText": "China",
+          "solution": false
+        },
+        {
+          "answerText": "Japan",
+          "solution": true
+        },
+        {
+          "answerText": "South Korea",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "What is the only continent with no active volcanoes?",
+      "answer": [
+        {
+          "answerText": "Australia",
+          "solution": true
+        },
+        {
+          "answerText": "Europe",
+          "solution": false
+        },
+        {
+          "answerText": "North America",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which animal cannot stick out its tongue?",
+      "answer": [
+        {
+          "answerText": "Snake",
+          "solution": false
+        },
+        {
+          "answerText": "Crocodile",
+          "solution": true
+        },
+        {
+          "answerText": "Lizard",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "In which country do people knock on wood twice for good luck?",
+      "answer": [
+        {
+          "answerText": "Russia",
+          "solution": true
+        },
+        {
+          "answerText": "France",
+          "solution": false
+        },
+        {
+          "answerText": "Italy",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "What is the only mammal that can't jump?",
+      "answer": [
+        {
+          "answerText": "Sloth",
+          "solution": false
+        },
+        {
+          "answerText": "Elephant",
+          "solution": true
+        },
+        {
+          "answerText": "Hippopotamus",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which country has the most twins?",
+      "answer": [
+        {
+          "answerText": "Nigeria",
+          "solution": true
+        },
+        {
+          "answerText": "India",
+          "solution": false
+        },
+        {
+          "answerText": "China",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "What is the only letter that doesn't appear in any U.S. state name?",
+      "answer": [
+        {
+          "answerText": "Q",
+          "solution": true
+        },
+        {
+          "answerText": "X",
+          "solution": false
+        },
+        {
+          "answerText": "Z",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which animal has the longest lifespan?",
+      "answer": [
+        {
+          "answerText": "Tortoise",
+          "solution": false
+        },
+        {
+          "answerText": "Arctic Whale",
+          "solution": false
+        },
+        {
+          "answerText": "Immortal Jellyfish",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "In which country is it customary to take a nap at work?",
+      "answer": [
+        {
+          "answerText": "Spain",
+          "solution": false
+        },
+        {
+          "answerText": "Japan",
+          "solution": true
+        },
+        {
+          "answerText": "Italy",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which animal never sleeps?",
+      "answer": [
+        {
+          "answerText": "Bullfrogs",
+          "solution": true
+        },
+        {
+          "answerText": "Bats",
+          "solution": false
+        },
+        {
+          "answerText": "Dolphins",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "What color is a polar bear's skin?",
+      "answer": [
+        {
+          "answerText": "White",
+          "solution": false
+        },
+        {
+          "answerText": "Pink",
+          "solution": false
+        },
+        {
+          "answerText": "Black",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which country has a mountain that's taller than Mount Everest?",
+      "answer": [
+        {
+          "answerText": "United States (Hawaii)",
+          "solution": true
+        },
+        {
+          "answerText": "Russia",
+          "solution": false
+        },
+        {
+          "answerText": "Canada",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "What percentage of Earth's water is freshwater?",
+      "answer": [
+        {
+          "answerText": "3%",
+          "solution": true
+        },
+        {
+          "answerText": "10%",
+          "solution": false
+        },
+        {
+          "answerText": "25%",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which country invented tea bags by accident?",
+      "answer": [
+        {
+          "answerText": "China",
+          "solution": false
+        },
+        {
+          "answerText": "United States",
+          "solution": true
+        },
+        {
+          "answerText": "England",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "How many dreams does the average person have per night?",
+      "answer": [
+        {
+          "answerText": "2-3",
+          "solution": false
+        },
+        {
+          "answerText": "4-6",
+          "solution": true
+        },
+        {
+          "answerText": "7-8",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which country has the most lakes in the world?",
+      "answer": [
+        {
+          "answerText": "Russia",
+          "solution": false
+        },
+        {
+          "answerText": "Canada",
+          "solution": true
+        },
+        {
+          "answerText": "United States",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "What is the only metal that is liquid at room temperature?",
+      "answer": [
+        {
+          "answerText": "Lead",
+          "solution": false
+        },
+        {
+          "answerText": "Mercury",
+          "solution": true
+        },
+        {
+          "answerText": "Zinc",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which country has a city called Batman?",
+      "answer": [
+        {
+          "answerText": "Iraq",
+          "solution": false
+        },
+        {
+          "answerText": "Turkey",
+          "solution": true
+        },
+        {
+          "answerText": "Iran",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "What is the only number that has the same number of letters as its value?",
+      "answer": [
+        {
+          "answerText": "Three",
+          "solution": false
+        },
+        {
+          "answerText": "Four",
+          "solution": true
+        },
+        {
+          "answerText": "Five",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "In which country is it illegal to chew gum?",
+      "answer": [
+        {
+          "answerText": "Japan",
+          "solution": false
+        },
+        {
+          "answerText": "Singapore",
+          "solution": true
+        },
+        {
+          "answerText": "Dubai",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "What color are flamingos when they are born?",
+      "answer": [
+        {
+          "answerText": "Pink",
+          "solution": false
+        },
+        {
+          "answerText": "Grey",
+          "solution": true
+        },
+        {
+          "answerText": "White",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FUN FACT",
+      "question": "Which animal can't walk backwards?",
+      "answer": [
+        {
+          "answerText": "Kangaroo",
+          "solution": true
+        },
+        {
+          "answerText": "Penguin",
+          "solution": false
+        },
+        {
+          "answerText": "Emu",
+          "solution": false
+        }
+      ]
+    }
+  ]
+}

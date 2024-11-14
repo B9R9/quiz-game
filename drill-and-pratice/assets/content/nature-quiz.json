@@ -1,0 +1,586 @@
+{
+  "questions": [
+    {
+      "topic": "NATURE",
+      "question": "Which is the largest big cat in the world?",
+      "answer": [
+        {
+          "answerText": "Tiger",
+          "solution": true
+        },
+        {
+          "answerText": "Lion",
+          "solution": false
+        },
+        {
+          "answerText": "Jaguar",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the process of plants converting sunlight into food called?",
+      "answer": [
+        {
+          "answerText": "Photosynthesis",
+          "solution": true
+        },
+        {
+          "answerText": "Respiration",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which of these trees is evergreen?",
+      "answer": [
+        {
+          "answerText": "Maple",
+          "solution": false
+        },
+        {
+          "answerText": "Pine",
+          "solution": true
+        },
+        {
+          "answerText": "Oak",
+          "solution": false
+        },
+        {
+          "answerText": "Birch",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the largest organ in the human body?",
+      "answer": [
+        {
+          "answerText": "Heart",
+          "solution": false
+        },
+        {
+          "answerText": "Liver",
+          "solution": false
+        },
+        {
+          "answerText": "Skin",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which gas do plants absorb from the atmosphere?",
+      "answer": [
+        {
+          "answerText": "Oxygen",
+          "solution": false
+        },
+        {
+          "answerText": "Carbon dioxide",
+          "solution": true
+        },
+        {
+          "answerText": "Nitrogen",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the study of weather called?",
+      "answer": [
+        {
+          "answerText": "Geology",
+          "solution": false
+        },
+        {
+          "answerText": "Meteorology",
+          "solution": true
+        },
+        {
+          "answerText": "Biology",
+          "solution": false
+        },
+        {
+          "answerText": "Astronomy",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which animal has the longest lifespan?",
+      "answer": [
+        {
+          "answerText": "Elephant",
+          "solution": false
+        },
+        {
+          "answerText": "Giant Tortoise",
+          "solution": true
+        },
+        {
+          "answerText": "Whale",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What causes ocean tides?",
+      "answer": [
+        {
+          "answerText": "Wind",
+          "solution": false
+        },
+        {
+          "answerText": "Moon's gravity",
+          "solution": true
+        },
+        {
+          "answerText": "Earth's rotation",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which continent has the most plant and animal species?",
+      "answer": [
+        {
+          "answerText": "Africa",
+          "solution": false
+        },
+        {
+          "answerText": "South America",
+          "solution": true
+        },
+        {
+          "answerText": "Asia",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the primary cause of coral bleaching?",
+      "answer": [
+        {
+          "answerText": "Ocean pollution",
+          "solution": false
+        },
+        {
+          "answerText": "Rising water temperatures",
+          "solution": true
+        },
+        {
+          "answerText": "Overfishing",
+          "solution": false
+        },
+        {
+          "answerText": "Ocean acidification",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which bird lays the largest egg?",
+      "answer": [
+        {
+          "answerText": "Ostrich",
+          "solution": true
+        },
+        {
+          "answerText": "Emu",
+          "solution": false
+        },
+        {
+          "answerText": "Cassowary",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the hardest natural substance on Earth?",
+      "answer": [
+        {
+          "answerText": "Gold",
+          "solution": false
+        },
+        {
+          "answerText": "Iron",
+          "solution": false
+        },
+        {
+          "answerText": "Diamond",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which animal can change its skin color?",
+      "answer": [
+        {
+          "answerText": "Chameleon",
+          "solution": true
+        },
+        {
+          "answerText": "Iguana",
+          "solution": false
+        },
+        {
+          "answerText": "Gecko",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the smallest unit of life?",
+      "answer": [
+        {
+          "answerText": "Atom",
+          "solution": false
+        },
+        {
+          "answerText": "Cell",
+          "solution": true
+        },
+        {
+          "answerText": "Molecule",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which layer of Earth's atmosphere contains the ozone layer?",
+      "answer": [
+        {
+          "answerText": "Troposphere",
+          "solution": false
+        },
+        {
+          "answerText": "Stratosphere",
+          "solution": true
+        },
+        {
+          "answerText": "Mesosphere",
+          "solution": false
+        },
+        {
+          "answerText": "Thermosphere",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What type of rock is formed by cooled lava?",
+      "answer": [
+        {
+          "answerText": "Sedimentary",
+          "solution": false
+        },
+        {
+          "answerText": "Metamorphic",
+          "solution": false
+        },
+        {
+          "answerText": "Igneous",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which animal has the best hearing?",
+      "answer": [
+        {
+          "answerText": "Elephant",
+          "solution": false
+        },
+        {
+          "answerText": "Bat",
+          "solution": false
+        },
+        {
+          "answerText": "Moth",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the fastest land animal?",
+      "answer": [
+        {
+          "answerText": "Lion",
+          "solution": false
+        },
+        {
+          "answerText": "Cheetah",
+          "solution": true
+        },
+        {
+          "answerText": "Leopard",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which gas makes up the majority of Earth's atmosphere?",
+      "answer": [
+        {
+          "answerText": "Oxygen",
+          "solution": false
+        },
+        {
+          "answerText": "Carbon dioxide",
+          "solution": false
+        },
+        {
+          "answerText": "Nitrogen",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the largest flower in the world?",
+      "answer": [
+        {
+          "answerText": "Sunflower",
+          "solution": false
+        },
+        {
+          "answerText": "Rafflesia",
+          "solution": true
+        },
+        {
+          "answerText": "Water lily",
+          "solution": false
+        },
+        {
+          "answerText": "Corpse flower",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which animal can survive the longest without water?",
+      "answer": [
+        {
+          "answerText": "Camel",
+          "solution": false
+        },
+        {
+          "answerText": "Kangaroo rat",
+          "solution": true
+        },
+        {
+          "answerText": "Desert tortoise",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the study of fossils called?",
+      "answer": [
+        {
+          "answerText": "Archaeology",
+          "solution": false
+        },
+        {
+          "answerText": "Paleontology",
+          "solution": true
+        },
+        {
+          "answerText": "Geology",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which tree is known as the tallest in the world?",
+      "answer": [
+        {
+          "answerText": "Giant Sequoia",
+          "solution": false
+        },
+        {
+          "answerText": "Coast Redwood",
+          "solution": true
+        },
+        {
+          "answerText": "Douglas Fir",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What causes earthquakes?",
+      "answer": [
+        {
+          "answerText": "Volcanic eruptions",
+          "solution": false
+        },
+        {
+          "answerText": "Tectonic plate movements",
+          "solution": true
+        },
+        {
+          "answerText": "Ocean currents",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which animal is known to have the best memory?",
+      "answer": [
+        {
+          "answerText": "Dolphin",
+          "solution": false
+        },
+        {
+          "answerText": "Elephant",
+          "solution": true
+        },
+        {
+          "answerText": "Chimpanzee",
+          "solution": false
+        },
+        {
+          "answerText": "Octopus",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the smallest bird in the world?",
+      "answer": [
+        {
+          "answerText": "Bee Hummingbird",
+          "solution": true
+        },
+        {
+          "answerText": "Weebill",
+          "solution": false
+        },
+        {
+          "answerText": "Goldcrest",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which gas do humans exhale when breathing?",
+      "answer": [
+        {
+          "answerText": "Oxygen",
+          "solution": false
+        },
+        {
+          "answerText": "Carbon dioxide",
+          "solution": true
+        },
+        {
+          "answerText": "Nitrogen",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the process of water changing from liquid to gas called?",
+      "answer": [
+        {
+          "answerText": "Condensation",
+          "solution": false
+        },
+        {
+          "answerText": "Evaporation",
+          "solution": true
+        },
+        {
+          "answerText": "Precipitation",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which animal has the longest migration route?",
+      "answer": [
+        {
+          "answerText": "Monarch butterfly",
+          "solution": false
+        },
+        {
+          "answerText": "Arctic tern",
+          "solution": true
+        },
+        {
+          "answerText": "Humpback whale",
+          "solution": false
+        },
+        {
+          "answerText": "Caribou",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "What is the largest desert in the world?",
+      "answer": [
+        {
+          "answerText": "Sahara Desert",
+          "solution": false
+        },
+        {
+          "answerText": "Antarctic Desert",
+          "solution": true
+        },
+        {
+          "answerText": "Arabian Desert",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "NATURE",
+      "question": "Which animal never sleeps?",
+      "answer": [
+        {
+          "answerText": "Shark",
+          "solution": false
+        },
+        {
+          "answerText": "Bullfrog",
+          "solution": true
+        },
+        {
+          "answerText": "Dolphin",
+          "solution": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,18 @@
 const data = [
   "javascript-questions.json",
-  // "cinema-questions.json",
-  // "geography-questions.json",
-  // "history-questions.json",
-  // "politics-questions.json",
+  "cinema-questions.json",
+  "geography-questions.json",
+  "history-questions.json",
+  "politics-questions.json",
+  "climat-questions.json",
+  "capital-cities-quiz.json",
+  "cooking-quiz.json",
+  "french-culture-questions.json",
+  "fun-facts-questions.json",
+  "nature-quiz.json",
+  "society-questions.json",
+  "typescript-quiz.json",
+  "video-game-quiz.json",
 ];
 
 for (const file of data) {
