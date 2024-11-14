@@ -24,16 +24,18 @@ jobs:
           deno-version: v2.x
 
       - name: Install Deno Deploy
-        run: deno install --allow-read --allow-write --allow-net --unstable https://deno.land/x/deploy/deployctl.ts
-
-      - name: Build step
-        run: |
-          cd drill-and-pratice 
-          deno task build --config=./drill-and-pratice/deno.json
+        run: deno install --allow-read --allow-write --allow-net --unstable https://deno.land/x/deploy/deployctl.ts --global
 
       - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "drill-and-pratice"
-          entrypoint: "run-locally.js"
-          root: "drill-and-pratice"
+        run: deployctl deploy --project=c2495af1-50e0-48ad-a2f1-1ca52c1864ea drill-and-pratice/run-locally.js
+      #   - name: Build step
+      #     run: |
+      #       cd drill-and-pratice
+      #       deno task build --config=./drill-and-pratice/deno.json
+
+    #   - name: Upload to Deno Deploy
+    #     uses: denoland/deployctl@v1
+    #     with:
+    #       project: "drill-and-pratice"
+    #       entrypoint: "run-locally.js"
+    #       root: "drill-and-pratice"
