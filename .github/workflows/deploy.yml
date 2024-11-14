@@ -25,7 +25,8 @@ jobs:
 
       - name: Build step
         run: |
-          ls drill-and-pratice 
+          cd drill-and-pratice 
+          ls
           deno task build --config=./drill-and-pratice/deno.json
 
       - name: Upload to Deno Deploy
