@@ -28,3 +28,6 @@ jobs:
           project: "baptiste-quiz-game-44"
           entrypoint: "run-locally.js"
           root: "drill-and-pratice"
+          env:
+           DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
+
