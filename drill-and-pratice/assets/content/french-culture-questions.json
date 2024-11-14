@@ -1,0 +1,566 @@
+{
+  "questions": [
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which famous French palace was the residence of Louis XIV?",
+      "answer": [
+        {
+          "answerText": "Versailles",
+          "solution": true
+        },
+        {
+          "answerText": "Louvre",
+          "solution": false
+        },
+        {
+          "answerText": "Fontainebleau",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the traditional French bread?",
+      "answer": [
+        {
+          "answerText": "Croissant",
+          "solution": false
+        },
+        {
+          "answerText": "Baguette",
+          "solution": true
+        },
+        {
+          "answerText": "Brioche",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Who painted the Mona Lisa?",
+      "answer": [
+        {
+          "answerText": "Vincent van Gogh",
+          "solution": false
+        },
+        {
+          "answerText": "Leonardo da Vinci",
+          "solution": true
+        },
+        {
+          "answerText": "Claude Monet",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which famous French fashion house was founded by Gabrielle 'Coco' Chanel?",
+      "answer": [
+        {
+          "answerText": "Louis Vuitton",
+          "solution": false
+        },
+        {
+          "answerText": "Chanel",
+          "solution": true
+        },
+        {
+          "answerText": "Dior",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French cheese is nicknamed 'The King of Cheeses'?",
+      "answer": [
+        {
+          "answerText": "Camembert",
+          "solution": false
+        },
+        {
+          "answerText": "Roquefort",
+          "solution": false
+        },
+        {
+          "answerText": "Brie",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the French national motto?",
+      "answer": [
+        {
+          "answerText": "Liberté, Égalité, Fraternité",
+          "solution": true
+        },
+        {
+          "answerText": "Vive la France",
+          "solution": false
+        },
+        {
+          "answerText": "En Garde",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French writer wrote 'Les Misérables'?",
+      "answer": [
+        {
+          "answerText": "Victor Hugo",
+          "solution": true
+        },
+        {
+          "answerText": "Émile Zola",
+          "solution": false
+        },
+        {
+          "answerText": "Alexandre Dumas",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the most visited museum in Paris?",
+      "answer": [
+        {
+          "answerText": "Musée d'Orsay",
+          "solution": false
+        },
+        {
+          "answerText": "Le Louvre",
+          "solution": true
+        },
+        {
+          "answerText": "Centre Pompidou",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French holiday celebrates the storming of the Bastille?",
+      "answer": [
+        {
+          "answerText": "Bastille Day",
+          "solution": true
+        },
+        {
+          "answerText": "Christmas",
+          "solution": false
+        },
+        {
+          "answerText": "New Year's Day",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the traditional French New Year's Eve celebration called?",
+      "answer": [
+        {
+          "answerText": "Le Jour de l'An",
+          "solution": false
+        },
+        {
+          "answerText": "Le Réveillon",
+          "solution": true
+        },
+        {
+          "answerText": "La Fête",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French region is famous for its wine production?",
+      "answer": [
+        {
+          "answerText": "Normandy",
+          "solution": false
+        },
+        {
+          "answerText": "Bordeaux",
+          "solution": true
+        },
+        {
+          "answerText": "Brittany",
+          "solution": false
+        },
+        {
+          "answerText": "Provence",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the traditional French greeting kiss called?",
+      "answer": [
+        {
+          "answerText": "La Bise",
+          "solution": true
+        },
+        {
+          "answerText": "Le Bisou",
+          "solution": false
+        },
+        {
+          "answerText": "Le Baiser",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French artist is known for his water lily paintings?",
+      "answer": [
+        {
+          "answerText": "Paul Cézanne",
+          "solution": false
+        },
+        {
+          "answerText": "Claude Monet",
+          "solution": true
+        },
+        {
+          "answerText": "Pierre-Auguste Renoir",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the main French film festival?",
+      "answer": [
+        {
+          "answerText": "Venice Film Festival",
+          "solution": false
+        },
+        {
+          "answerText": "Cannes Film Festival",
+          "solution": true
+        },
+        {
+          "answerText": "Berlin Film Festival",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French dessert is traditionally served on January 6th?",
+      "answer": [
+        {
+          "answerText": "Bûche de Noël",
+          "solution": false
+        },
+        {
+          "answerText": "Galette des Rois",
+          "solution": true
+        },
+        {
+          "answerText": "Crème Brûlée",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the famous French cycling race?",
+      "answer": [
+        {
+          "answerText": "Paris-Roubaix",
+          "solution": false
+        },
+        {
+          "answerText": "Tour de France",
+          "solution": true
+        },
+        {
+          "answerText": "Tour de Paris",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French composer wrote 'Boléro'?",
+      "answer": [
+        {
+          "answerText": "Claude Debussy",
+          "solution": false
+        },
+        {
+          "answerText": "Maurice Ravel",
+          "solution": true
+        },
+        {
+          "answerText": "Erik Satie",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the traditional French pancake called?",
+      "answer": [
+        {
+          "answerText": "Crêpe",
+          "solution": true
+        },
+        {
+          "answerText": "Waffle",
+          "solution": false
+        },
+        {
+          "answerText": "Pancake",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French city is known as the 'Capital of Gastronomy'?",
+      "answer": [
+        {
+          "answerText": "Paris",
+          "solution": false
+        },
+        {
+          "answerText": "Lyon",
+          "solution": true
+        },
+        {
+          "answerText": "Marseille",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the famous French cabaret in Paris?",
+      "answer": [
+        {
+          "answerText": "Moulin Rouge",
+          "solution": true
+        },
+        {
+          "answerText": "Lido",
+          "solution": false
+        },
+        {
+          "answerText": "Crazy Horse",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French author wrote 'The Three Musketeers'?",
+      "answer": [
+        {
+          "answerText": "Victor Hugo",
+          "solution": false
+        },
+        {
+          "answerText": "Alexandre Dumas",
+          "solution": true
+        },
+        {
+          "answerText": "Jules Verne",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the French art movement that began in the 1860s?",
+      "answer": [
+        {
+          "answerText": "Surrealism",
+          "solution": false
+        },
+        {
+          "answerText": "Impressionism",
+          "solution": true
+        },
+        {
+          "answerText": "Cubism",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French city hosts the famous jazz festival?",
+      "answer": [
+        {
+          "answerText": "Nice",
+          "solution": false
+        },
+        {
+          "answerText": "Juan-les-Pins",
+          "solution": true
+        },
+        {
+          "answerText": "Cannes",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the traditional Christmas dessert in France?",
+      "answer": [
+        {
+          "answerText": "Bûche de Noël",
+          "solution": true
+        },
+        {
+          "answerText": "Tarte Tatin",
+          "solution": false
+        },
+        {
+          "answerText": "Éclair",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French architect designed the Eiffel Tower?",
+      "answer": [
+        {
+          "answerText": "Le Corbusier",
+          "solution": false
+        },
+        {
+          "answerText": "Gustave Eiffel",
+          "solution": true
+        },
+        {
+          "answerText": "Baron Haussmann",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the oldest university in France?",
+      "answer": [
+        {
+          "answerText": "University of Paris",
+          "solution": true
+        },
+        {
+          "answerText": "University of Lyon",
+          "solution": false
+        },
+        {
+          "answerText": "University of Montpellier",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French region is famous for its lavender fields?",
+      "answer": [
+        {
+          "answerText": "Bretagne",
+          "solution": false
+        },
+        {
+          "answerText": "Provence",
+          "solution": true
+        },
+        {
+          "answerText": "Alsace",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the French card game played with 32 cards?",
+      "answer": [
+        {
+          "answerText": "Poker",
+          "solution": false
+        },
+        {
+          "answerText": "Belote",
+          "solution": true
+        },
+        {
+          "answerText": "Bridge",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French philosopher wrote 'I think, therefore I am'?",
+      "answer": [
+        {
+          "answerText": "Jean-Paul Sartre",
+          "solution": false
+        },
+        {
+          "answerText": "René Descartes",
+          "solution": true
+        },
+        {
+          "answerText": "Voltaire",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "What is the traditional French game played with metal balls?",
+      "answer": [
+        {
+          "answerText": "Pétanque",
+          "solution": true
+        },
+        {
+          "answerText": "Croquet",
+          "solution": false
+        },
+        {
+          "answerText": "Bowling",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "FRENCH CULTURE",
+      "question": "Which French scientist discovered radioactivity?",
+      "answer": [
+        {
+          "answerText": "Louis Pasteur",
+          "solution": false
+        },
+        {
+          "answerText": "Marie Curie",
+          "solution": true
+        },
+        {
+          "answerText": "Antoine Lavoisier",
+          "solution": false
+        }
+      ]
+    }
+  ]
+}

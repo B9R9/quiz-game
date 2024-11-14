@@ -72,18 +72,22 @@ export const addQuestion = async ({ request, response }) => {
     }
   }
 
-  const questionId = DB_question[0]
-    ? Number(DB_question[0].id)
-    : await questionService.getQuestionByQuestion_text(
-        Number(topicId[0].id),
-        question.questionText
-      );
+  const qID = await questionService.getQuestionByQuestion_text(
+    Number(topicId[0].id),
+    question.questionText
+  );
+
+  if (!qID[0]) {
+    response.body = { message: "Question not found!" };
+    return;
+  }
 
   if (question.answer.length > 1) {
     for (let i = 0; i < question.answer.length; i++) {
+      log("Adding options", "info", "apiController.js");
       await optionsService.insertOption(
         question.answer[i].optionText,
-        questionId,
+        Number(qID[0].id),
         question.answer[i].correct
       );
     }

@@ -1,0 +1,634 @@
+{
+  "questions": [
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which company created Mario?",
+      "answer": [
+        {
+          "answerText": "Nintendo",
+          "solution": true
+        },
+        {
+          "answerText": "Sega",
+          "solution": false
+        },
+        {
+          "answerText": "Sony",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What year was Minecraft first released?",
+      "answer": [
+        {
+          "answerText": "2009",
+          "solution": true
+        },
+        {
+          "answerText": "2011",
+          "solution": false
+        },
+        {
+          "answerText": "2007",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Who is the main protagonist of The Legend of Zelda series?",
+      "answer": [
+        {
+          "answerText": "Zelda",
+          "solution": false
+        },
+        {
+          "answerText": "Link",
+          "solution": true
+        },
+        {
+          "answerText": "Ganon",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the name of the first Pokemon game released?",
+      "answer": [
+        {
+          "answerText": "Red and Blue",
+          "solution": false
+        },
+        {
+          "answerText": "Red and Green",
+          "solution": true
+        },
+        {
+          "answerText": "Gold and Silver",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which company produces the Grand Theft Auto series?",
+      "answer": [
+        {
+          "answerText": "EA",
+          "solution": false
+        },
+        {
+          "answerText": "Rockstar Games",
+          "solution": true
+        },
+        {
+          "answerText": "Ubisoft",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the best-selling video game of all time?",
+      "answer": [
+        {
+          "answerText": "Minecraft",
+          "solution": true
+        },
+        {
+          "answerText": "Tetris",
+          "solution": false
+        },
+        {
+          "answerText": "GTA V",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which console is known as the NES?",
+      "answer": [
+        {
+          "answerText": "Nintendo Entertainment System",
+          "solution": true
+        },
+        {
+          "answerText": "New Electronic System",
+          "solution": false
+        },
+        {
+          "answerText": "Nintendo Electronic Station",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What is Sonic the Hedgehog's primary color?",
+      "answer": [
+        {
+          "answerText": "Red",
+          "solution": false
+        },
+        {
+          "answerText": "Green",
+          "solution": false
+        },
+        {
+          "answerText": "Blue",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which game features a character named Master Chief?",
+      "answer": [
+        {
+          "answerText": "Destiny",
+          "solution": false
+        },
+        {
+          "answerText": "Halo",
+          "solution": true
+        },
+        {
+          "answerText": "Gears of War",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What year was PlayStation first released?",
+      "answer": [
+        {
+          "answerText": "1994",
+          "solution": true
+        },
+        {
+          "answerText": "1990",
+          "solution": false
+        },
+        {
+          "answerText": "1996",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which game features a character named Lara Croft?",
+      "answer": [
+        {
+          "answerText": "Uncharted",
+          "solution": false
+        },
+        {
+          "answerText": "Tomb Raider",
+          "solution": true
+        },
+        {
+          "answerText": "Prince of Persia",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What color is Pac-Man?",
+      "answer": [
+        {
+          "answerText": "Blue",
+          "solution": false
+        },
+        {
+          "answerText": "Red",
+          "solution": false
+        },
+        {
+          "answerText": "Yellow",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which company created Sonic the Hedgehog?",
+      "answer": [
+        {
+          "answerText": "Nintendo",
+          "solution": false
+        },
+        {
+          "answerText": "Sega",
+          "solution": true
+        },
+        {
+          "answerText": "Capcom",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the name of Mario's brother?",
+      "answer": [
+        {
+          "answerText": "Luigi",
+          "solution": true
+        },
+        {
+          "answerText": "Wario",
+          "solution": false
+        },
+        {
+          "answerText": "Yoshi",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which game features a character named Cloud Strife?",
+      "answer": [
+        {
+          "answerText": "Final Fantasy VII",
+          "solution": true
+        },
+        {
+          "answerText": "Kingdom Hearts",
+          "solution": false
+        },
+        {
+          "answerText": "Dragon Quest",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the main objective in Tetris?",
+      "answer": [
+        {
+          "answerText": "Collect coins",
+          "solution": false
+        },
+        {
+          "answerText": "Clear lines",
+          "solution": true
+        },
+        {
+          "answerText": "Defeat enemies",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which company produces FIFA games?",
+      "answer": [
+        {
+          "answerText": "Konami",
+          "solution": false
+        },
+        {
+          "answerText": "EA Sports",
+          "solution": true
+        },
+        {
+          "answerText": "2K Sports",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the name of the protagonist in God of War (2018)?",
+      "answer": [
+        {
+          "answerText": "Zeus",
+          "solution": false
+        },
+        {
+          "answerText": "Kratos",
+          "solution": true
+        },
+        {
+          "answerText": "Ares",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which game features a character named Nathan Drake?",
+      "answer": [
+        {
+          "answerText": "Uncharted",
+          "solution": true
+        },
+        {
+          "answerText": "Tomb Raider",
+          "solution": false
+        },
+        {
+          "answerText": "The Last of Us",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What year was the first Xbox released?",
+      "answer": [
+        {
+          "answerText": "2001",
+          "solution": true
+        },
+        {
+          "answerText": "1999",
+          "solution": false
+        },
+        {
+          "answerText": "2003",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the name of the main antagonist in Super Mario?",
+      "answer": [
+        {
+          "answerText": "Wario",
+          "solution": false
+        },
+        {
+          "answerText": "Bowser",
+          "solution": true
+        },
+        {
+          "answerText": "King Boo",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which game features a character named Solid Snake?",
+      "answer": [
+        {
+          "answerText": "Metal Gear Solid",
+          "solution": true
+        },
+        {
+          "answerText": "Splinter Cell",
+          "solution": false
+        },
+        {
+          "answerText": "Counter-Strike",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the main power-up in Super Mario that makes him bigger?",
+      "answer": [
+        {
+          "answerText": "Fire Flower",
+          "solution": false
+        },
+        {
+          "answerText": "Super Mushroom",
+          "solution": true
+        },
+        {
+          "answerText": "Star",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which company created Doom?",
+      "answer": [
+        {
+          "answerText": "Valve",
+          "solution": false
+        },
+        {
+          "answerText": "id Software",
+          "solution": true
+        },
+        {
+          "answerText": "Epic Games",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the name of Pikachu's evolved form?",
+      "answer": [
+        {
+          "answerText": "Raichu",
+          "solution": true
+        },
+        {
+          "answerText": "Pichu",
+          "solution": false
+        },
+        {
+          "answerText": "Raikou",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which game features a character named Geralt of Rivia?",
+      "answer": [
+        {
+          "answerText": "Dragon Age",
+          "solution": false
+        },
+        {
+          "answerText": "The Witcher",
+          "solution": true
+        },
+        {
+          "answerText": "Skyrim",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the name of the player character in Half-Life?",
+      "answer": [
+        {
+          "answerText": "Gordon Freeman",
+          "solution": true
+        },
+        {
+          "answerText": "Alex Vance",
+          "solution": false
+        },
+        {
+          "answerText": "G-Man",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which game features blocks that can be broken and placed?",
+      "answer": [
+        {
+          "answerText": "Terraria",
+          "solution": false
+        },
+        {
+          "answerText": "Minecraft",
+          "solution": true
+        },
+        {
+          "answerText": "Roblox",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the name of the princess in Super Mario?",
+      "answer": [
+        {
+          "answerText": "Daisy",
+          "solution": false
+        },
+        {
+          "answerText": "Peach",
+          "solution": true
+        },
+        {
+          "answerText": "Rosalina",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which company created Fortnite?",
+      "answer": [
+        {
+          "answerText": "Blizzard",
+          "solution": false
+        },
+        {
+          "answerText": "Epic Games",
+          "solution": true
+        },
+        {
+          "answerText": "EA",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the name of the main character in The Legend of Zelda: Breath of the Wild?",
+      "answer": [
+        {
+          "answerText": "Link",
+          "solution": true
+        },
+        {
+          "answerText": "Zelda",
+          "solution": false
+        },
+        {
+          "answerText": "Ganon",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which game features a character named Ellie?",
+      "answer": [
+        {
+          "answerText": "Horizon Zero Dawn",
+          "solution": false
+        },
+        {
+          "answerText": "The Last of Us",
+          "solution": true
+        },
+        {
+          "answerText": "Days Gone",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the name of the company that created World of Warcraft?",
+      "answer": [
+        {
+          "answerText": "Square Enix",
+          "solution": false
+        },
+        {
+          "answerText": "Blizzard",
+          "solution": true
+        },
+        {
+          "answerText": "BioWare",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "Which console is made by Microsoft?",
+      "answer": [
+        {
+          "answerText": "PlayStation",
+          "solution": false
+        },
+        {
+          "answerText": "Xbox",
+          "solution": true
+        },
+        {
+          "answerText": "Switch",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "VIDEO GAMES",
+      "question": "What's the name of Mario's dinosaur friend?",
+      "answer": [
+        {
+          "answerText": "Birdo",
+          "solution": false
+        },
+        {
+          "answerText": "Yoshi",
+          "solution": true
+        },
+        {
+          "answerText": "Koopa",
+          "solution": false
+        }
+      ]
+    }
+  ]
+}

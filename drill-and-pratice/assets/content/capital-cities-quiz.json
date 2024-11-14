@@ -1,0 +1,396 @@
+{
+  "questions": [
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital city of France?",
+      "answer": [
+        { "answerText": "Lyon", "solution": false },
+        { "answerText": "Paris", "solution": true },
+        { "answerText": "Marseille", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Japan?",
+      "answer": [
+        { "answerText": "Osaka", "solution": false },
+        { "answerText": "Kyoto", "solution": false },
+        { "answerText": "Tokyo", "solution": true },
+        { "answerText": "Yokohama", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Australia?",
+      "answer": [
+        { "answerText": "Sydney", "solution": false },
+        { "answerText": "Melbourne", "solution": false },
+        { "answerText": "Canberra", "solution": true }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city serves as the capital of Brazil?",
+      "answer": [
+        { "answerText": "Rio de Janeiro", "solution": false },
+        { "answerText": "São Paulo", "solution": false },
+        { "answerText": "Brasília", "solution": true }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital city of Egypt?",
+      "answer": [
+        { "answerText": "Cairo", "solution": true },
+        { "answerText": "Alexandria", "solution": false },
+        { "answerText": "Giza", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of China?",
+      "answer": [
+        { "answerText": "Shanghai", "solution": false },
+        { "answerText": "Beijing", "solution": true },
+        { "answerText": "Hong Kong", "solution": false },
+        { "answerText": "Guangzhou", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Russia?",
+      "answer": [
+        { "answerText": "Saint Petersburg", "solution": false },
+        { "answerText": "Moscow", "solution": true },
+        { "answerText": "Novosibirsk", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of India?",
+      "answer": [
+        { "answerText": "Mumbai", "solution": false },
+        { "answerText": "New Delhi", "solution": true },
+        { "answerText": "Bangalore", "solution": false },
+        { "answerText": "Kolkata", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of South Africa?",
+      "answer": [
+        { "answerText": "Cape Town", "solution": false },
+        { "answerText": "Johannesburg", "solution": false },
+        { "answerText": "Pretoria", "solution": true }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Argentina?",
+      "answer": [
+        { "answerText": "Buenos Aires", "solution": true },
+        { "answerText": "Córdoba", "solution": false },
+        { "answerText": "Rosario", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Canada?",
+      "answer": [
+        { "answerText": "Toronto", "solution": false },
+        { "answerText": "Ottawa", "solution": true },
+        { "answerText": "Vancouver", "solution": false },
+        { "answerText": "Montreal", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Spain?",
+      "answer": [
+        { "answerText": "Barcelona", "solution": false },
+        { "answerText": "Madrid", "solution": true },
+        { "answerText": "Valencia", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Italy?",
+      "answer": [
+        { "answerText": "Milan", "solution": false },
+        { "answerText": "Rome", "solution": true },
+        { "answerText": "Naples", "solution": false },
+        { "answerText": "Florence", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Germany?",
+      "answer": [
+        { "answerText": "Munich", "solution": false },
+        { "answerText": "Hamburg", "solution": false },
+        { "answerText": "Berlin", "solution": true }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Mexico?",
+      "answer": [
+        { "answerText": "Mexico City", "solution": true },
+        { "answerText": "Guadalajara", "solution": false },
+        { "answerText": "Monterrey", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Turkey?",
+      "answer": [
+        { "answerText": "Istanbul", "solution": false },
+        { "answerText": "Ankara", "solution": true },
+        { "answerText": "Izmir", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Sweden?",
+      "answer": [
+        { "answerText": "Gothenburg", "solution": false },
+        { "answerText": "Stockholm", "solution": true },
+        { "answerText": "Malmö", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Norway?",
+      "answer": [
+        { "answerText": "Bergen", "solution": false },
+        { "answerText": "Oslo", "solution": true },
+        { "answerText": "Trondheim", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Denmark?",
+      "answer": [
+        { "answerText": "Aarhus", "solution": false },
+        { "answerText": "Copenhagen", "solution": true },
+        { "answerText": "Odense", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Poland?",
+      "answer": [
+        { "answerText": "Krakow", "solution": false },
+        { "answerText": "Warsaw", "solution": true },
+        { "answerText": "Gdansk", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Greece?",
+      "answer": [
+        { "answerText": "Thessaloniki", "solution": false },
+        { "answerText": "Athens", "solution": true },
+        { "answerText": "Patras", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Portugal?",
+      "answer": [
+        { "answerText": "Porto", "solution": false },
+        { "answerText": "Lisbon", "solution": true },
+        { "answerText": "Faro", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Ireland?",
+      "answer": [
+        { "answerText": "Cork", "solution": false },
+        { "answerText": "Dublin", "solution": true },
+        { "answerText": "Galway", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Austria?",
+      "answer": [
+        { "answerText": "Salzburg", "solution": false },
+        { "answerText": "Vienna", "solution": true },
+        { "answerText": "Graz", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Switzerland?",
+      "answer": [
+        { "answerText": "Geneva", "solution": false },
+        { "answerText": "Zurich", "solution": false },
+        { "answerText": "Bern", "solution": true }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Belgium?",
+      "answer": [
+        { "answerText": "Antwerp", "solution": false },
+        { "answerText": "Brussels", "solution": true },
+        { "answerText": "Bruges", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Netherlands?",
+      "answer": [
+        { "answerText": "Rotterdam", "solution": false },
+        { "answerText": "Amsterdam", "solution": true },
+        { "answerText": "The Hague", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Finland?",
+      "answer": [
+        { "answerText": "Tampere", "solution": false },
+        { "answerText": "Helsinki", "solution": true },
+        { "answerText": "Turku", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Hungary?",
+      "answer": [
+        { "answerText": "Debrecen", "solution": false },
+        { "answerText": "Budapest", "solution": true },
+        { "answerText": "Szeged", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Czech Republic?",
+      "answer": [
+        { "answerText": "Brno", "solution": false },
+        { "answerText": "Prague", "solution": true },
+        { "answerText": "Ostrava", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Romania?",
+      "answer": [
+        { "answerText": "Cluj-Napoca", "solution": false },
+        { "answerText": "Bucharest", "solution": true },
+        { "answerText": "Timișoara", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Bulgaria?",
+      "answer": [
+        { "answerText": "Plovdiv", "solution": false },
+        { "answerText": "Sofia", "solution": true },
+        { "answerText": "Varna", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Ukraine?",
+      "answer": [
+        { "answerText": "Lviv", "solution": false },
+        { "answerText": "Kyiv", "solution": true },
+        { "answerText": "Kharkiv", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Belarus?",
+      "answer": [
+        { "answerText": "Gomel", "solution": false },
+        { "answerText": "Minsk", "solution": true },
+        { "answerText": "Brest", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Lithuania?",
+      "answer": [
+        { "answerText": "Kaunas", "solution": false },
+        { "answerText": "Vilnius", "solution": true },
+        { "answerText": "Klaipėda", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Latvia?",
+      "answer": [
+        { "answerText": "Daugavpils", "solution": false },
+        { "answerText": "Riga", "solution": true },
+        { "answerText": "Liepāja", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Estonia?",
+      "answer": [
+        { "answerText": "Tartu", "solution": false },
+        { "answerText": "Tallinn", "solution": true },
+        { "answerText": "Narva", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Moldova?",
+      "answer": [
+        { "answerText": "Bălți", "solution": false },
+        { "answerText": "Chișinău", "solution": true },
+        { "answerText": "Orhei", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Georgia?",
+      "answer": [
+        { "answerText": "Batumi", "solution": false },
+        { "answerText": "Tbilisi", "solution": true },
+        { "answerText": "Kutaisi", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Armenia?",
+      "answer": [
+        { "answerText": "Gyumri", "solution": false },
+        { "answerText": "Yerevan", "solution": true },
+        { "answerText": "Vanadzor", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Azerbaijan?",
+      "answer": [
+        { "answerText": "Ganja", "solution": false },
+        { "answerText": "Baku", "solution": true },
+        { "answerText": "Sumqayit", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "Which city is the capital of Kazakhstan?",
+      "answer": [
+        { "answerText": "Almaty", "solution": false },
+        { "answerText": "Astana", "solution": true },
+        { "answerText": "Shymkent", "solution": false }
+      ]
+    },
+    {
+      "topic": "CAPITALS",
+      "question": "What is the capital of Uzbekistan?",
+      "answer": [
+        { "answerText": "Namangan", "solution": false },
+        { "answerText": "Tashkent", "solution": true },
+        { "answerText": "Samarkand", "solution": false }
+      ]
+    }
+  ]
+}

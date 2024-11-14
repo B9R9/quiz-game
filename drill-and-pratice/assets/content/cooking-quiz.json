@@ -1,0 +1,504 @@
+{
+  "questions": [
+    {
+      "topic": "COOKING",
+      "question": "What is the main ingredient in guacamole?",
+      "answer": [
+        {
+          "answerText": "Avocado",
+          "solution": true
+        },
+        {
+          "answerText": "Tomato",
+          "solution": false
+        },
+        {
+          "answerText": "Lime",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which cuisine is sushi from?",
+      "answer": [
+        {
+          "answerText": "Korean",
+          "solution": false
+        },
+        {
+          "answerText": "Chinese",
+          "solution": false
+        },
+        {
+          "answerText": "Japanese",
+          "solution": true
+        },
+        {
+          "answerText": "Thai",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What temperature in Fahrenheit is considered 'medium-rare' for steak?",
+      "answer": [
+        {
+          "answerText": "135°F",
+          "solution": true
+        },
+        {
+          "answerText": "145°F",
+          "solution": false
+        },
+        {
+          "answerText": "125°F",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which herb is the main ingredient in traditional pesto?",
+      "answer": [
+        {
+          "answerText": "Parsley",
+          "solution": false
+        },
+        {
+          "answerText": "Basil",
+          "solution": true
+        },
+        {
+          "answerText": "Cilantro",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What is the process of cooking food in a vacuum-sealed bag in water called?",
+      "answer": [
+        {
+          "answerText": "Sous vide",
+          "solution": true
+        },
+        {
+          "answerText": "Blanching",
+          "solution": false
+        },
+        {
+          "answerText": "Braising",
+          "solution": false
+        },
+        {
+          "answerText": "Poaching",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which ingredient makes bread rise?",
+      "answer": [
+        {
+          "answerText": "Salt",
+          "solution": false
+        },
+        {
+          "answerText": "Sugar",
+          "solution": false
+        },
+        {
+          "answerText": "Yeast",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What is the main spice in a traditional Indian curry powder?",
+      "answer": [
+        {
+          "answerText": "Turmeric",
+          "solution": true
+        },
+        {
+          "answerText": "Cumin",
+          "solution": false
+        },
+        {
+          "answerText": "Coriander",
+          "solution": false
+        },
+        {
+          "answerText": "Cardamom",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which pasta shape means 'little worms' in Italian?",
+      "answer": [
+        {
+          "answerText": "Spaghetti",
+          "solution": false
+        },
+        {
+          "answerText": "Vermicelli",
+          "solution": true
+        },
+        {
+          "answerText": "Linguine",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What is the French term for a mixture of diced vegetables used as a base for many dishes?",
+      "answer": [
+        {
+          "answerText": "Mirepoix",
+          "solution": true
+        },
+        {
+          "answerText": "Roux",
+          "solution": false
+        },
+        {
+          "answerText": "Bouquet garni",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which oil has the highest smoke point?",
+      "answer": [
+        {
+          "answerText": "Olive oil",
+          "solution": false
+        },
+        {
+          "answerText": "Avocado oil",
+          "solution": true
+        },
+        {
+          "answerText": "Coconut oil",
+          "solution": false
+        },
+        {
+          "answerText": "Sesame oil",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What is tempering in chocolate making?",
+      "answer": [
+        {
+          "answerText": "Melting chocolate",
+          "solution": false
+        },
+        {
+          "answerText": "Heating and cooling chocolate to form stable crystals",
+          "solution": true
+        },
+        {
+          "answerText": "Adding flavors to chocolate",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which country invented pizza?",
+      "answer": [
+        {
+          "answerText": "Greece",
+          "solution": false
+        },
+        {
+          "answerText": "Italy",
+          "solution": true
+        },
+        {
+          "answerText": "France",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What is the main ingredient in hummus?",
+      "answer": [
+        {
+          "answerText": "Lentils",
+          "solution": false
+        },
+        {
+          "answerText": "Chickpeas",
+          "solution": true
+        },
+        {
+          "answerText": "Black beans",
+          "solution": false
+        },
+        {
+          "answerText": "Fava beans",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which meat is traditionally used in Wiener Schnitzel?",
+      "answer": [
+        {
+          "answerText": "Pork",
+          "solution": false
+        },
+        {
+          "answerText": "Chicken",
+          "solution": false
+        },
+        {
+          "answerText": "Veal",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What gives San Marzano tomatoes their unique flavor?",
+      "answer": [
+        {
+          "answerText": "The volcanic soil they grow in",
+          "solution": true
+        },
+        {
+          "answerText": "Special fertilizers",
+          "solution": false
+        },
+        {
+          "answerText": "Genetic modification",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which cheese is traditionally used in a classic French onion soup?",
+      "answer": [
+        {
+          "answerText": "Mozzarella",
+          "solution": false
+        },
+        {
+          "answerText": "Gruyère",
+          "solution": true
+        },
+        {
+          "answerText": "Cheddar",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What is the primary difference between ice cream and gelato?",
+      "answer": [
+        {
+          "answerText": "Fat content",
+          "solution": true
+        },
+        {
+          "answerText": "Sugar content",
+          "solution": false
+        },
+        {
+          "answerText": "Freezing temperature",
+          "solution": false
+        },
+        {
+          "answerText": "Ingredients used",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which nut is used to make marzipan?",
+      "answer": [
+        {
+          "answerText": "Walnut",
+          "solution": false
+        },
+        {
+          "answerText": "Almond",
+          "solution": true
+        },
+        {
+          "answerText": "Hazelnut",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What is the main ingredient in paella?",
+      "answer": [
+        {
+          "answerText": "Pasta",
+          "solution": false
+        },
+        {
+          "answerText": "Rice",
+          "solution": true
+        },
+        {
+          "answerText": "Potatoes",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which spice is known as 'red gold'?",
+      "answer": [
+        {
+          "answerText": "Paprika",
+          "solution": false
+        },
+        {
+          "answerText": "Saffron",
+          "solution": true
+        },
+        {
+          "answerText": "Cayenne",
+          "solution": false
+        },
+        {
+          "answerText": "Cinnamon",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What type of pastry is used to make éclairs?",
+      "answer": [
+        {
+          "answerText": "Puff pastry",
+          "solution": false
+        },
+        {
+          "answerText": "Choux pastry",
+          "solution": true
+        },
+        {
+          "answerText": "Shortcrust pastry",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which kitchen tool is used to remove zest from citrus fruits?",
+      "answer": [
+        {
+          "answerText": "Peeler",
+          "solution": false
+        },
+        {
+          "answerText": "Zester",
+          "solution": true
+        },
+        {
+          "answerText": "Grater",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What is the main ingredient in risotto?",
+      "answer": [
+        {
+          "answerText": "Arborio rice",
+          "solution": true
+        },
+        {
+          "answerText": "Basmati rice",
+          "solution": false
+        },
+        {
+          "answerText": "Jasmine rice",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "Which sauce is traditionally served with beef Wellington?",
+      "answer": [
+        {
+          "answerText": "Béarnaise",
+          "solution": false
+        },
+        {
+          "answerText": "Hollandaise",
+          "solution": false
+        },
+        {
+          "answerText": "Madeira",
+          "solution": true
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What gives rye bread its distinctive dark color?",
+      "answer": [
+        {
+          "answerText": "Food coloring",
+          "solution": false
+        },
+        {
+          "answerText": "Molasses",
+          "solution": true
+        },
+        {
+          "answerText": "Cocoa powder",
+          "solution": false
+        },
+        {
+          "answerText": "Coffee",
+          "solution": false
+        }
+      ]
+    },
+    {
+      "topic": "COOKING",
+      "question": "What is the main ingredient in traditional Japanese miso soup?",
+      "answer": [
+        {
+          "answerText": "Soy sauce",
+          "solution": false
+        },
+        {
+          "answerText": "Fermented soybean paste",
+          "solution": true
+        },
+        {
+          "answerText": "Fish sauce",
+          "solution": false
+        }
+      ]
+    }
+  ]
+}

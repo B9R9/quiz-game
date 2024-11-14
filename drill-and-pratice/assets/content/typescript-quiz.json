@@ -1,0 +1,297 @@
+[
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the primary purpose of TypeScript?",
+    "answer": [
+      { "answerText": "To add static typing to JavaScript", "solution": true },
+      { "answerText": "To create a new programming language", "solution": false },
+      { "answerText": "To improve the performance of JavaScript", "solution": false },
+      { "answerText": "To add object-oriented features to JavaScript", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "Which of these is a core feature of TypeScript?",
+    "answer": [
+      { "answerText": "Automatic memory management", "solution": false },
+      { "answerText": "Asynchronous programming support", "solution": false },
+      { "answerText": "Static type checking", "solution": true },
+      { "answerText": "Interpreted execution", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How does TypeScript relate to JavaScript?",
+    "answer": [
+      { "answerText": "TypeScript is a completely separate language from JavaScript", "solution": false },
+      { "answerText": "TypeScript is a superset of JavaScript", "solution": true },
+      { "answerText": "TypeScript is a compiled version of JavaScript", "solution": false },
+      { "answerText": "TypeScript and JavaScript are two different dialects of the same language", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of type annotations in TypeScript?",
+    "answer": [
+      { "answerText": "To make the code more readable", "solution": false },
+      { "answerText": "To enable static type checking", "solution": true },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "Which of these is a primitive data type in TypeScript?",
+    "answer": [
+      { "answerText": "Array", "solution": false },
+      { "answerText": "Object", "solution": false },
+      { "answerText": "String", "solution": true },
+      { "answerText": "Function", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a variable with a specific type in TypeScript?",
+    "answer": [
+      { "answerText": "Using the 'var' keyword and a colon to specify the type", "solution": true },
+      { "answerText": "Using the 'let' keyword and a colon to specify the type", "solution": false },
+      { "answerText": "Using the 'const' keyword and a colon to specify the type", "solution": false },
+      { "answerText": "TypeScript automatically infers the variable type, no declaration needed", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript interfaces?",
+    "answer": [
+      { "answerText": "To define the shape of an object", "solution": true },
+      { "answerText": "To create custom data types", "solution": false },
+      { "answerText": "To handle function overloading", "solution": false },
+      { "answerText": "To enable inheritance between classes", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a function with parameter types and return type in TypeScript?",
+    "answer": [
+      { "answerText": "function myFunction(a: number, b: number): number { ... }", "solution": true },
+      { "answerText": "def myFunction(a: number, b: number) -> number: ... ", "solution": false },
+      { "answerText": "myFunction(a: number, b: number): number = { ... }", "solution": false },
+      { "answerText": "TypeScript automatically infers the function signature, no declaration needed", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript classes?",
+    "answer": [
+      { "answerText": "To define the structure of an object", "solution": true },
+      { "answerText": "To create custom data types", "solution": false },
+      { "answerText": "To handle function overloading", "solution": false },
+      { "answerText": "To enable type inference for variables", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you create a TypeScript class with a constructor?",
+    "answer": [
+      { "answerText": "class MyClass { constructor(a: number, b: number) { ... } }", "solution": true },
+      { "answerText": "def MyClass(a: number, b: number): ... ", "solution": false },
+      { "answerText": "MyClass(a: number, b: number) = { ... }", "solution": false },
+      { "answerText": "TypeScript automatically creates constructors, no declaration needed", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript access modifiers (public, private, protected)?",
+    "answer": [
+      { "answerText": "To control the visibility and accessibility of class members", "solution": true },
+      { "answerText": "To enable method overloading", "solution": false },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a TypeScript variable as optional?",
+    "answer": [
+      { "answerText": "Using the '?' operator after the variable name", "solution": true },
+      { "answerText": "Using the 'optional' keyword before the variable name", "solution": false },
+      { "answerText": "Using the 'nullable' keyword after the variable name", "solution": false },
+      { "answerText": "TypeScript automatically handles optional variables, no declaration needed", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript generics?",
+    "answer": [
+      { "answerText": "To create reusable components that can work with different data types", "solution": true },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false },
+      { "answerText": "To enable method overloading", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a TypeScript array with a specific element type?",
+    "answer": [
+      { "answerText": "Using the 'Array<T>' syntax", "solution": true },
+      { "answerText": "Using the 'T[]' syntax", "solution": true },
+      { "answerText": "Using the 'list<T>' syntax", "solution": false },
+      { "answerText": "TypeScript automatically infers the array element type, no declaration needed", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript union types?",
+    "answer": [
+      { "answerText": "To create a custom data type that can hold values of multiple types", "solution": true },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false },
+      { "answerText": "To enable method overloading", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a TypeScript function that accepts a variable number of arguments?",
+    "answer": [
+      { "answerText": "Using the '...' syntax before the parameter name", "solution": true },
+      { "answerText": "Using the 'varargs' keyword before the parameter name", "solution": false },
+      { "answerText": "Using the 'args' keyword before the parameter name", "solution": false },
+      { "answerText": "TypeScript automatically handles variable arguments, no declaration needed", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript type aliases?",
+    "answer": [
+      { "answerText": "To create a new name for an existing type", "solution": true },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false },
+      { "answerText": "To enable method overloading", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a TypeScript enum?",
+    "answer": [
+      { "answerText": "enum Color { Red, Green, Blue }", "solution": true },
+      { "answerText": "def Color: Red, Green, Blue", "solution": false },
+      { "answerText": "Color = { Red, Green, Blue }", "solution": false },
+      { "answerText": "TypeScript doesn't support enums, you have to use an object instead", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript decorators?",
+    "answer": [
+      { "answerText": "To add metadata to classes, properties, methods, and parameters", "solution": true },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false },
+      { "answerText": "To enable method overloading", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a TypeScript namespace?",
+    "answer": [
+      { "answerText": "namespace MyNamespace { ... }", "solution": true },
+      { "answerText": "module MyNamespace { ... }", "solution": false },
+      { "answerText": "def MyNamespace: ... ", "solution": false },
+      { "answerText": "TypeScript doesn't support namespaces, you have to use modules instead", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript type guards?",
+    "answer": [
+      { "answerText": "To narrow the type of a variable within a conditional block", "solution": true },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false },
+      { "answerText": "To enable method overloading", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a TypeScript type intersection?",
+    "answer": [
+      { "answerText": "Using the '&' operator to combine two or more types", "solution": true },
+      { "answerText": "Using the 'intersection' keyword before the type names", "solution": false },
+      { "answerText": "Using the 'type' keyword to create a new intersected type", "solution": false },
+      { "answerText": "TypeScript doesn't support type intersections, you have to use unions instead", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript type mapping?",
+    "answer": [
+      { "answerText": "To create new types by transforming the properties of an existing type", "solution": true },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false },
+      { "answerText": "To enable method overloading", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a TypeScript tuple type?",
+    "answer": [
+      { "answerText": "Using the '[T1, T2, ...]' syntax", "solution": true },
+      { "answerText": "Using the 'tuple<T1, T2, ...>' syntax", "solution": false },
+      { "answerText": "Using the 'Tuple(T1, T2, ...)' syntax", "solution": false },
+      { "answerText": "TypeScript doesn't support tuple types, you have to use arrays instead", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript utility types?",
+    "answer": [
+      { "answerText": "To provide a set of pre-defined type transformations", "solution": true },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false },
+      { "answerText": "To enable method overloading", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a TypeScript conditional type?",
+    "answer": [
+      { "answerText": "Using the 'extends' and '?' operators", "solution": true },
+      { "answerText": "Using the 'if' and 'else' keywords", "solution": false },
+      { "answerText": "Using the 'cond' keyword", "solution": false },
+      { "answerText": "TypeScript doesn't support conditional types", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript index signatures?",
+    "answer": [
+      { "answerText": "To define the shape of an object with dynamically named properties", "solution": true },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false },
+      { "answerText": "To enable method overloading", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a TypeScript function overload?",
+    "answer": [
+      { "answerText": "Using multiple function signatures with the same name", "solution": true },
+      { "answerText": "Using the 'overload' keyword before the function declaration", "solution": false },
+      { "answerText": "Using the 'overloaded' attribute on the function", "solution": false },
+      { "answerText": "TypeScript doesn't support function overloading", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "What is the purpose of TypeScript readonly properties?",
+    "answer": [
+      { "answerText": "To prevent a property from being modified after it's been set", "solution": true },
+      { "answerText": "To improve the performance of the code", "solution": false },
+      { "answerText": "To provide automatic type inference", "solution": false },
+      { "answerText": "To enable method overloading", "solution": false }
+    ]
+  },
+  {
+    "topic": "TYPESCRIPT",
+    "question": "How do you declare a TypeScript type assertion?",
+    "answer": [
+      { "answerText": "Using the 'as' keyword", "solution": true },
+      { "answerText
