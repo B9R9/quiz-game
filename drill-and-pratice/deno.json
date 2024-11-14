@@ -9,6 +9,6 @@
     "@neon/serverless": "jsr:@neon/serverless@^0.10.3"
   },
   "tasks": {
-    "build": "deno run --allow-net --allow-read --allow-env drill-and-pratice/run-locally.js"
+    "build": "deno run --allow-net --allow-read --allow-env run-locally.js"
   }
 }
