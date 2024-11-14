@@ -26,6 +26,9 @@ jobs:
       - name: Change directory to drill-and-pratice
         run: cd drill-and-pratice
 
+      - name: check the current directory
+        run: pwd
+
       - name: Build step
         run: "deno task build"
 
