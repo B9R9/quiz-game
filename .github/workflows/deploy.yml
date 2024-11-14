@@ -21,7 +21,12 @@ jobs:
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
+          
+      -name: Install deployctl
+         run: deno install -A -f --no-check -r https://deno.land/x/deploy/deployctl.ts
 
       - name: Deploy to Deno Deploy
-        run: deployctl deploy --project=baptiste-quiz-game-44 --prod --token=${{ secrets.DENO_DEPLOY_TOKEN }} drill-and-pratice/run-locally.js}}
+        env: 
+          DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
+        run: deployctl deploy --project=baptiste-quiz-game-44 --prod --token=$DENO_DEPLOY_TOKEN drill-and-pratice/run-locally.js
 
