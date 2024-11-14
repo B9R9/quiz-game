@@ -23,11 +23,5 @@ jobs:
           deno-version: v2.x
 
       - name: Deploy to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "baptiste-quiz-game-44"
-          entrypoint: "run-locally.js"
-          root: "drill-and-pratice"
-          env:
-           DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY_TOKEN }}
+        run: deployctl deploy --project=baptiste-quiz-game-44 --prod --token=${{ secrets.DENO_DEPLOY_TOKEN }} drill-and-pratice/run-locally.js}}
 
