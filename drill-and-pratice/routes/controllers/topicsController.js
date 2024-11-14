@@ -78,13 +78,14 @@ export const addTopic = async ({ request, response, render, state }) => {
 
 export const deleteTopic = async ({ params, response, state }) => {
   const user = await getCookies(state);
-
+  log("Deleting topic", "info", "topicsController.js-deleteTopic");
+  console.log(user);
   if (!user.authenticated) {
     response.redirect("/auth/login");
     return;
   }
 
-  if (user.user.authorisation !== "admin") {
+  if (!user.user.admin) {
     response.redirect("/topics");
     return;
   }
