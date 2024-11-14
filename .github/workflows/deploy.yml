@@ -24,13 +24,11 @@ jobs:
           deno-version: v2.x
 
       - name: Build step
-        run: "docker-compose up"
+        run: "dockerfile"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "baptiste-quiz-game-29"
-          entrypoint: ""
-          root: ""
-          
-          
+          project: "baptiste-quiz-game-44"
+          entrypoint: "drill-and-pratice/run-locally.js"
+          root: "drill-and-pratice"
