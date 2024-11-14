@@ -1,0 +1,14 @@
+{
+  "deploy": {
+    "project": "c2495af1-50e0-48ad-a2f1-1ca52c1864ea",
+    "exclude": ["**/node_modules"],
+    "include": [],
+    "entrypoint": "run-locally.js"
+  },
+  "imports": {
+    "@neon/serverless": "jsr:@neon/serverless@^0.10.3"
+  },
+  "tasks": {
+    "build": "deno run --allow-net --allow-read --allow-env drill-and-pratice/run-locally.js"
+  }
+}

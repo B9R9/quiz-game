@@ -1,6 +1,6 @@
 <footer class="footer">
-  <div class="footer-content">
-    <a href="/" class="home-icon-footer"><i class="fa-solid fa-house"></i></a>
+  <div class="footer-content flex-row">
+    <a href="/" class="home-icon footer-icon"><i class="fa-solid fa-house footer-icon"></i></a>
     <a href="https://www.linkedin.com/in/baptiste-riffard/" target="_blank" class="footer-icon">
       <img src="https://img.icons8.com/material-outlined/24/ffffff/linkedin.png" alt="LinkedIn Logo"/>
     </a>

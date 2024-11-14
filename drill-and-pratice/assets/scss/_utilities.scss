@@ -1,0 +1,210 @@
+@import "variables";
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid $color-border;
+  background-color: $color-primary;
+  border-radius: 0.5rem;
+  color: $color-text-secondary;
+}
+
+.container-column {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-border;
+  background-color: $color-primary;
+  border-radius: 0.5rem;
+  color: $color-text-secondary;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.a-btn {
+  border: $color-border 1px solid;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+
+  &:hover {
+    background-color: white;
+    color: $color-primary;
+  }
+}
+
+.header-content {
+  background-color: $color-primary;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+
+  h1 {
+    font-size: 1.5rem;
+    color: $color-text;
+
+    @media screen and (max-width: $breakpoint-xs) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid $color-border;
+  border-radius: 0.5rem;
+  background-color: $color-primary;
+  color: $color-text-secondary;
+
+  label {
+    padding: 0 0.3rem;
+  }
+
+  input {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid $color-border;
+  }
+
+  button {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid $color-border;
+    background-color: $color-secondary;
+    color: $color-text;
+  }
+}
+
+.form-add-element {
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+
+  input {
+    padding: 0.5rem 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 20px;
+    background-color: $color-primary;
+    color: $color-text;
+    border: 1px solid $color-border;
+    width: 80%;
+
+    &::placeholder {
+      text-align: center;
+      font-size: 0.8rem;
+      @media screen and (min-width: $breakpoint-xs) {
+        font-size: 0.6rem;
+      }
+      @media screen and (min-width: $breakpoint-sm) {
+        font-size: 0.7rem;
+      }
+      @media screen and (min-width: $breakpoint-md) {
+        font-size: 0.8rem;
+      }
+      @media screen and (min-width: $breakpoint-lg) {
+        font-size: 1rem;
+      }
+      @media screen and (min-width: $breakpoint-xl) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .form__button {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: $color-background;
+    color: $color-text;
+    border: 1px solid $color-border;
+
+    &:hover {
+      background-color: $color-button-hover;
+    }
+  }
+}
+
+.header-list {
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid $color-border;
+  padding: 0.5rem 0.5rem;
+}
+
+.line-list {
+  ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    border: 1px solid $color-border;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-text;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    padding-left: 0.5rem;
+
+    &:hover {
+      background-color: $color-border;
+    }
+  }
+}
+
+.input-add-element {
+  padding: 0.5rem 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 20px;
+  background-color: $color-primary;
+  color: $color-text;
+  border: 1px solid $color-border;
+  width: 80%;
+
+  &::placeholder {
+    text-align: center;
+    font-size: 0.8rem;
+    @media screen and (min-width: $breakpoint-xs) {
+      font-size: 0.6rem;
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+      font-size: 0.7rem;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 0.8rem;
+    }
+    @media screen and (min-width: $breakpoint-lg) {
+      font-size: 1rem;
+    }
+    @media screen and (min-width: $breakpoint-xl) {
+      font-size: 1.1rem;
+    }
+  }
+}

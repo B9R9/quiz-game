@@ -1,22 +1,37 @@
-import postgres from "https://deno.land/x/postgresjs@v3.4.2/mod.js";
+import { neon } from "@neon/serverless";
+import { log } from "../utils/logger.js";
 
-let connection;
+const mode = Deno.env.get("MODE");
 
-const db = Deno.env.get("MODE");
-console.log("MODE: ", db);
+let sql;
 
-if (Deno.env.get("DATABASE_URL")) {
-  console.log("Using DATABASE_URL");
-  connection = postgres(Deno.env.get("DATABASE_URL"));
-} else {
-  console.log("Using local database");
-  connection = postgres({
-    database: "db-prod",
-    host: "postgres",
-    port: 5432,
-    user: "admin",
-    password: "xyz",
-  });
+// async function executeQuery(query, params) {
+//   let result;
+//   log(`Executing query: ${query}`, "info", "database.js");
+//   if (mode === "DEV") {
+//     result = await client.query(query, params);
+//   } else if (mode === "PROD") {
+//     result = await client.sql(query);
+//   }
+//   console.log(result);
+//   return result;
+// }
+
+if (mode === "PROD") {
+  const databaseUrl = Deno.env.get("DATABASE_PROD_URL");
+  log(`Database URL: PROD DB`, "info", "database.js");
+  sql = neon(databaseUrl);
+  log("Checking database connection...", "info", "database.js");
+  const result = await sql`SELECT ${"Database"} || ' is connected' as message`;
+  log(result[0].message, "info", "database.js");
+}
+if (mode === "DEV") {
+  const databaseUrl = Deno.env.get("DATABASE_DEV_URL");
+  log(`Database URL: DEV DB`, "info", "database.js");
+  sql = neon(databaseUrl);
+  log("Checking database connection...", "info", "database.js");
+  const result = await sql`SELECT ${"Database"} || ' is connected' as message`;
+  log(result[0].message, "info", "database.js");
 }
 
-export { connection };
+export { sql };

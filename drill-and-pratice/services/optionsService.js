@@ -1,4 +1,4 @@
-import { connection } from "../database/database.js";
+import { sql } from "../database/database.js";
 
 export const addOptions = async (options, isCorrects, questionId) => {
   for (let i = 0; i < options.length; i++) {
@@ -8,7 +8,7 @@ export const addOptions = async (options, isCorrects, questionId) => {
 
 export const insertOption = async (option, questionId, isCorrect) => {
   try {
-    await connection`INSERT INTO question_answer_options (option_text, question_id, is_correct) VALUES (${option}, ${questionId}, ${isCorrect})`;
+    await sql`INSERT INTO question_answer_options (option_text, question_id, is_correct) VALUES (${option}, ${questionId}, ${isCorrect})`;
   } catch (e) {
     console.log("Error: ", e);
   }
@@ -17,7 +17,7 @@ export const insertOption = async (option, questionId, isCorrect) => {
 export const getOptions = async (questionId) => {
   try {
     const result =
-      await connection`SELECT * FROM question_answer_options WHERE question_id = ${questionId}`;
+      await sql`SELECT * FROM question_answer_options WHERE question_id = ${questionId}`;
     return result;
   } catch (e) {
     console.log("Error: ", e);
@@ -26,7 +26,7 @@ export const getOptions = async (questionId) => {
 
 export const deleteOptions = async (optionId) => {
   try {
-    await connection`DELETE FROM question_answer_options WHERE id = ${optionId}`;
+    await sql`DELETE FROM question_answer_options WHERE id = ${optionId}`;
   } catch (e) {
     console.log("Error: ", e);
   }
@@ -35,7 +35,7 @@ export const deleteOptions = async (optionId) => {
 export const checkOption = async (optionId) => {
   try {
     const result =
-      await connection`SELECT * FROM question_answer_options WHERE id = ${optionId}`;
+      await sql`SELECT * FROM question_answer_options WHERE id = ${optionId}`;
     return result;
   } catch (e) {
     console.log("Error: ", e);
@@ -45,7 +45,7 @@ export const checkOption = async (optionId) => {
 export const checkAnswer = async (optionId, questionId) => {
   try {
     const result =
-      await connection`SELECT is_correct FROM question_answer_options WHERE id = ${optionId} AND question_id = ${questionId}`;
+      await sql`SELECT is_correct FROM question_answer_options WHERE id = ${optionId} AND question_id = ${questionId}`;
     return result[0].is_correct;
   } catch (e) {
     console.log("Error: ", e);
@@ -55,7 +55,7 @@ export const checkAnswer = async (optionId, questionId) => {
 export const getCorrectOption = async (questionId) => {
   try {
     const result =
-      await connection`SELECT * FROM question_answer_options WHERE question_id = ${questionId} AND is_correct = true`;
+      await sql`SELECT * FROM question_answer_options WHERE question_id = ${questionId} AND is_correct = true`;
     return result;
   } catch (e) {
     console.log("Error: ", e);

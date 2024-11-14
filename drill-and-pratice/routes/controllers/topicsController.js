@@ -14,30 +14,25 @@ let data = {
 
 export const showTopics = async ({ render, state, response }) => {
   data = await getCookies(state);
-  // if (!data.authenticated) {
-  //   log("User not authenticated", "warning", "topicsController.js-showTopics");
-  //   response.redirect("/auth/login");
-  //   return;
-  // }
+  if (!data.authenticated) {
+    log("User not authenticated", "warning", "topicsController.js-showTopics");
+    response.redirect("/auth/login");
+    return;
+  }
   log("User authenticated", "success", "topicsController.js-showTopics");
   const topics = await topicsService.getTopics();
 
   data.topics = topics;
-  data.authenticated = true;
-  data.user.admin = "admin";
   data.value = "";
   render("topics.eta", data);
 };
 
 export const showTopic = async ({ params, render, state, response }) => {
   const user = await getCookies(state);
-  user.user.id = 3;
-  user.authenticated = true;
-  user.user.authorisation = "admin";
-  // if (!user.authenticated) {
-  //   response.redirect("/auth/login");
-  //   return;
-  // }
+  if (!user.authenticated) {
+    response.redirect("/auth/login");
+    return;
+  }
 
   const topicId = params.id;
   const topic = await topicsService.getTopic(topicId);
@@ -74,8 +69,8 @@ export const addTopic = async ({ request, response, render, state }) => {
     data.value = topicName;
     render("topics.eta", data);
   } else {
-    // await topicsService.createTopic(topicName, user.user.id);
-    await topicsService.createTopic(topicName, 3);
+    await topicsService.createTopic(topicName, user.user.id);
+
     response.redirect("/topics");
   }
   data.errors = [];

@@ -1,8 +1,8 @@
-import { connection } from "../database/database.js";
+import { sql } from "../database/database.js";
 
 export const getTotalTopics = async () => {
   try {
-    const result = await connection`SELECT COUNT(*) FROM topics`;
+    const result = await sql`SELECT COUNT(*) FROM topics`;
     return result[0].count;
   } catch (e) {
     console.log("Error: ", e);
@@ -11,7 +11,7 @@ export const getTotalTopics = async () => {
 
 export const getTotalQuestions = async () => {
   try {
-    const result = await connection`SELECT COUNT(*) FROM questions`;
+    const result = await sql`SELECT COUNT(*) FROM questions`;
     return result[0].count;
   } catch (e) {
     console.log("Error: ", e);
@@ -20,7 +20,7 @@ export const getTotalQuestions = async () => {
 
 export const getTotalAnswers = async () => {
   try {
-    const result = await connection`SELECT COUNT(*) FROM question_answers`;
+    const result = await sql`SELECT COUNT(*) FROM question_answers`;
     return result[0].count;
   } catch (e) {
     console.log("Error: ", e);

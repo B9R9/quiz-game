@@ -1,0 +1,22 @@
+@import "variables";
+@import "base";
+@import "typography";
+@import "buttons";
+@import "container";
+@import "utilities";
+@import "mixins";
+
+.error {
+  margin-top: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  color: $color-error;
+
+  li {
+    text-align: center;
+    list-style-type: none;
+  }
+}
+.form__error.active {
+  display: block;
+}

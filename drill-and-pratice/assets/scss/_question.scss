@@ -1,0 +1,91 @@
+@import "variables";
+@import "typography";
+@import "buttons";
+@import "container";
+@import "utilities";
+@import "mixins";
+
+@import "variables";
+@import "typography";
+@import "buttons";
+@import "container";
+@import "utilities";
+@import "mixins";
+
+.quiz-topics-container {
+  height: 75vh;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    color: $color-text-secondary;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid $color-border;
+  }
+
+  .answer-topics {
+    width: 100%;
+    align-items: center;
+    justify-self: center;
+    padding: 0.5rem 0.5rem;
+    gap: 0.5rem;
+
+    .answer-topic-container {
+      width: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: $color-text-secondary;
+          font-size: 100%;
+          height: 20vh;
+          overflow: hidden;
+          word-wrap: break-word; /* Permet le retour à la ligne */
+          overflow-wrap: break-word; /* Permet le retour à la ligne */
+          white-space: normal; /* Permet le retour à la ligne */
+        }
+
+        input {
+          padding: 0.1rem;
+          border-radius: 20px;
+          background-color: #1e1e1e;
+          color: #fff;
+          border: 1px solid #3a3a3a;
+          width: 80%;
+          transition: all 0.3s;
+          font-size: 0.6rem;
+
+          @media screen and (min-width: 680px) {
+            font-size: 1rem;
+          }
+          &:hover {
+            background-color: $color-button-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.four-answers {
+  .answer-container {
+    flex: 1 1 calc(25% - 1rem); /* Ajuste la largeur pour 4 divs par ligne */
+    max-width: calc(
+      25% - 1rem
+    ); /* Assure que chaque div ne dépasse pas cette largeur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+  }
+}

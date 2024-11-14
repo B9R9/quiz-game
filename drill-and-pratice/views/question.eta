@@ -1,21 +1,24 @@
 <% layout("./layouts/layout.eta") %>
-<section class="question">
-<div class="question__header">
-<h2><%= it.question.questionText %></h2>
+<section class="question flex-column">
+<div class="question-header header-content">
+<h1><%= it.question.questionText %></h1>
 </div>
-<div class="question__options">
+<div class="quiz-topics-container flex-column">
 <h2>Choose an option</h2>
-<div class="question__options__list">
+<div class="answer-topics flex-row <%= it.question.answersOptions.length === 4 ? 'four-answers' : '' %>">
 <% if (it && it.question) { %>
     <% it.question.answersOptions.forEach((option) => { %>
+    <div class="answer-topic-container container-column">
         <form action="/quiz/<%= it.question.topicID %>/questions/<%= it.question.questionId %>/options/<%= option.optionId %>" method="POST">
-        <p><%= option.optionText %></p>
-        <input type="submit" value="Choose">
+            <p><%= option.optionText %></p>
+            <input type="submit" value="Choose">
         </form>
+    </div>
     <% }) %>
 <% } %>
 </div>
 </div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fitty/2.3.6/fitty.min.js"></script>
 <script>
 </script>

@@ -1,4 +1,4 @@
-FROM denoland/deno:alpine-1.42.2
+FROM denoland/deno:2.0.5
 
 EXPOSE 7777
 
@@ -10,4 +10,4 @@ RUN deno cache deps.js
 
 COPY . .
 
-CMD [ "deno", "run", "--allow-net","--allow-read","--allow-env", "--watch", "--unstable", "run-locally.js" ]
+CMD [ "deno", "run", "--allow-net","--allow-write","--allow-read","--allow-env", "--watch", "--unstable", "run-locally.js" ]

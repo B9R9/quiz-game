@@ -1,0 +1,204 @@
+@import "variables";
+@import "base";
+@import "typography";
+@import "buttons";
+@import "container";
+@import "utilities";
+@import "mixins";
+
+@media only screen and (max-width: 680px) {
+  .options__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    height: 75vh;
+    padding: 1rem 1rem;
+
+    .options__form {
+      overflow-y: auto;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      h2 {
+        color: $color-text-secondary;
+        font-size: 1.2rem;
+        padding: 0.5rem 0.5rem;
+      }
+
+      form {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        p {
+          width: 100%;
+          text-align: end;
+          color: $color-text-secondary;
+          font-size: 0.7rem;
+          margin: 0;
+          padding-right: 0.5rem;
+        }
+
+        .option-input {
+          align-items: center;
+          justify-content: end;
+          gap: 0.5rem;
+          padding-right: 0.5rem;
+          width: 100%;
+          padding: 0.2rem 0.5rem;
+
+          .remove-btn {
+            border-radius: 0.5rem;
+            padding: 0.2rem 0.5rem;
+
+            i {
+              color: $color-text-secondary;
+            }
+          }
+          .check-true {
+            width: 0.7rem;
+            height: 0.7rem;
+          }
+        }
+
+        .buttons-container {
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          width: 100%;
+          padding: 0.2rem 0.5rem;
+        }
+      }
+    }
+
+    .topics__list {
+      h2 {
+        color: $color-text-secondary;
+        font-size: 1.2rem;
+        padding: 0.5rem 0.5rem;
+      }
+
+      .line-list {
+        li {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.2rem 0.2rem;
+
+          .option_text {
+            width: 100%;
+            padding: 0 0.2rem;
+            margin-right: 0.2rem;
+            overflow: hidden;
+            p {
+              font-size: 100%; /* Taille de police responsive */
+              white-space: wrap; /* Empêche le texte de passer à la ligne */
+              overflow: hidden;
+              text-overflow: ellipsis; /* Coupe le texte avec "..." */
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .options__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 1rem;
+    height: 70vh;
+
+    .options__form {
+      overflow-y: auto;
+      justify-content: start;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      h2 {
+        color: $color-text-secondary;
+        font-size: 1.2rem;
+        padding: 0.5rem 0.5rem;
+      }
+
+      form {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        p {
+          width: 100%;
+          text-align: end;
+          color: $color-text-secondary;
+          font-size: 0.7rem;
+          margin: 0;
+          padding-right: 0.5rem;
+        }
+
+        .option-input {
+          align-items: center;
+          justify-content: end;
+          gap: 0.5rem;
+          padding-right: 0.5rem;
+          width: 100%;
+          padding: 0.2rem 0.5rem;
+
+          .remove-btn {
+            border-radius: 0.5rem;
+            padding: 0.2rem 0.5rem;
+
+            i {
+              color: $color-text-secondary;
+            }
+          }
+          .check-true {
+            width: 0.7rem;
+            height: 0.7rem;
+          }
+        }
+
+        .buttons-container {
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          width: 100%;
+          padding: 0.2rem 0.5rem;
+        }
+      }
+    }
+
+    .topics__list {
+      width: 40%;
+      h2 {
+        color: $color-text-secondary;
+        font-size: 1.2rem;
+        padding: 0.5rem 0.5rem;
+      }
+
+      .line-list {
+        li {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.2rem 0.2rem;
+
+          .option_text {
+            width: 100%;
+            padding: 0 0.2rem;
+            margin-right: 0.2rem;
+            overflow: hidden;
+            p {
+              font-size: 100%; /* Taille de police responsive */
+              white-space: wrap; /* Empêche le texte de passer à la ligne */
+              overflow: hidden;
+              text-overflow: ellipsis; /* Coupe le texte avec "..." */
+            }
+          }
+        }
+      }
+    }
+  }
+}
