@@ -4,7 +4,5 @@ export const getCookies = async (state) => {
     return { authenticated: false, user: {} };
   }
   const user = await state.session.get("user");
-  user.authorisation =
-    authenticated && user.role === "admin" ? "admin" : "user";
   return { authenticated, user };
 };
