@@ -30,7 +30,7 @@ jobs:
         run: cd drill-and-pratice
 
       - name: check the current directory
-        run: pwd
+        run: ls
 
       - name: Build step
         run: "deno task build"
