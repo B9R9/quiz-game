@@ -26,5 +26,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "baptiste-quiz-game-44"
-          entrypoint: "drill-and-pratice/run-locally.js"
+          entrypoint: "run-locally.js"
           root: "drill-and-pratice"
