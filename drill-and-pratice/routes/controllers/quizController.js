@@ -12,10 +12,10 @@ let question = {
 export const showQuiz = async ({ response, state, render }) => {
   let data = {};
   const user = await getCookies(state);
-  /*   if (!user.authenticated) {
+  if (!user.authenticated) {
     response.redirect("/auth/login");
     return;
-  } */
+  }
   data = user;
   data.topics = await topicsService.getTopics();
   render("quiz.eta", data);
@@ -23,10 +23,10 @@ export const showQuiz = async ({ response, state, render }) => {
 
 export const findQuiz = async ({ response, state, render, params }) => {
   const user = await getCookies(state);
-  /*   if (!user.authenticated) {
+  if (!user.authenticated) {
     response.redirect("/auth/login");
     return;
-  } */
+  }
 
   const topicId = Number(params.tid);
   const allQuestionsTopic = await questionService.getAllQuestions(topicId);
@@ -47,12 +47,17 @@ export const findQuiz = async ({ response, state, render, params }) => {
       };
     }),
   };
-  console.log("QUESTION:", question);
+  question.answersOptions.sort(() => Math.random() - 0.5);
+
   response.redirect(`/quiz/${params.tid}/questions/${question.questionId}`);
 };
 
 export const showQuestion = async ({ response, state, render, params }) => {
   const user = await getCookies(state);
+  if (!user.authenticated) {
+    response.redirect("/auth/login");
+    return;
+  }
 
   let data = user;
   data.question = question;
@@ -61,12 +66,9 @@ export const showQuestion = async ({ response, state, render, params }) => {
 };
 
 export const checkAnswer = async ({ request, response, params }) => {
-  console.log("PATH:", request.url.pathname);
-
   const answer = Number(params.oid);
   const tID = Number(params.tid);
   const qID = Number(params.qid);
-  console.log("Check Answer:", question);
 
   const isCorrect = await optionsService.checkAnswer(answer, qID);
 
@@ -91,10 +93,8 @@ export const showIncorrect = async ({ render, state }) => {
   const correctanswer = await optionsService.getCorrectOption(
     question.questionId
   );
-  console.log("CORRECT ANSWER:", correctanswer[0]);
   data.answer = correctanswer[0].option_text;
   data.topicID = question.topicID;
-  console.log("RIGHT ANSWER:", data.rightAnswer);
   render("result.eta", data);
 };
 
