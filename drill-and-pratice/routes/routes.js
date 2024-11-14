@@ -5,7 +5,7 @@ import * as questionController from "./controllers/questionController.js";
 import * as optionsController from "./controllers/optionsController.js";
 import * as authController from "./controllers/authController.js";
 import * as quizController from "./controllers/quizController.js";
-import * as apiController from "./controllers/apiController.js";
+import * as apiController from "./apis/apiController.js";
 
 const router = new Router();
 
@@ -53,5 +53,6 @@ router.get("/quiz/:tid/questions/:qid/incorrect", quizController.showIncorrect);
 
 router.get("/api/questions/random", apiController.getRandomQuestion);
 router.post("/api/questions", apiController.addQuestion);
+router.post("/api/questions/answer", apiController.answerQuestion);
 
 export { router };

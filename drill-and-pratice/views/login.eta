@@ -1,15 +1,16 @@
 <% layout("./layouts/authLayout.eta") %>
-<section class="login__form">
+<section class="login__form flex-column">
 <h1>Login</h1>
-<form action="/auth/login" method="POST">
+<form action="/auth/login" class="login form"method="POST">
   <label for="email">Email</label>
   <input type="email" id="email" name="email" value="<%= it.email%>" required>
   <label for="password">Password</label>
   <input type="password" id="password" name="password" required>
+  <a href="/auth/forgot-password">Forgot password?</a>
   <button type="submit">Login</button>
   <p>Don't have an account? <a href="/auth/register">Sign up</a></p>
 </form>
-    <div class="form__error" id="error-message">
+    <div class="form__error flex-column error" id="error-message">
         <%~ includeFile("./partials/error.eta", { errors: it.errors }) %>
     </div>
 </section>
@@ -20,7 +21,8 @@
       errorMessage.classList.add("active");
       setTimeout(() => {
         errorMessage.classList.remove("active");
-      }, 5000); // 5000 ms = 5 secondes
+        errorMessage.innerHTML = "";
+      }, 5000); // time in milliseconds
     }
   });
 </script>

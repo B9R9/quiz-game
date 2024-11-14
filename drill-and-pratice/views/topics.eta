@@ -1,30 +1,31 @@
 <% layout("./layouts/layout.eta") %>
-<section class="topics">
-  <div class="topics__header">
-    <h1>Topics</h1>
+<section class="topics flex-column">
+  <div class="topics__header header-content">
+    <h1>Topics:</h1>
+    <p>Choose a topic and add a question</p>
   </div>
   <div class="topics__container">
   <% if (it && it.user && it.user.admin) { %>
-    <div class="topics__form">
+    <div class="topics__form container-column">
       <h2>Create Topic</h2>
-      <form action="/topics" method="POST">
+      <form action="/topics" class="form-add-element flex-column" method="POST">
         <input class="form__input" type="text" name="name" placeholder="Enter a New Topic ..." value="<%= it.value %>">
         <input class="form__button" type="submit" value="Add Topic">
       </form>
-      <div class="form__error" id="error-message">
+      <div class="form__error error" id="error-message">
         <%~ includeFile("./partials/error.eta", { errors: it.errors }) %>
       </div>
     </div>
     <% } %>
-    <div class="topics__list">
-      <div class="topics__list__title">
+    <div class="topics__list container-column">
+      <div class="topics__list__title header-list flex-column">
         <h2>Topics List</h2>
       </div>
-      <div class="topics__list__content">
+      <div class="topics__list__content line-list flex-row">
         <ul>
           <% if (it.topics) { %>
             <% it.topics.forEach(topic => { %>
-              <li>
+              <li class="flex-row">
                 <a href="/topics/<%= topic.id %>"><%= topic.name %></a>
                 <% if (it.user.admin) {%>
                 <form action="/topics/<%= topic.id %>/delete" method="POST" class="delete-form">
@@ -50,6 +51,7 @@
       errorMessage.classList.add("active");
       setTimeout(() => {
         errorMessage.classList.remove("active");
+        errorMessage.innerHTML = "";
       }, 5000); // 5000 ms = 5 secondes
     }
   });

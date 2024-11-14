@@ -1,35 +1,27 @@
-
 <% layout("./layouts/layout.eta") %>
-<section class="quiz">
-  <div class="quiz__header">
+<section class="quiz flex-column">
+  <div class="quiz__header header-content">
     <h1>Are you ready to play <%= it.user.username %>?</h1>
   </div>
-  <div class="quiz_topics_list_container">
-  <div class="quiz__topics__title">
-  <h3>Choose your topic</h3>
-  </div>
-  <div class="quiz__topics">
-  <% if (it && it.topics) { %>
-    <% /* <div class="quiz__arrow">
-      <button id="left-arrow"><i class="fa-solid fa-arrow-left"></i></button>
-    </div> */ %>
-    <div class="quiz__topic__list">
-    <% it.topics.forEach((topic) => { %>
-      <div class="quiz__topic">
-        <a href="/quiz/<%= topic.id %>"><%= topic.name %></a>
-      </div>
-    <% }) %>
+  <div class="quiz-topics-container flex-column">
+    <div class="quiz-topics-title">
+      <h2>Choose your topic</h2>
     </div>
-    <% /* <div class="quiz__arrow">
-      <button id="right-arrow"><i class="fa-solid fa-arrow-right"></i></button>
-    </div> */ %>
-  <% } else { %>
-    <p>No topics available</p>
-  <% } %>
-  </div>
+    <div class="quiz-topics flex-column">
+      <% if (it && it.topics) { %>
+      <div class="quiz-topics-list flex-row" id="quiz-topics-list">
+        <% it.topics.forEach((topic) => { %>
+        <div class="quiz-topic-container container-column">
+          <a href="/quiz/<%= topic.id %>"><%= topic.name %></a>
+        </div>
+        <% }) %>
+      </div>
+      <% } else { %>
+        <p>No topics available</p>
+      <% } %>
+    </div>
   </div>
 </section>
 
 <script>
-
 </script>

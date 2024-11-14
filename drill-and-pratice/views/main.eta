@@ -1,29 +1,27 @@
 <% layout("./layouts/layout.eta") %>  
-  <section class="description">
+  <section class="main-content flex-column">
+    <div class="header-content">
     <h1>Welcome to Drill and Pratice</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptate.</p>
-  </section>
-
-<section class="stats">
-      <h2>Application Statistics</h2>
-      <div class="stats-container">
-        <div class="stat">
+    </div>
+<div class="content flex-column">
+      <h2>We have</h2>
+      <div class="stats-container container-row">
+        <div class="stat flex-column">
           <span class="stat-number" data-target="<%= it.ttTopics%>">0</span>
-          <% /* <span class="stat-number" data-target="2000">0</span> */ %>
           <span class="stat-label">Topics</span>
         </div>
-        <div class="stat">
+        <div class="stat flex-column">
           <span class="stat-number" data-target="<%= it.ttQuestions%>">0</span>
-          <% /* <span class="stat-number" data-target="4000">0</span> */ %>
           <span class="stat-label">Questions</span>
         </div>
-        <div class="stat">
+        <div class="stat flex-column">
           <span class="stat-number" data-target="<%= it.ttAnswers%>">0</span>
-          <% /* <span class="stat-number" data-target="10000">0</span> */ %>
           <span class="stat-label">Answers</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <script>
     function animateCounter(element, target, duration = 2000) {

@@ -1,10 +1,16 @@
 import * as questionService from "../../services/questionService.js";
 import * as optionsService from "../../services/optionsService.js";
 import * as topicService from "../../services/topicsService.js";
+import { log } from "../../utils/logger.js";
 
 export const getRandomQuestion = async ({ response }) => {
   const question = await questionService.getRandomQuestion();
   const answers = await optionsService.getOptions(question[0].id);
+
+  if (!question[0]) {
+    response.body = {};
+    return;
+  }
 
   response.body = {
     questionId: question[0].id,
@@ -35,44 +41,41 @@ export const addQuestion = async ({ request, response }) => {
   };
 
   const userId = Number(request.headers.get("userId"));
-  console.log(userId);
-  console.log(question);
+  log(`Adding question by ${userId}`, "info", "apiController.js");
 
-  if (!(await topicService.getTopicByName(question.topic))) {
-    console.log("Topic not found");
+  const isTopic = await topicService.getTopicByName(question.topic);
+
+  if (!isTopic[0]) {
+    log("Creating topic", "info", "apiController.js");
     await topicService.createTopic(question.topic, userId);
   }
-
   const topicId = await topicService.getTopicByName(question.topic);
-  console.log("topicId", topicId[0].id);
   const DB_question = await questionService.getQuestionByQuestion_text(
-    topicId[0].id,
+    Number(topicId[0].id),
     question.questionText
   );
 
-  console.log(DB_question);
-
   if (!DB_question[0]) {
-    console.log("Question not found");
+    log("Adding question", "info", "apiController.js");
     await questionService.addQuestion(
       question.questionText,
-      topicId[0].id,
+      Number(topicId[0].id),
       userId
     );
   } else {
-    const retOptions = await optionsService.getOptions(DB_question[0].id);
+    const retOptions = await optionsService.getOptions(
+      Number(DB_question[0].id)
+    );
     if (retOptions[0]) {
-      console.log("Options found");
-      console.log(retOptions);
       response.body = { message: "Question already exists!" };
       return;
     }
   }
 
   const questionId = DB_question[0]
-    ? DB_question[0].id
+    ? Number(DB_question[0].id)
     : await questionService.getQuestionByQuestion_text(
-        topicId[0].id,
+        Number(topicId[0].id),
         question.questionText
       );
 
@@ -85,8 +88,27 @@ export const addQuestion = async ({ request, response }) => {
       );
     }
   } else {
+    log("Error when trying adding the question", "info", "apiController.js");
     response.body = JSON.stringify({ message: "You need more options!" });
   }
-
+  log("Question added successfully", "info", "apiController.js");
   response.body = JSON.stringify({ message: "Success!" });
+};
+
+export const answerQuestion = async ({ request, response }) => {
+  const body = request.body({ type: "json" });
+  const document = await body.value;
+  const answer = {
+    questionId: document.questionId,
+    optionId: document.optionId,
+  };
+
+  const correct = await optionsService.getCorrectOption(answer.questionId);
+  const correctOption = correct[0].id;
+
+  if (correctOption === answer.optionId) {
+    response.body = { correct: true };
+  } else {
+    response.body = { message: false };
+  }
 };

@@ -1,29 +1,29 @@
 <% layout("./layouts/layout.eta") %>
-<section>
-    <div class="topic__header">
-        <h2>Topic <%= it.topic.id %>:</h2>
-        <h2 class="topic__title"><%= it.topic.name %></h2>
+<section class="flex-column">
+    <div class="topics__header header-content">
+        <h1>Topic <%= it.topic.id %>:</h2>
+        <p class="topic__title"><%= it.topic.name %></p>
     </div>
      <div class="topics__container">
-    <div class="topics__form">
+    <div class="topics__form container-column">
       <h2>Create a Question</h2>
-      <form action="/topics/<%= it.topic.id %>/questions" method="POST">
+      <form action="/topics/<%= it.topic.id %>/questions" class="form-add-element flex-row" method="POST">
         <input class="form__input" type="textarea" name="question_text" placeholder="Enter a New Question..." value="<%= it.value %>">
         <input class="form__button" type="submit" value="Add Question">
       </form>
-      <div class="form__error" id="error-message">
+      <div class="form__error error" id="error-message">
         <%~ includeFile("./partials/error.eta", { errors: it.errors }) %>
       </div>
     </div>
-    <div class="topics__list">
-      <div class="topics__list__title">
+    <div class="topics__list container-column">
+      <div class="topics__list__title header-list flex-column">
         <h2>Question List</h2>
       </div> 
-      <div class="topics__list__content">
+      <div class="topics__list__content line-list flex-row">
         <ul>
           <% if (it.questions) { %>
             <% it.questions.forEach(question => { %>
-              <li>
+              <li class="flex-row">
                 <a href="/topics/<%= it.topic.id %>/questions/<%= question.id%>"><%= question.id %>. <%= question.question_text %></a>
                  <form action="/topics/<%= it.topic.id %>/questions/<%= question.id%>/delete" method="POST" class="delete-form">
                   <input type="hidden" name="_method" value="DELETE">

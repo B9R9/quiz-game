@@ -1,0 +1,28 @@
+@import "variables";
+@import "base";
+@import "typography";
+@import "buttons";
+@import "container";
+@import "utilities";
+@import "mixins";
+
+.register__form {
+  align-items: center;
+  height: 100vh;
+
+  h1 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: $color-text-secondary;
+    text-decoration: none;
+  }
+}

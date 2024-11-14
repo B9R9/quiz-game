@@ -10,10 +10,12 @@ import {
   isSpecialCharacter,
   isUppercase,
   isAlreadyRegistered,
+  hashPassword,
+  comparePassword,
 } from "../../utils/validatorPassword.js";
 
-import * as bcrypt from "https://deno.land/x/bcrypt@v0.4.1/mod.ts";
 import * as authService from "../../services/authService.js";
+import { log } from "../../utils/logger.js";
 
 let data = {
   errors: [],
@@ -27,7 +29,9 @@ const validationRules = {
   password: [required, lengthBetween(4, 20)],
 };
 
-export const showRegistrationForm = async ({ render }) => {
+export const showRegistrationForm = ({ render }) => {
+  console.log(data);
+  console.log(data.errors);
   render("register.eta", data);
   data = {
     errors: [],
@@ -37,7 +41,7 @@ export const showRegistrationForm = async ({ render }) => {
   };
 };
 
-export const showLoginForm = async ({ render }) => {
+export const showLoginForm = ({ render }) => {
   render("login.eta", data);
   data = {
     errors: [],
@@ -50,8 +54,13 @@ export const showLoginForm = async ({ render }) => {
 export const register = async ({ request, response }) => {
   const body = request.body();
   const params = await body.value;
+  log("Registering user", "info", "authController.js");
 
-  data.errors = [];
+  let data = {
+    errors: [],
+    email: "",
+    username: "",
+  };
 
   const registerData = {
     email: params.get("email").trim(),
@@ -90,6 +99,8 @@ export const register = async ({ request, response }) => {
     });
     data.email = registerData.email;
     data.username = registerData.username;
+    console.log(data);
+    console.log(data.errors);
     response.redirect("/auth/register");
     return;
   }
@@ -99,9 +110,11 @@ export const register = async ({ request, response }) => {
     username: "",
   };
 
-  const hash = await bcrypt.hash(registerData.password);
+  const hashPW = await hashPassword(registerData.password);
 
-  await authService.createUser(hash, registerData);
+  console.log(hashPW);
+
+  await authService.createUser(hashPW, registerData);
   response.redirect("/auth/login");
 };
 
@@ -118,11 +131,11 @@ export const login = async ({ request, response, state }) => {
     password: params.get("password"),
   };
 
+  let isMatch = false;
+  console.log(dataRegister);
   const user = await authService.getUserByEmail(params.get("email"));
-  if (
-    user.length === 0 ||
-    !(await bcrypt.compare(dataRegister.password, user[0].password))
-  ) {
+  isMatch = await comparePassword(dataRegister.password, user[0].password);
+  if (user.length === 0 || !isMatch) {
     data.errors.push("Invalid email or password");
   }
 

@@ -1,0 +1,62 @@
+@import "variables";
+@import "typography";
+@import "buttons";
+@import "container";
+@import "utilities";
+@import "mixins";
+
+body {
+  font-family: $font-primary;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: $color-background;
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-text-hover;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: $color-text;
+}
+
+p {
+  color: $color-text;
+}
+
+button {
+  font-family: $font-primary;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: $color-border 1px solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: $color-primary;
+  color: $color-text;
+
+  &:hover {
+    background-color: $color-button-hover;
+  }
+}
+
+.fa-circle-xmark {
+  color: red;
+}
+
+.fa-circle-check {
+  color: green;
+}
+
+// Autres styles par dé

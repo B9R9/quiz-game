@@ -1,0 +1,52 @@
+@import "variables";
+@import "typography";
+@import "buttons";
+@import "container";
+@import "utilities";
+@import "mixins";
+
+.quiz-topics-container {
+  height: 75vh;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    color: $color-text-secondary;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid $color-border;
+  }
+
+  .quiz-topics {
+    width: 100%;
+    align-items: center;
+    justify-self: center;
+    padding: 1rem 1rem;
+
+    .quiz-topics-list {
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      .quiz-topic-container {
+        width: 100%;
+
+        a {
+          text-align: center;
+          text-decoration: none;
+          color: $color-text-secondary;
+          width: 100%;
+          height: 100%;
+          padding: 1rem;
+          padding-left: 0.5rem;
+          border: 1px solid $color-border;
+          border-radius: 0.5rem;
+
+          &:hover {
+            background-color: $color-border;
+          }
+        }
+      }
+    }
+  }
+}
