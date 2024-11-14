@@ -22,7 +22,7 @@ jobs:
         with:
           deno-version: v2.x
           
-      -name: Install deployctl
+      - name: Install deployctl
          run: deno install -A -f --no-check -r https://deno.land/x/deploy/deployctl.ts
 
       - name: Deploy to Deno Deploy
