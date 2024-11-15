@@ -1,0 +1,40 @@
+@import "variables";
+@import "base";
+@import "typography";
+@import "buttons";
+@import "container";
+@import "utilities";
+@import "mixins";
+
+.result {
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+
+  .result-text {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .result-links {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    a {
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background-color: $color-primary;
+      color: $color-text;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $color-background;
+      }
+    }
+  }
+}
