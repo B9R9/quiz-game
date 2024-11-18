@@ -1,6 +1,6 @@
 <% layout("./layouts/layout.eta") %>
-<section class="result">
-    <div class="result__text">
+<section class="result flex-column">
+    <div class="result-text flex-column">
 <% if ( it && it.result) { %>
         <h1>Correct!</h1>
 <% } else { %>
@@ -8,7 +8,7 @@
         <p>The correct answer is: <%= it.answer%></p>
 <% } %>
     </div>
-    <div class="result__links">
+    <div class="result-links">
         <a href="/">Home</a>
         <a href="/quiz">Topics</a>
         <a href="/quiz/<%= it.topicID %>">Next Question</a>

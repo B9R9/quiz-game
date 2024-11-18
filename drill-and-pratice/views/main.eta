@@ -1,8 +1,8 @@
 <% layout("./layouts/layout.eta") %>  
   <section class="main-content flex-column">
     <div class="header-content">
-    <h1>Welcome to Drill and Pratice</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptate.</p>
+    <h1>Welcome to Drill and Practice</h1>
+    <p>The application provides a list of topics and allows creating multiple-choice questions into those topics that are then answered by self and others. The application also shows basic statistics: the total number of available questions and the total number of question answers. In addition, the application also provides an API for retrieving and answering random questions.</p>
     </div>
 <div class="content flex-column">
       <h2>We have</h2>

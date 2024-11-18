@@ -1,4 +1,5 @@
 import * as authService from "../services/authService.js";
+import { crypto } from "https://deno.land/std@0.203.0/crypto/mod.ts";
 
 export const isUppercase = (value) => {
   return /[A-Z]/.test(value);
@@ -14,7 +15,6 @@ export const isSpecialCharacter = (value) => {
 
 export const isAlreadyRegistered = async (email) => {
   const user = await authService.getUserByEmail(email);
-  console.log("check user email-->", user);
   return user.length;
 };
 

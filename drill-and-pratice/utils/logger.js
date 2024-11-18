@@ -6,19 +6,13 @@ export const log = (msg, type, where) => {
   const reset = "\x1b[0m";
   if (type === "error") {
     console.log(`[${time}]: ${where}: ${red} ${msg}${reset}`);
-    return;
-  }
-  if (type === "success") {
-    console.log(`[${time}]: ${where}: ${green}${msg}${reset}`);
-    return;
-  }
-  if (type === "warning") {
-    console.log(`[${time}]: ${where}: ${yellow}${msg}${reset}`);
-    return;
-  }
-  if (type === "info") {
+  } else if (type === "success") {
+    console.log(`[${time}]: ${where}: ${green} ${msg}${reset}`);
+  } else if (type === "warning") {
+    console.log(`[${time}]: ${where}: ${yellow} ${msg}${reset}`);
+  } else if (type === "info") {
     console.log(`[${time}]: ${where}: ${msg}`);
-    return;
+  } else {
+    console.log(`[${time}]: ${msg}`);
   }
-  console.log(`[${time}]: ${msg}`);
 };
