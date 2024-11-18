@@ -1,0 +1,20 @@
+{
+  "scriptId": "317",
+  "url": "file:///Users/baptiste/Desktop/Aalto-FullStack/ch35%20-%20Course%20Project%20II/drill-and-pratice/utils/cookiesHandler.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 486, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "getCookies",
+      "ranges": [
+        { "startOffset": 62, "endOffset": 484, "count": 3 },
+        { "startOffset": 156, "endOffset": 181, "count": 2 },
+        { "startOffset": 181, "endOffset": 482, "count": 1 }
+      ],
+      "isBlockCoverage": true
+    }
+  ]
+}

@@ -52,6 +52,23 @@ services:
     ports:
       - 8080:8080
 
+  test:
+    build:
+      context: ./drill-and-pratice
+      dockerfile: Dockerfile
+    image: app-test
+    volumes:
+      - ./drill-and-pratice:/app
+      - ./app-cache:/app-cache
+    depends_on:
+      - postgres
+    command: deno test --allow-net --allow-env
+    env_file:
+      - .env
+    environment:
+      - PORT=7777
+      - BASE_URL=http://localhost:7777
+
   # flyway_repair:
   #   image: flyway/flyway:7.3.0-alpine
   #   environment:
