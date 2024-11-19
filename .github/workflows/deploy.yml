@@ -1,5 +1,9 @@
 name: Deploy
 on:
+  workflow_run:
+    workflows: ["Database Migrations"]
+    types:
+      - completed
   push:
     branches: deploy
   pull_request:
@@ -22,15 +26,6 @@ jobs:
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-
-      - name: Run Flyway Migrations
-        uses: flyway/flyway-action@v2.0.0
-        with:
-          url: ${{ secrets.DB_URL }}
-          user: ${{ secrets.DB_USER }}
-          password: ${{ secrets.DB_PASSWORD }}
-          # Dossier contenant vos fichiers SQL
-          locations: filesystem:./migrations/sql
 
       - name: Deno test
         run: deno test --allow-net --allow-env
