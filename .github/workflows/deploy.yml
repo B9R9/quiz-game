@@ -1,9 +1,5 @@
 name: Deploy
 on:
-  workflow_run:
-    workflows: ["Database Migrations"]
-    types:
-      - completed
   push:
     branches: deploy
   pull_request:
