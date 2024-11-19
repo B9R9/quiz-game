@@ -35,5 +35,7 @@ Thumbs.db
 
 # Tests
 coverage/
+cov/
+
 *.test.ts.snap
 test-results/
