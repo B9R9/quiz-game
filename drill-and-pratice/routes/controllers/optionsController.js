@@ -1,6 +1,7 @@
 import * as optionsService from "../../services/optionsService.js";
 import * as questionService from "../../services/questionService.js";
 import { getCookies } from "../../utils/cookiesHandler.js";
+import { sql } from "../../database/database.js";
 
 let data = {
   options: [],
@@ -9,6 +10,9 @@ let data = {
   errors: [],
   question: {},
 };
+
+// const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
+// const sql = await initializeSQL(config);
 
 /* tu ne peux interagir qu'avec tes propres options */
 
@@ -23,7 +27,7 @@ export const addOptions = async ({ request, response, params }) => {
     return paramsBody.has(`is_correct[${index}]`);
   });
 
-  await optionsService.addOptions(optionTexts, isCorrects, questionId);
+  await optionsService.addOptions(sql, optionTexts, isCorrects, questionId);
 
   response.redirect(`/topics/${topicId}/questions/${questionId}`);
 };
@@ -37,7 +41,7 @@ export const showOptions = async ({ render, params, response, state }) => {
 
   const topicId = Number(params.tid);
   const questionId = Number(params.qid);
-  const questions = await questionService.getQuestion(topicId, questionId);
+  const questions = await questionService.getQuestion(sql, topicId, questionId);
   if (
     !questions[0] ||
     (questions[0] && questions[0].user_id !== user.user.id)
@@ -46,7 +50,7 @@ export const showOptions = async ({ render, params, response, state }) => {
     return;
   }
 
-  const options = await optionsService.getOptions(questionId);
+  const options = await optionsService.getOptions(sql, questionId);
   data = user;
   data.question = questions[0];
   data.options = options;
@@ -62,7 +66,7 @@ export const deleteOptions = async ({ response, params }) => {
   const questionId = Number(params.qid);
   const optionId = Number(params.oid);
 
-  await optionsService.deleteOptions(optionId);
+  await optionsService.deleteOptions(sql, optionId);
 
   response.redirect(`/topics/${topicId}/questions/${questionId}`);
 };

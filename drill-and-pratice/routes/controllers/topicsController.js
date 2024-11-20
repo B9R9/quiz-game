@@ -3,6 +3,7 @@ import * as questionService from "../../services/questionService.js";
 import * as optionsService from "../../services/optionsService.js";
 import { getCookies } from "../../utils/cookiesHandler.js";
 import { log } from "../../utils/logger.js";
+import { sql } from "../../database/database.js";
 
 let data = {
   topic: [],
@@ -12,6 +13,9 @@ let data = {
   value: "Enter a New Topic",
 };
 
+// const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
+// const sql = await initializeSQL(config);
+
 export const showTopics = async ({ render, state, response }) => {
   data = await getCookies(state);
   if (!data.authenticated) {
@@ -20,7 +24,7 @@ export const showTopics = async ({ render, state, response }) => {
     return;
   }
   log("User authenticated", "success", "topicsController.js-showTopics");
-  const topics = await topicsService.getTopics();
+  const topics = await topicsService.getTopics(sql);
 
   data.topics = topics;
   data.value = "";
@@ -35,12 +39,16 @@ export const showTopic = async ({ params, render, state, response }) => {
   }
 
   const topicId = Number(params.id);
-  const topic = await topicsService.getTopic(topicId);
+  const topic = await topicsService.getTopic(sql, topicId);
   let questions = [];
   if (user.user.admin) {
-    questions = await questionService.getAllQuestions(topicId);
+    questions = await questionService.getAllQuestions(sql, topicId);
   } else {
-    questions = await questionService.getYourQuestions(topicId, user.user.id);
+    questions = await questionService.getYourQuestions(
+      sql,
+      topicId,
+      user.user.id
+    );
   }
 
   if (!topic || topic.length === 0) {
@@ -64,7 +72,7 @@ export const addTopic = async ({ request, response, render, state }) => {
   log(`Adding topic: ${topicName}`, "info", "topicsController.js-addTopic");
   const user = await getCookies(state);
 
-  const isTopics = await topicsService.getTopicByName(topicName);
+  const isTopics = await topicsService.getTopicByName(sql, topicName);
 
   if (topicName.lenght < 1 || !topicName || topicName === "" || isTopics[0]) {
     if (isTopics[0]) {
@@ -76,7 +84,7 @@ export const addTopic = async ({ request, response, render, state }) => {
     data.value = topicName;
     render("topics.eta", data);
   } else {
-    await topicsService.createTopic(topicName, user.user.id);
+    await topicsService.createTopic(sql, topicName, user.user.id);
 
     response.redirect("/topics");
   }
@@ -98,25 +106,25 @@ export const deleteTopic = async ({ params, response, state }) => {
   }
 
   const topicId = Number(params.id);
-  const questionsid = await questionService.getAllQuestions(topicId);
+  const questionsid = await questionService.getAllQuestions(sql, topicId);
   let optionsid = [];
   if (questionsid[0]) {
-    optionsid = await optionsService.getOptions(questionsid[0].id);
+    optionsid = await optionsService.getOptions(sql, questionsid[0].id);
   }
 
   if (optionsid[0]) {
     for (let i = 0; i < optionsid.length; i++) {
-      await optionsService.deleteOptions(optionsid[i].id);
+      await optionsService.deleteOptions(sql, optionsid[i].id);
     }
   }
 
   if (questionsid[0]) {
     for (let i = 0; i < questionsid.length; i++) {
-      await questionService.deleteQuestion(questionsid[i].id);
+      await questionService.deleteQuestion(sql, questionsid[i].id);
     }
   }
 
-  await topicsService.deleteTopic(topicId);
+  await topicsService.deleteTopic(sql, topicId);
   log(
     `Deleting topic: ${params.id}`,
     "info",
