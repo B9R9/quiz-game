@@ -2,10 +2,11 @@ import * as questionService from "../../services/questionService.js";
 import * as optionsService from "../../services/optionsService.js";
 import * as topicService from "../../services/topicsService.js";
 import { log } from "../../utils/logger.js";
+import { sql } from "../../database/database.js";
 
 export const getRandomQuestion = async ({ response }) => {
-  const question = await questionService.getRandomQuestion();
-  const answers = await optionsService.getOptions(question[0].id);
+  const question = await questionService.getRandomQuestion(sql);
+  const answers = await optionsService.getOptions(sql, question[0].id);
 
   if (!question[0]) {
     response.body = {};
@@ -43,14 +44,15 @@ export const addQuestion = async ({ request, response }) => {
   const userId = Number(request.headers.get("userId"));
   log(`Adding question by ${userId}`, "info", "apiController.js");
 
-  const isTopic = await topicService.getTopicByName(question.topic);
+  const isTopic = await topicService.getTopicByName(sql, question.topic);
 
   if (!isTopic[0]) {
     log("Creating topic", "info", "apiController.js");
-    await topicService.createTopic(question.topic, userId);
+    await topicService.createTopic(sql, question.topic, userId);
   }
-  const topicId = await topicService.getTopicByName(question.topic);
+  const topicId = await topicService.getTopicByName(sql, question.topic);
   const DB_question = await questionService.getQuestionByQuestion_text(
+    sql,
     Number(topicId[0].id),
     question.questionText
   );
@@ -58,12 +60,14 @@ export const addQuestion = async ({ request, response }) => {
   if (!DB_question[0]) {
     log("Adding question", "info", "apiController.js");
     await questionService.addQuestion(
+      sql,
       question.questionText,
       Number(topicId[0].id),
       userId
     );
   } else {
     const retOptions = await optionsService.getOptions(
+      sql,
       Number(DB_question[0].id)
     );
     if (retOptions[0]) {
@@ -73,6 +77,7 @@ export const addQuestion = async ({ request, response }) => {
   }
 
   const qID = await questionService.getQuestionByQuestion_text(
+    sql,
     Number(topicId[0].id),
     question.questionText
   );
@@ -86,6 +91,7 @@ export const addQuestion = async ({ request, response }) => {
     for (let i = 0; i < question.answer.length; i++) {
       log("Adding options", "info", "apiController.js");
       await optionsService.insertOption(
+        sql,
         question.answer[i].optionText,
         Number(qID[0].id),
         question.answer[i].correct
@@ -107,7 +113,7 @@ export const answerQuestion = async ({ request, response }) => {
     optionId: document.optionId,
   };
 
-  const correct = await optionsService.getCorrectOption(answer.questionId);
+  const correct = await optionsService.getCorrectOption(sql, answer.questionId);
   const correctOption = correct[0].id;
 
   if (correctOption === answer.optionId) {

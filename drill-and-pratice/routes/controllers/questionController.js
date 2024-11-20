@@ -1,6 +1,7 @@
 import * as questionService from "../../services/questionService.js";
 import * as optionsService from "../../services/optionsService.js";
 import { getCookies } from "../../utils/cookiesHandler.js";
+import { sql } from "../../database/database.js";
 
 let data = {
   question: {},
@@ -8,6 +9,9 @@ let data = {
   questionId: 0,
   errors: [],
 };
+
+// const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
+// const sql = await initializeSQL(config);
 
 export const addQuestion = async ({ request, response, params, state }) => {
   const user = await getCookies(state);
@@ -21,7 +25,7 @@ export const addQuestion = async ({ request, response, params, state }) => {
   const question = paramsBody.get("question_text");
   const topicId = params.id;
 
-  await questionService.addQuestion(question, topicId, user.user.id);
+  await questionService.addQuestion(sql, question, topicId, user.user.id);
 
   response.redirect(`/topics/${topicId}`);
 };
@@ -36,13 +40,13 @@ export const showQuestions = async ({ render, params, state, response }) => {
   const topicId = Number(params.tid);
   const questionId = Number(params.qid);
 
-  const questions = await questionService.getQuestion(topicId, questionId);
+  const questions = await questionService.getQuestion(sql, topicId, questionId);
   if (questions.length === 0 || questions[0].user_id !== user.user.id) {
     response.redirect(`/topics/${topicId}`);
     return;
   }
 
-  const options = await optionsService.getOptions(questionId);
+  const options = await optionsService.getOptions(sql, questionId);
 
   data = user;
   data.question = questions[0];
@@ -57,7 +61,7 @@ export const deleteQuestion = async ({ response, params }) => {
   const topicId = Number(params.tid);
   const questionId = Number(params.qid);
 
-  await questionService.deleteQuestion(questionId);
+  await questionService.deleteQuestion(sql, questionId);
 
   response.redirect(`/topics/${topicId}`);
 };

@@ -15,7 +15,11 @@ import {
 } from "../../utils/validatorPassword.js";
 
 import * as authService from "../../services/authService.js";
+import { sql } from "../../database/database.js";
 import { log } from "../../utils/logger.js";
+
+// const config = getConfig("DEV", Deno.env.toObject());
+// const sql = await initializeSQL(config);
 
 let data = {
   errors: [],
@@ -85,7 +89,7 @@ export const register = async ({ request, response }) => {
     data.errors.push("Password must contain an uppercase letter");
   }
 
-  if ((await isAlreadyRegistered(registerData.email)) > 0) {
+  if ((await isAlreadyRegistered(sql, registerData.email)) > 0) {
     data.errors.push("Email already registered");
   }
 
@@ -114,7 +118,7 @@ export const register = async ({ request, response }) => {
 
   console.log(hashPW);
 
-  await authService.createUser(hashPW, registerData);
+  await authService.createUser(sql, hashPW, registerData);
   response.redirect("/auth/login");
 };
 
@@ -133,7 +137,7 @@ export const login = async ({ request, response, state }) => {
 
   let isMatch = false;
   console.log(dataRegister);
-  const user = await authService.getUserByEmail(params.get("email"));
+  const user = await authService.getUserByEmail(sql, params.get("email"));
   isMatch = await comparePassword(dataRegister.password, user[0].password);
   if (user.length === 0 || !isMatch) {
     data.errors.push("Invalid email or password");

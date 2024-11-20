@@ -1,5 +1,5 @@
 import { assertObjectMatch } from "https://deno.land/std@0.203.0/testing/asserts.ts";
-import { getCookies } from "../../utils/cookiesHandler.js";
+import { getCookies } from "../../../utils/cookiesHandler.js";
 
 Deno.test(
   "should return authenticated false and empty user if session is not authenticated",

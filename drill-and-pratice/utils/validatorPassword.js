@@ -13,8 +13,8 @@ export const isSpecialCharacter = (value) => {
   return /[^a-zA-Z0-9]/.test(value);
 };
 
-export const isAlreadyRegistered = async (email) => {
-  const user = await authService.getUserByEmail(email);
+export const isAlreadyRegistered = async (sql, email) => {
+  const user = await authService.getUserByEmail(sql, email);
   return user.length;
 };
 

@@ -1,6 +1,4 @@
-import { sql } from "../database/database.js";
-
-export const addQuestion = async (question, topicId, userId) => {
+export const addQuestion = async (sql, question, topicId, userId) => {
   try {
     await sql`INSERT INTO questions (question_text, topic_id, user_id)
     VALUES (${question}, ${topicId}, ${userId})`;
@@ -9,7 +7,7 @@ export const addQuestion = async (question, topicId, userId) => {
   }
 };
 
-export const deleteQuestion = async (questionId) => {
+export const deleteQuestion = async (sql, questionId) => {
   try {
     await sql`DELETE FROM question_answer_options WHERE question_id = ${questionId}`;
     await sql`DELETE FROM questions WHERE id = ${questionId}`;
@@ -18,7 +16,7 @@ export const deleteQuestion = async (questionId) => {
   }
 };
 
-export const getQuestion = async (topicId, questionId) => {
+export const getQuestion = async (sql, topicId, questionId) => {
   try {
     const result =
       await sql`SELECT * FROM questions WHERE topic_id = ${topicId} AND id = ${questionId}`;
@@ -28,7 +26,11 @@ export const getQuestion = async (topicId, questionId) => {
   }
 };
 
-export const getQuestionByQuestion_text = async (topicId, question_text) => {
+export const getQuestionByQuestion_text = async (
+  sql,
+  topicId,
+  question_text
+) => {
   try {
     const result =
       await sql`SELECT * FROM questions WHERE topic_id = ${topicId} AND question_text = ${question_text}`;
@@ -38,7 +40,7 @@ export const getQuestionByQuestion_text = async (topicId, question_text) => {
   }
 };
 
-export const getAllQuestions = async (topicId) => {
+export const getAllQuestions = async (sql, topicId) => {
   try {
     const result =
       await sql`SELECT * FROM questions WHERE topic_id = ${topicId}`;
@@ -48,7 +50,7 @@ export const getAllQuestions = async (topicId) => {
   }
 };
 
-export const getYourQuestions = async (topicId, userId) => {
+export const getYourQuestions = async (sql, topicId, userId) => {
   try {
     const result =
       await sql`SELECT * FROM questions WHERE topic_id = ${topicId} AND user_id = ${userId}`;
@@ -58,7 +60,7 @@ export const getYourQuestions = async (topicId, userId) => {
   }
 };
 
-export const getRandomQuestion = async () => {
+export const getRandomQuestion = async (sql) => {
   try {
     const result = await sql`SELECT * FROM questions ORDER BY RANDOM() LIMIT 1`;
     return result;

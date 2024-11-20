@@ -1,4 +1,4 @@
-import { log } from "../../utils/logger.js";
+import { log } from "../../../utils/logger.js";
 import { assertStringIncludes } from "https://deno.land/std@0.203.0/assert/mod.ts";
 
 function mockConsole() {
