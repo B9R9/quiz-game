@@ -1,4 +1,4 @@
-// import { neon } from "../deps.js";
+import { neon } from "../deps.js";
 import { log } from "../utils/logger.js";
 import postgres from "https://deno.land/x/postgresjs@v3.4.4/mod.js";
 
