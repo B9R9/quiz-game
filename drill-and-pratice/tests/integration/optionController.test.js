@@ -3,12 +3,14 @@ import {
   showOptions,
   deleteOptions,
 } from "../../routes/controllers/optionsController.js";
-import { sql } from "../../database/database.js";
+import { sql, getConfig, initializeSQL } from "../../database/database.js";
 import { assertEquals } from "jsr:@std/assert";
 
 Deno.test(
   "addOptions - should add options to the database and redirect",
   async () => {
+    const config = getConfig("LOCAL", Deno.env.toObject());
+    const sql = await initializeSQL(config);
     // Préparer la base de données pour le test
     await sql`INSERT INTO users (id, username) VALUES (1000, 'test_user_addOptions');`;
     await sql`INSERT INTO topics (id, user_id, name) VALUES (1000, 1000, 'Sample topic');`;
@@ -53,10 +55,14 @@ Deno.test(
     await sql`DELETE FROM questions WHERE id = 1000;`;
     await sql`DELETE FROM topics WHERE id = 1000;`;
     await sql`DELETE FROM users WHERE id = 1000;`;
+
+    await sql.end();
   }
 );
 
 Deno.test("showOptions - should render options page", async () => {
+  const config = getConfig("LOCAL", Deno.env.toObject());
+  const sql = await initializeSQL(config);
   // Préparer les données de test
   await sql`INSERT INTO users (id, username) VALUES (1001, 'test_user_ShowOptions');`;
   await sql`INSERT INTO topics (id, user_id, name) VALUES (1001, 1001, 'Sample topic');`;
@@ -105,6 +111,8 @@ Deno.test("showOptions - should render options page", async () => {
   await sql`DELETE FROM questions WHERE user_id = 1001;`;
   await sql`DELETE FROM topics WHERE user_id = 1001;`;
   await sql`DELETE FROM users WHERE id = 1001;`;
+
+  await sql.end();
 });
 
 Deno.test(
@@ -171,6 +179,8 @@ Deno.test(
 Deno.test(
   "showOptions - should redirect if question does not belong to user",
   async () => {
+    const config = getConfig("LOCAL", Deno.env.toObject());
+    const sql = await initializeSQL(config);
     // Préparer les données de test
     await sql`INSERT INTO users (id, username) VALUES (1002, 'test_user_ShowOptions Not belong to user');`;
     await sql`INSERT INTO users (id, username) VALUES (1003, 'another_user');`;
@@ -208,6 +218,8 @@ Deno.test(
     await sql`DELETE FROM topics WHERE user_id = 1002;`;
     await sql`DELETE FROM users WHERE id = 1002;`;
     await sql`DELETE FROM users WHERE id = 1003;`;
+
+    await sql.end();
   }
 );
 
@@ -243,6 +255,8 @@ Deno.test(
 );
 
 Deno.test("DeleteOptions - should delete options", async () => {
+  const config = getConfig("LOCAL", Deno.env.toObject());
+  const sql = await initializeSQL(config);
   // Préparer les données de test
   await sql`INSERT INTO users (id, username) VALUES (1004, 'test_user_DeleteOptions');`;
   await sql`INSERT INTO topics (id, user_id, name) VALUES (1004, 1004, 'Sample topic');`;
@@ -271,4 +285,6 @@ Deno.test("DeleteOptions - should delete options", async () => {
   await sql`DELETE FROM questions WHERE user_id = 1004;`;
   await sql`DELETE FROM topics WHERE user_id = 1004;`;
   await sql`DELETE FROM users WHERE id = 1004;`;
+
+  await sql.end();
 });

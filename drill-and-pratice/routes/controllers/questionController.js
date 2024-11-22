@@ -1,7 +1,7 @@
 import * as questionService from "../../services/questionService.js";
 import * as optionsService from "../../services/optionsService.js";
 import { getCookies } from "../../utils/cookiesHandler.js";
-import { sql } from "../../database/database.js";
+import { sql, getConfig, initializeSQL } from "../../database/database.js";
 
 let data = {
   question: {},
@@ -14,22 +14,36 @@ let data = {
 // const sql = await initializeSQL(config);
 
 export const addQuestion = async ({ request, response, params, state }) => {
-  const user = await getCookies(state);
-  if (!user.authenticated) {
-    response.redirect("/auth/login");
-    return;
+  const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
+  const sql = await initializeSQL(config);
+
+  try {
+    const user = await getCookies(state);
+    if (!user.authenticated) {
+      response.redirect("/auth/login");
+      return;
+    }
+
+    const body = await request.body();
+
+    const paramsBody = await body.value;
+    const question = paramsBody.get("question_text");
+    const topicId = params.id;
+
+    await questionService.addQuestion(sql, question, topicId, user.user.id);
+
+    response.redirect(`/topics/${topicId}`);
+  } finally {
+    await sql.end();
   }
-
-  const body = request.body();
-  const paramsBody = await body.value;
-  const question = paramsBody.get("question_text");
-  const topicId = params.id;
-
-  await questionService.addQuestion(sql, question, topicId, user.user.id);
-
-  response.redirect(`/topics/${topicId}`);
 };
 
+/**
+ * Display options.eta file
+ * Naming is bad and needs to be refactored
+ * @param {*} param0
+ * @returns
+ */
 export const showQuestions = async ({ render, params, state, response }) => {
   const user = await getCookies(state);
   if (!user.authenticated) {

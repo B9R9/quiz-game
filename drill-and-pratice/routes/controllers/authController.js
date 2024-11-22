@@ -15,11 +15,8 @@ import {
 } from "../../utils/validatorPassword.js";
 
 import * as authService from "../../services/authService.js";
-import { sql } from "../../database/database.js";
+import { getConfig, initializeSQL } from "../../database/database.js";
 import { log } from "../../utils/logger.js";
-
-// const config = getConfig("DEV", Deno.env.toObject());
-// const sql = await initializeSQL(config);
 
 let data = {
   errors: [],
@@ -34,8 +31,6 @@ const validationRules = {
 };
 
 export const showRegistrationForm = ({ render }) => {
-  console.log(data);
-  console.log(data.errors);
   render("register.eta", data);
   data = {
     errors: [],
@@ -56,116 +51,127 @@ export const showLoginForm = ({ render }) => {
 };
 
 export const register = async ({ request, response }) => {
-  const body = request.body();
-  const params = await body.value;
-  log("Registering user", "info", "authController.js");
+  const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
+  const sql = await initializeSQL(config);
 
-  let data = {
-    errors: [],
-    email: "",
-    username: "",
-  };
+  try {
+    const body = request.body();
+    const params = await body.value;
+    log("Registering user", "info", "authController.js");
 
-  const registerData = {
-    email: params.get("email").trim(),
-    username: params.get("username").trim(),
-    password: params.get("password"),
-    confirmPassword: params.get("confirmPW"),
-  };
+    let data = {
+      errors: [],
+      email: "",
+      username: "",
+    };
 
-  if (registerData.password !== registerData.confirmPassword) {
-    data.errors.push("Passwords do not match");
-  }
+    const registerData = {
+      email: params.get("email").trim(),
+      username: params.get("username").trim(),
+      password: params.get("password"),
+      confirmPassword: params.get("confirmPW"),
+    };
 
-  if (!isSpecialCharacter(registerData.password)) {
-    data.errors.push("Password must contain a special character");
-  }
+    if (registerData.password !== registerData.confirmPassword) {
+      data.errors.push("Passwords do not match");
+    }
 
-  if (!isNumeric(registerData.password)) {
-    data.errors.push("Password must contain a number");
-  }
+    if (!isSpecialCharacter(registerData.password)) {
+      data.errors.push("Password must contain a special character");
+    }
 
-  if (!isUppercase(registerData.password)) {
-    data.errors.push("Password must contain an uppercase letter");
-  }
+    if (!isNumeric(registerData.password)) {
+      data.errors.push("Password must contain a number");
+    }
 
-  if ((await isAlreadyRegistered(sql, registerData.email)) > 0) {
-    data.errors.push("Email already registered");
-  }
+    if (!isUppercase(registerData.password)) {
+      data.errors.push("Password must contain an uppercase letter");
+    }
 
-  const [passes, errors] = await validate(registerData, validationRules);
+    if ((await isAlreadyRegistered(sql, registerData.email)) > 0) {
+      data.errors.push("Email already registered");
+    }
 
-  if (!passes || data.errors.length > 0) {
-    Object.keys(errors).forEach((key) => {
-      Object.keys(errors[key]).forEach((error) => {
-        data.errors.push(errors[key][error]);
+    const [passes, errors] = await validate(registerData, validationRules);
+
+    if (!passes || data.errors.length > 0) {
+      Object.keys(errors).forEach((key) => {
+        Object.keys(errors[key]).forEach((error) => {
+          data.errors.push(errors[key][error]);
+        });
       });
-    });
-    data.email = registerData.email;
-    data.username = registerData.username;
-    console.log(data);
-    console.log(data.errors);
-    response.redirect("/auth/register");
-    return;
+      data.email = registerData.email;
+      data.username = registerData.username;
+      response.redirect("/auth/register");
+      return;
+    }
+    data = {
+      errors: [],
+      email: "",
+      username: "",
+    };
+
+    const hashPW = await hashPassword(registerData.password);
+
+    await authService.createUser(sql, hashPW, registerData);
+
+    response.redirect("/auth/login");
+  } finally {
+    await sql.end();
   }
-  data = {
-    errors: [],
-    email: "",
-    username: "",
-  };
-
-  const hashPW = await hashPassword(registerData.password);
-
-  console.log(hashPW);
-
-  await authService.createUser(sql, hashPW, registerData);
-  response.redirect("/auth/login");
 };
 
 export const login = async ({ request, response, state }) => {
-  const body = request.body();
-  const params = await body.value;
+  const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
+  const sql = await initializeSQL(config);
 
-  data.errors = [];
-  data.email = "";
-  data.password = "";
+  try {
+    const body = request.body();
+    const params = await body.value;
 
-  const dataRegister = {
-    email: params.get("email"),
-    password: params.get("password"),
-  };
+    data.errors = [];
+    data.email = "";
+    data.password = "";
 
-  let isMatch = false;
-  console.log(dataRegister);
-  const user = await authService.getUserByEmail(sql, params.get("email"));
-  console.log(user.data.password);
-  if (user.length === 0) {
-    data.errors.push("Invalid email or password");
+    const dataRegister = {
+      email: params.get("email"),
+      password: params.get("password"),
+    };
+
+    let isMatch = false;
+    const user = await authService.getUserByEmail(sql, params.get("email"));
+    if (user.success === false) {
+      data.errors.push("Invalid email or password");
+      data.email = dataRegister.email;
+      response.redirect("/auth/login");
+      return;
+    }
+    isMatch = await comparePassword(dataRegister.password, user.data.password);
+    if (!isMatch) {
+      if (data.errors.length === 0) {
+        data.errors.push("Invalid email or password");
+        data.email = dataRegister.email;
+        response.redirect("/auth/login");
+        return;
+      }
+    }
+
+    data.errors = [];
+    data.email = "";
+    data.password = "";
+
+    await state.session.set("authenticated", true);
+    await state.session.set("user", {
+      id: user.data.id,
+      email: user.data.email,
+      username: user.data.username,
+      admin: user.data.admin,
+    });
+
+    response.redirect("/topics");
+  } finally {
+    await sql.end();
   }
-  isMatch = await comparePassword(dataRegister.password, user.data.password);
-  if (!isMatch) {
-    data.errors.push("Invalid email or password");
-  }
-
-  if (data.errors.length > 0) {
-    data.email = dataRegister.email;
-    response.redirect("/auth/login");
-    return;
-  }
-
-  data.errors = [];
-  data.email = "";
-  data.password = "";
-
-  await state.session.set("authenticated", true);
-  await state.session.set("user", {
-    id: user.data.id,
-    email: user.data.email,
-    username: user.data.username,
-    admin: user.data.admin,
-  });
-
-  response.redirect("/topics");
 };
 
 export const logout = async ({ response, state }) => {
