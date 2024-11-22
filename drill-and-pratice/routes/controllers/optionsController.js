@@ -57,7 +57,6 @@ export const showOptions = async ({ render, params, response, state }) => {
   data.topicId = topicId;
   data.questionId = questionId;
 
-  console.log("DATA:", data);
   render("options.eta", data);
 };
 
