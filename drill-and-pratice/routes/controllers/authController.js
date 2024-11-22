@@ -138,8 +138,12 @@ export const login = async ({ request, response, state }) => {
   let isMatch = false;
   console.log(dataRegister);
   const user = await authService.getUserByEmail(sql, params.get("email"));
-  isMatch = await comparePassword(dataRegister.password, user[0].password);
-  if (user.length === 0 || !isMatch) {
+  console.log(user.data.password);
+  if (user.length === 0) {
+    data.errors.push("Invalid email or password");
+  }
+  isMatch = await comparePassword(dataRegister.password, user.data.password);
+  if (!isMatch) {
     data.errors.push("Invalid email or password");
   }
 
@@ -155,10 +159,10 @@ export const login = async ({ request, response, state }) => {
 
   await state.session.set("authenticated", true);
   await state.session.set("user", {
-    id: user[0].id,
-    email: user[0].email,
-    username: user[0].username,
-    admin: user[0].admin,
+    id: user.data.id,
+    email: user.data.email,
+    username: user.data.username,
+    admin: user.data.admin,
   });
 
   response.redirect("/topics");

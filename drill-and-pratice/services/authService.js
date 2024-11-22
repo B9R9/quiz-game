@@ -14,7 +14,7 @@ export const getUserByEmail = async (sql, email) => {
     if (result.length === 0) {
       return { success: false, data: null, error: "User not found" };
     }
-    return { success: true, data: result };
+    return { success: true, data: result[0] };
   } catch (e) {
     console.error("Error in getUserByEmail:", e);
     return { success: false, error: e.message };
