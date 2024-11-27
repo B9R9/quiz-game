@@ -58,6 +58,25 @@ jobs:
             -password=testpassword \
             migrate
 
+      - name: Insert test data
+        run: |
+          PGPASSWORD=testpassword psql -h localhost -U testuser -d testdb << EOF
+          INSERT INTO users (id, username, email, admin) VALUES (6, 'Admin', 'admin@admin.admin', true);
+          INSERT INTO topics (id, user_id, name) VALUES (800, 6, 'Test Topic with 1 question');
+          INSERT INTO topics (id, user_id, name) VALUES (801, 6, 'Tpoic test no question');
+          INSERT INTO topics (id, user_id, name) VALUES (802, 6, 'Topic with question and 1 option');
+          INSERT INTO topics (id, user_id, name) VALUES (1, 6, 'Topic test');
+          INSERT INTO questions (id, user_id, topic_id, question) VALUES (1, 6, 1, 'Test Question');
+          INSERT INTO questions (id, user_id, topic_id, question) VALUES (800, 6, 1, 'Test question without options');
+          INSERT INTO questions (id, user_id, topic_id, question) VALUES (801, 6, 800, 'Test question without options');
+          INSERT INTO questions (id, user_id, topic_id, question) VALUES (802, 6, 802, 'Question with one option');
+          INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (804, 802, 'Option 1', false);
+          INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (803, 801, 'Option 1', false);
+          INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (802, 801, 'Option 2', true);
+          INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (801, 1, 'Option 1', false);
+          INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (800, 1, 'Option 2', true);
+          EOF
+
       - name: Run integration tests
         env:
           DATABASE_URL: postgres://testuser:testpassword@localhost:5432/testdb
