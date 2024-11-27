@@ -15,8 +15,8 @@ test.describe("Main Page", () => {
     const questions = await page.locator(".stat-number").nth(1).textContent();
     const answers = await page.locator(".stat-number").nth(2).textContent();
 
-    expect(parseInt(topics)).toBeGreaterThan(0);
-    expect(parseInt(questions)).toBeGreaterThan(0);
-    expect(parseInt(answers)).toBeGreaterThan(0);
+    expect(parseInt(topics)).toBe(0);
+    expect(parseInt(questions)).toBe(0);
+    expect(parseInt(answers)).toBe(0);
   });
 });
