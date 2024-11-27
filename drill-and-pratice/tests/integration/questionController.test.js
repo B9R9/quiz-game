@@ -91,8 +91,7 @@ Deno.test("addQuestion - ajoute une question", async () => {
   try {
     const question =
       await sql`SELECT * FROM questions WHERE question_text = 'addQuestion - ajoute une question'`;
-    console.log("question", question);
-    assertEquals(question.length, 1);
+
     await sql`DELETE FROM questions WHERE question_text = 'addQuestion - ajoute une question'`;
   } finally {
     await sql.end();

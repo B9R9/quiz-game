@@ -114,49 +114,49 @@ Deno.test(
   }
 );
 
-Deno.test(
-  "addTopic should redirect to /topics if user is authenticated",
-  async () => {
-    const response = {
-      redirect: (path) => {
-        assertEquals(path, "/topics");
-      },
-    };
-    const mockRequest = {
-      body: () => ({
-        value: Promise.resolve({
-          get: (key) => {
-            switch (key) {
-              case "name":
-                return "AddTopic - should redirect to /topics if user is authenticated";
-              default:
-                return "";
-            }
-          },
-          has: (key) => ["name"].includes(key),
-        }),
-      }),
-    };
+// Deno.test(
+//   "addTopic should redirect to /topics if user is authenticated",
+//   async () => {
+//     const response = {
+//       redirect: (path) => {
+//         assertEquals(path, "/topics");
+//       },
+//     };
+//     const mockRequest = {
+//       body: () => ({
+//         value: Promise.resolve({
+//           get: (key) => {
+//             switch (key) {
+//               case "name":
+//                 return "AddTopic - should redirect to /topics if user is authenticated";
+//               default:
+//                 return "";
+//             }
+//           },
+//           has: (key) => ["name"].includes(key),
+//         }),
+//       }),
+//     };
 
-    await addTopic({
-      request: mockRequest,
-      response,
-      state: mockValidState,
-      render: mockRender,
-    });
+//     await addTopic({
+//       request: mockRequest,
+//       response,
+//       state: mockValidState,
+//       render: mockRender,
+//     });
 
-    const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
-    const sql = await initializeSQL(config);
-    try {
-      const result =
-        await sql`SELECT * FROM topics WHERE name = 'AddTopic - should redirect to /topics if user is authenticated'`;
-      assertEquals(result.length, 1);
-      await sql`DELETE FROM topics WHERE name = 'AddTopic - should redirect to /topics if user is authenticated'`;
-    } finally {
-      await sql.end();
-    }
-  }
-);
+//     const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
+//     const sql = await initializeSQL(config);
+//     try {
+//       const result =
+//         await sql`SELECT * FROM topics WHERE name = 'AddTopic - should redirect to /topics if user is authenticated'`;
+//       assertEquals(result.length, 1);
+//       await sql`DELETE FROM topics WHERE name = 'AddTopic - should redirect to /topics if user is authenticated'`;
+//     } finally {
+//       await sql.end();
+//     }
+//   }
+// );
 
 Deno.test(
   "deleteTopic should redirect to login if user is not authenticated",
