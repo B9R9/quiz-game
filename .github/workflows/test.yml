@@ -47,6 +47,16 @@ jobs:
             sleep 3;
           done
 
+      - name: Clean database
+        run: |
+          docker run --rm \
+            --network host \
+            flyway/flyway:latest \
+            -url=jdbc:postgresql://localhost:5432/testdb \
+            -user=testuser \
+            -password=testpassword \
+            clean
+
       - name: Run Flyway migrations
         run: |
           docker run --rm \
