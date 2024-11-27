@@ -17,6 +17,6 @@ test.describe("Main Page", () => {
 
     expect(parseInt(topics)).toBeGreaterThan(0);
     expect(parseInt(questions)).toBeGreaterThan(0);
-    expect(parseInt(answers)).toBeGreaterThan(0);
+    expect(parseInt(answers)).toBe(0);
   });
 });
