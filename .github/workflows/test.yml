@@ -62,4 +62,4 @@ jobs:
         env:
           DATABASE_URL: postgres://testuser:testpassword@localhost:5432/testdb
           MODE: LOCAL
-        run: deno test --allow-net --allow-env --allow-read tests
+        run: deno test --allow-net --allow-env --allow-read
