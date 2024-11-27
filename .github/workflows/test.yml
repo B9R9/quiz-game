@@ -1,27 +1,63 @@
-name: Test
+name: Integration Tests with Flyway
+
 on:
   push:
-    branches: main
+    branches:
+      - main
   pull_request:
-    branches: main
+    branches:
+      - main
 
 jobs:
-  test:
-    name: Deploy
+  integration-tests:
     runs-on: ubuntu-latest
 
-    permissions:
-      id-token: write # Needed for auth with Deno Deploy
-      contents: read # Needed to clone the repository
+    services:
+      postgres:
+        image: postgres:15
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: testuser
+          POSTGRES_PASSWORD: testpassword
+          POSTGRES_DB: testdb
+        options: >-
+          --health-cmd "pg_isready -U testuser"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
-      - name: Clone repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Deno
+      - name: Set up Deno
         uses: denoland/setup-deno@v2
         with:
-          deno-version: v2.x
+          deno-version: v1.x
 
-      - name: Deno test
-        run: deno test --allow-net --allow-env
+      - name: Wait for PostgreSQL to be ready
+        run: |
+          for i in {1..10}; do
+            if pg_isready -h localhost -p 5432 -U testuser; then
+              echo "PostgreSQL is ready!";
+              break;
+            fi;
+            echo "Waiting for PostgreSQL...";
+            sleep 3;
+          done
+
+      - name: Run Flyway migrations
+        uses: docker://flyway/flyway:latest
+        with:
+          entrypoint: ""
+        env:
+          FLYWAY_URL: jdbc:postgresql://localhost:5432/testdb
+          FLYWAY_USER: testuser
+          FLYWAY_PASSWORD: testpassword
+        run: migrate -locations=filesystem:/flyway/sql
+
+      - name: Run integration tests
+        env:
+          DATABASE_URL: postgres://testuser:testpassword@localhost:5432/testdb
+        run: deno test --allow-net --allow-env --allow-read tests/integration
