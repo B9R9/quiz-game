@@ -103,7 +103,10 @@ jobs:
         working-directory: e2e-tests
 
       - name: Start Deno server
-        run: deno run --allow-net --allow-read run-locally.js
+        env:
+          DATABASE_URL: "postgres://testuser:testpassword@localhost:5432/testdb"
+          MODE: "LOCAL"
+        run: deno run --allow-net --allow-read --allow-env run-locally.js
         working-directory: drill-and-pratice
 
       - name: Run Playwright tests
