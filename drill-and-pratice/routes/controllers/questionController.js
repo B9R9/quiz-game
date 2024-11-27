@@ -45,30 +45,40 @@ export const addQuestion = async ({ request, response, params, state }) => {
  * @returns
  */
 export const showQuestions = async ({ render, params, state, response }) => {
-  const user = await getCookies(state);
-  if (!user.authenticated) {
-    response.redirect("/auth/login");
-    return;
+  const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
+  const sql = await initializeSQL(config);
+  try {
+    const user = await getCookies(state);
+    if (!user.authenticated) {
+      response.redirect("/auth/login");
+      return;
+    }
+
+    const topicId = Number(params.tid);
+    const questionId = Number(params.qid);
+
+    const questions = await questionService.getQuestion(
+      sql,
+      topicId,
+      questionId
+    );
+
+    if (questions.length === 0 || questions[0].user_id !== user.user.id) {
+      response.redirect(`/topics/${topicId}`);
+    } else {
+      const options = await optionsService.getOptions(sql, questionId);
+
+      data = user;
+      data.question = questions[0];
+      data.topicId = topicId;
+      data.questionId = questionId;
+      data.options = options;
+
+      render("options.eta", data);
+    }
+  } finally {
+    await sql.end();
   }
-
-  const topicId = Number(params.tid);
-  const questionId = Number(params.qid);
-
-  const questions = await questionService.getQuestion(sql, topicId, questionId);
-  if (questions.length === 0 || questions[0].user_id !== user.user.id) {
-    response.redirect(`/topics/${topicId}`);
-    return;
-  }
-
-  const options = await optionsService.getOptions(sql, questionId);
-
-  data = user;
-  data.question = questions[0];
-  data.topicId = topicId;
-  data.questionId = questionId;
-  data.options = options;
-
-  render("options.eta", data);
 };
 
 export const deleteQuestion = async ({ response, params }) => {

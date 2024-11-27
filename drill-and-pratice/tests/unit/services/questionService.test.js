@@ -72,9 +72,9 @@ Deno.test({
   name: "addQuestion should insert a question correctly",
   async fn() {
     // Arrange
-    const question = "Sample Question";
+    const question = "Test: addQuestion should insert a question correctly";
     const topicId = 1;
-    const userId = 1;
+    const userId = 6;
 
     // Act
     await questionService.addQuestion(sql, question, topicId, userId);
