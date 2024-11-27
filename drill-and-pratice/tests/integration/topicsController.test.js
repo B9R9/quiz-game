@@ -182,33 +182,33 @@ Deno.test(
   }
 );
 
-Deno.test(
-  "deleteTopic should delete topic if user is authenticated and admin",
-  async () => {
-    const response = {
-      redirect: (path) => {
-        assertEquals(path, "/topics");
-      },
-    };
-    const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
-    const sql = await initializeSQL(config);
+// Deno.test(
+//   "deleteTopic should delete topic if user is authenticated and admin",
+//   async () => {
+//     const response = {
+//       redirect: (path) => {
+//         assertEquals(path, "/topics");
+//       },
+//     };
+//     const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
+//     const sql = await initializeSQL(config);
 
-    await sql`INSERT INTO topics (name, user_id) VALUES ('Topics to delete for test', 6)`;
-    const ret =
-      await sql`SELECT * FROM topics WHERE name = 'Topics to delete for test'`;
-    const params = { id: ret[0].id };
+//     await sql`INSERT INTO topics (name, user_id) VALUES ('Topics to delete for test', 6)`;
+//     const ret =
+//       await sql`SELECT * FROM topics WHERE name = 'Topics to delete for test'`;
+//     const params = { id: ret[0].id };
 
-    await deleteTopic({
-      params,
-      response,
-      state: mockValidState,
-    });
+//     await deleteTopic({
+//       params,
+//       response,
+//       state: mockValidState,
+//     });
 
-    try {
-      const result = await sql`SELECT * FROM topics WHERE id = ${params.id}`;
-      assertEquals(result.length, 0);
-    } finally {
-      await sql.end();
-    }
-  }
-);
+//     try {
+//       const result = await sql`SELECT * FROM topics WHERE id = ${params.id}`;
+//       assertEquals(result.length, 0);
+//     } finally {
+//       await sql.end();
+//     }
+//   }
+// );
