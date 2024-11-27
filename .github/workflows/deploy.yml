@@ -32,6 +32,10 @@ jobs:
         run: npm install
         working-directory: e2e-tests
 
+      - name: Install Playwright
+        run: npx install playwright
+        working-directory: e2e-tests
+
       - name: Run Playwright tests
         run: npx playwright test --reporter=dot
         working-directory: e2e-tests
