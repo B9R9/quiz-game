@@ -106,7 +106,7 @@ jobs:
         env:
           DATABASE_URL: "postgres://testuser:testpassword@localhost:5432/testdb"
           MODE: "LOCAL"
-        run: deno run --allow-net --allow-read --allow-env run-locally.js
+        run: deno run --allow-net --allow-read --allow-env run-locally.js &
         working-directory: drill-and-pratice
 
       - name: Run Playwright tests
