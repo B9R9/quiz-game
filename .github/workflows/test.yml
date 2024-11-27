@@ -66,10 +66,10 @@ jobs:
           INSERT INTO topics (id, user_id, name) VALUES (801, 6, 'Tpoic test no question');
           INSERT INTO topics (id, user_id, name) VALUES (802, 6, 'Topic with question and 1 option');
           INSERT INTO topics (id, user_id, name) VALUES (1, 6, 'Topic test');
-          INSERT INTO questions (id, user_id, topic_id, question) VALUES (1, 6, 1, 'Test Question');
-          INSERT INTO questions (id, user_id, topic_id, question) VALUES (800, 6, 1, 'Test question without options');
-          INSERT INTO questions (id, user_id, topic_id, question) VALUES (801, 6, 800, 'Test question without options');
-          INSERT INTO questions (id, user_id, topic_id, question) VALUES (802, 6, 802, 'Question with one option');
+          INSERT INTO questions (id, user_id, topic_id, question_text) VALUES (1, 6, 1, 'Test Question');
+          INSERT INTO questions (id, user_id, topic_id, question_text) VALUES (800, 6, 1, 'Test question without options');
+          INSERT INTO questions (id, user_id, topic_id, question_text) VALUES (801, 6, 800, 'Test question without options');
+          INSERT INTO questions (id, user_id, topic_id, question_text) VALUES (802, 6, 802, 'Question with one option');
           INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (804, 802, 'Option 1', false);
           INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (803, 801, 'Option 1', false);
           INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (802, 801, 'Option 2', true);
