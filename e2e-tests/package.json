@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "deno run  --allow-net --allow-write --allow-read --allow-env  --watch --unstable ../drill-and-pratice/run-locally.js"
+    "start": "MODE=LOCAL deno run  --allow-net --allow-write --allow-read --allow-env --unstable ../drill-and-pratice/run-locally.js"
   },
   "keywords": [],
   "author": "",
