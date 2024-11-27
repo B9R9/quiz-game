@@ -48,14 +48,15 @@ jobs:
           done
 
       - name: Run Flyway migrations
-        uses: docker://flyway/flyway:latest
-        with:
-          entrypoint: ""
-        env:
-          FLYWAY_URL: jdbc:postgresql://localhost:5432/testdb
-          FLYWAY_USER: testuser
-          FLYWAY_PASSWORD: testpassword
-        run: migrate -locations=filesystem:/flyway/sql
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}/migrations:/flyway/sql \
+            --network host \
+            flyway/flyway:latest \
+            -url=jdbc:postgresql://localhost:5432/testdb \
+            -user=testuser \
+            -password=testpassword \
+            migrate
 
       - name: Run integration tests
         env:
