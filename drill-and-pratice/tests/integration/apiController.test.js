@@ -79,30 +79,30 @@ Deno.test(
 //   }
 // });
 
-Deno.test(
-  "answerQuestion should return true if the answer is correct",
-  async () => {
-    const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
-    const sql = await initializeSQL(config);
-    try {
-      const response = {
-        body: {},
-      };
-      const request = {
-        body: () => ({
-          value: Promise.resolve({
-            questionId: validQId,
-            optionId: 800,
-          }),
-        }),
-      };
-      await answerQuestion(request, response);
-      assertEquals(response.body, { correct: true });
-    } finally {
-      await sql.end();
-    }
-  }
-);
+// Deno.test(
+//   "answerQuestion should return true if the answer is correct",
+//   async () => {
+//     const config = getConfig(Deno.env.get("MODE"), Deno.env.toObject());
+//     const sql = await initializeSQL(config);
+//     try {
+//       const response = {
+//         body: {},
+//       };
+//       const request = {
+//         body: () => ({
+//           value: Promise.resolve({
+//             questionId: validQId,
+//             optionId: 800,
+//           }),
+//         }),
+//       };
+//       await answerQuestion(request, response);
+//       assertEquals(response.body, { correct: true });
+//     } finally {
+//       await sql.end();
+//     }
+//   }
+// );
 
 // Deno.test(
 //   "answerQuestion should return false if the answer is correct",

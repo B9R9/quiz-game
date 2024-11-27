@@ -128,7 +128,7 @@ Deno.test(
           get: (key) => {
             switch (key) {
               case "name":
-                return "testTopic inte";
+                return "AddTopic - should redirect to /topics if user is authenticated";
               default:
                 return "";
             }
@@ -149,9 +149,9 @@ Deno.test(
     const sql = await initializeSQL(config);
     try {
       const result =
-        await sql`SELECT * FROM topics WHERE name = 'testTopic inte'`;
+        await sql`SELECT * FROM topics WHERE name = 'AddTopic - should redirect to /topics if user is authenticated'`;
       assertEquals(result.length, 1);
-      await sql`DELETE FROM topics WHERE name = 'testTopic inte'`;
+      await sql`DELETE FROM topics WHERE name = 'AddTopic - should redirect to /topics if user is authenticated'`;
     } finally {
       await sql.end();
     }
