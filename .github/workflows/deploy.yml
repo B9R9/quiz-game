@@ -33,7 +33,7 @@ jobs:
         working-directory: e2e-tests
 
       - name: Install Playwright
-        run: npx install playwright
+        run: npx playwright install
         working-directory: e2e-tests
 
       - name: Run Playwright tests
