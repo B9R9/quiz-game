@@ -49,7 +49,7 @@ jobs:
 
       - name: Reset database
         run: |
-          PGPASSWORD=testpassword psql -h localhost -U testdb << EOF
+          PGPASSWORD=testpassword psql -h localhost -U testuser << EOF
           DROP DATABASE IF EXISTS testdb;
           CREATE DATABASE testdb;
           EOF
