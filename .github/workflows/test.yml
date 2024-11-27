@@ -1,15 +1,15 @@
-name: Deploy
+name: Integration Tests with Flyway
+
 on:
   push:
     branches:
-      - deploy
+      - main
   pull_request:
     branches:
-      - deploy
+      - main
 
 jobs:
-  deploy:
-    name: Deploy
+  integration-tests:
     runs-on: ubuntu-latest
 
     services:
@@ -27,23 +27,14 @@ jobs:
           --health-timeout 5s
           --health-retries 5
 
-    permissions:
-      id-token: write # Needed for auth with Deno Deploy
-      contents: read # Needed to clone the repository
-
     steps:
-      - name: Clone repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Deno
+      - name: Set up Deno
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16"
 
       - name: Wait for PostgreSQL to be ready
         run: |
@@ -94,28 +85,8 @@ jobs:
           INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (800, 1, 'Option 2', true);
           EOF
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: e2e-tests
-
-      - name: Install Playwright
-        run: npx playwright install --with-deps
-        working-directory: e2e-tests
-
-      - name: Start Deno server
+      - name: Run integration tests
         env:
-          DATABASE_URL: "postgres://testuser:testpassword@localhost:5432/testdb"
-          MODE: "LOCAL"
-        run: deno run --allow-net --allow-read --allow-env run-locally.js &
-        working-directory: drill-and-pratice
-
-      - name: Run Playwright tests
-        run: npx playwright test --reporter=dot
-        working-directory: e2e-tests
-
-      - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "c2495af1-50e0-48ad-a2f1-1ca52c1864ea"
-          entrypoint: "run-locally.js"
-          root: "drill-and-pratice"
+          DATABASE_URL: postgres://testuser:testpassword@localhost:5432/testdb
+          MODE: LOCAL
+        run: deno test --allow-net --allow-env --allow-read

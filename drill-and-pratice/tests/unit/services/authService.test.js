@@ -64,7 +64,7 @@ Deno.test({
 
     // Assert
     assertEquals(result.success, true);
-    assertEquals(result.data[0].email, email);
+    assertEquals(result.data.email, email);
   },
 });
 

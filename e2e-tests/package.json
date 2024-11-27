@@ -1,0 +1,16 @@
+{
+  "name": "e2e-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "MODE=LOCAL deno run  --allow-net --allow-write --allow-read --allow-env --unstable ../drill-and-pratice/run-locally.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0"
+  }
+}

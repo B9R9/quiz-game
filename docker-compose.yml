@@ -52,7 +52,7 @@ services:
     ports:
       - 8080:8080
 
-  test:
+  unit-test:
     build:
       context: ./drill-and-pratice
       dockerfile: Dockerfile
@@ -62,12 +62,38 @@ services:
       - ./app-cache:/app-cache
     depends_on:
       - postgres
-    command: deno test --allow-net --allow-env
+    command: deno test --allow-net --allow-env --allow-read --unstable tests/unit
     env_file:
       - .env
     environment:
       - PORT=7777
       - BASE_URL=http://localhost:7777
+
+  integration-test:
+    build:
+      context: ./drill-and-pratice
+      dockerfile: Dockerfile
+    image: app-test
+    volumes:
+      - ./drill-and-pratice:/app
+      - ./app-cache:/app-cache
+    depends_on:
+      - postgres
+    command: deno test --allow-net --allow-env --allow-read --unstable tests/integration
+    env_file:
+      - .env
+    environment:
+      - PORT=7777
+      - BASE_URL=http://localhost:7777
+
+  e2e-tests:
+    entrypoint: "/bin/true"
+    build: e2e-tests
+    network_mode: host
+    depends_on:
+      - app
+    volumes:
+      - ./e2e-tests/tests:/app/tests
 
   # flyway_repair:
   #   image: flyway/flyway:7.3.0-alpine
