@@ -102,6 +102,10 @@ jobs:
         run: npx playwright install
         working-directory: e2e-tests
 
+      - name: Start Deno server
+        run: deno run --allow-net --allow-read run-locally.js
+        working-directory: drill-and-pratice
+
       - name: Run Playwright tests
         run: npx playwright test --reporter=dot
         working-directory: e2e-tests
