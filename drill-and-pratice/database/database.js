@@ -14,10 +14,10 @@ function getConfig(mode, env) {
     return {
       client: "postgres",
       config: {
-        user: env.PG_DEV_USER || "admin",
-        database: env.PG_DEV_DB || "db-prod",
+        user: env.PG_DEV_USER || "testuser",
+        database: env.PG_DEV_DB || "testdb",
         hostname: env.PG_DEV_HOST || "localhost",
-        password: env.PG_DEV_PASSWORD || "xyz",
+        password: env.PG_DEV_PASSWORD || "testpassword",
         port: parseInt(env.PG_DEV_PORT) || 5432,
       },
     };
