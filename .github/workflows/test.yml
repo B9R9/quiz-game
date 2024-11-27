@@ -47,15 +47,12 @@ jobs:
             sleep 3;
           done
 
-      - name: Clean database
+      - name: Reset database
         run: |
-          docker run --rm \
-            --network host \
-            flyway/flyway:latest \
-            -url=jdbc:postgresql://localhost:5432/testdb \
-            -user=testuser \
-            -password=testpassword \
-            clean
+          PGPASSWORD=testpassword psql -h localhost -U testuser << EOF
+          DROP DATABASE IF EXISTS testdb;
+          CREATE DATABASE testdb;
+          EOF
 
       - name: Run Flyway migrations
         run: |
@@ -71,9 +68,10 @@ jobs:
       - name: Insert test data
         run: |
           PGPASSWORD=testpassword psql -h localhost -U testuser -d testdb << EOF
+          TRUNCATE TABLE question_answer_options, questions, topics, users RESTART IDENTITY CASCADE;
           INSERT INTO users (id, username, email, admin) VALUES (6, 'Admin', 'admin@admin.admin', true);
           INSERT INTO topics (id, user_id, name) VALUES (800, 6, 'Test Topic with 1 question');
-          INSERT INTO topics (id, user_id, name) VALUES (801, 6, 'Tpoic test no question');
+          INSERT INTO topics (id, user_id, name) VALUES (801, 6, 'Topic test no question');
           INSERT INTO topics (id, user_id, name) VALUES (802, 6, 'Topic with question and 1 option');
           INSERT INTO topics (id, user_id, name) VALUES (1, 6, 'Topic test');
           INSERT INTO questions (id, user_id, topic_id, question_text) VALUES (1, 6, 1, 'Test Question');
