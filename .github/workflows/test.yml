@@ -34,7 +34,7 @@ jobs:
       - name: Set up Deno
         uses: denoland/setup-deno@v2
         with:
-          deno-version: v1.x
+          deno-version: v2.x
 
       - name: Wait for PostgreSQL to be ready
         run: |
@@ -50,7 +50,7 @@ jobs:
       - name: Run Flyway migrations
         run: |
           docker run --rm \
-            -v ${{ github.workspace }}/migrations:/flyway/sql \
+            -v ${{ github.workspace }}/flyway/sql:/flyway/sql \
             --network host \
             flyway/flyway:latest \
             -url=jdbc:postgresql://localhost:5432/testdb \
@@ -61,4 +61,5 @@ jobs:
       - name: Run integration tests
         env:
           DATABASE_URL: postgres://testuser:testpassword@localhost:5432/testdb
-        run: deno test --allow-net --allow-env --allow-read tests/integration
+          MODE: LOCAL
+        run: deno test --allow-net --allow-env --allow-read tests
