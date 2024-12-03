@@ -13,7 +13,7 @@
         <button type="submit">Create</button>
     </form>
     <p>Already have an account? <a href="/auth/login">Login</a></p>
-    <div class="form__error" id="error-message">
+    <div class="form__error flex-column error" id="error-message">
         <%~ includeFile("./partials/error.eta", { errors: it.errors }) %>
     </div>
 </section>

@@ -31,6 +31,8 @@ const validationRules = {
 };
 
 export const showRegistrationForm = ({ render }) => {
+  console.log("showRegistrationForm");
+  console.log(data);
   render("register.eta", data);
   data = {
     errors: [],
@@ -59,11 +61,9 @@ export const register = async ({ request, response }) => {
     const params = await body.value;
     log("Registering user", "info", "authController.js");
 
-    let data = {
-      errors: [],
-      email: "",
-      username: "",
-    };
+    data.errors = [];
+    data.email = "";
+    data.password = "";
 
     const registerData = {
       email: params.get("email").trim(),

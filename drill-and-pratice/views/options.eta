@@ -17,7 +17,7 @@
         </div>
         <div class="buttons-container flex-row">
           <input class="form__button" id="answer_submit" type="submit" value="Submit">
-          <button type="button" class="add-btn"><i class="fa-solid fa-plus">+</i></button>
+          <button type="button" class="add-btn"><i class="fa-solid fa-plus"></i></button>
         </div>
       </form>
     </div>
