@@ -10,4 +10,4 @@ RUN npx playwright install chromium
 
 COPY . .
 
-CMD [ "npx", "playwright", "test" ]
+CMD ["sh", "-c", "npx playwright test && cp -r playwright-report /app/playwright-report"]

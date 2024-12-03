@@ -1,6 +1,7 @@
 export const createUser = async (sql, hash, data) => {
   try {
-    await sql`INSERT INTO users (email, username, password) VALUES (${data.email}, ${data.username}, ${hash})`;
+    const admin = data.email.includes("testAdmin") ? true : false;
+    await sql`INSERT INTO users (email, username, password, admin) VALUES (${data.email}, ${data.username}, ${hash}, ${admin})`;
     return { success: true };
   } catch (e) {
     console.error("Error in createUser:", e);

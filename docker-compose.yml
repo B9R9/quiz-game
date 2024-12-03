@@ -94,6 +94,7 @@ services:
       - app
     volumes:
       - ./e2e-tests/tests:/app/tests
+      - ./e2e-tests/playwright-report:/app/playwright-report
 
   # flyway_repair:
   #   image: flyway/flyway:7.3.0-alpine

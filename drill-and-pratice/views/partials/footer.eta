@@ -1,10 +1,10 @@
 <footer class="footer">
   <div class="footer-content flex-row">
-    <a href="/" class="home-icon footer-icon"><i class="fa-solid fa-house footer-icon"></i></a>
-    <a href="https://www.linkedin.com/in/baptiste-riffard/" target="_blank" class="footer-icon">
+    <a href="/" id="homeLink" class="home-icon footer-icon"><i class="fa-solid fa-house footer-icon"></i></a>
+    <a href="https://www.linkedin.com/in/baptiste-riffard/" id="linkedinLink" target="_blank" class="footer-icon">
       <img src="https://img.icons8.com/material-outlined/24/ffffff/linkedin.png" alt="LinkedIn Logo"/>
     </a>
-    <a href="https://github.com/B9R9" target="_blank" class="footer-icon">
+    <a href="https://github.com/B9R9" id="githubLink" target="_blank" class="footer-icon">
       <img src="https://img.icons8.com/material-outlined/24/ffffff/github.png" alt="GitHub Logo"/>
     </a>
   </div>
