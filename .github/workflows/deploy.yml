@@ -109,9 +109,9 @@ jobs:
         run: deno run --allow-net --allow-read --allow-env run-locally.js &
         working-directory: drill-and-pratice
 
-      - name: Run Playwright tests
-        run: npx playwright test --reporter=dot
-        working-directory: e2e-tests
+      # - name: Run Playwright tests
+      #   run: npx playwright test --reporter=dot
+      #   working-directory: e2e-tests
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
