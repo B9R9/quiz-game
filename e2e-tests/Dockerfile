@@ -6,6 +6,7 @@ COPY package*.json .
 COPY *config.js .
 
 RUN npm install
+RUN npm ci
 RUN npx playwright install chromium
 
 COPY . .
