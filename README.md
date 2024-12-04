@@ -93,30 +93,41 @@ docker compose run e2e-tests
 
 ---
 
-## CI/CD Workflows
+### CI/CD Workflows
 
-This project integrates CI/CD workflows to automate testing, build and deployment processes. These workflows are defined in the `.github/workflows` directory.
+This project integrates CI/CD workflows to automate testing and deployment processes. The workflows are defined in the `.github/workflows` directory.
 
-### **Workflow steps**
+#### Available Workflows
 
-- **Tests**:
-  - Execution of unit and integration tests with `deno test`.
-  - Execution of end-to-end tests with Playwright.
-- **Deployment**:
-  - Automatic deployment to a staging or production environment after validation.
+1. **Deploy**
 
-### **Enable workflows**
+   - Manages deployment to Deno Deploy.
+   - This workflow is triggered only on the `deploy` branch and only if the unit, integration, and end-to-end tests pass successfully.
 
-CI/CD workflows are automatically triggered during the following events:
+2. **Playwright Test**
 
-- **Pull Request**: Tests and linting are executed to validate the modifications.
-- **Merge to the `deploy` branch**: Build and deployment are carried out.
+   - Executes end-to-end tests with Playwright.
+   - This workflow is triggered on **push** or **pull request** events for the `main` and `deploy` branches.
+
+3. **Integration and Unit Test**
+   - Executes unit and integration tests with `deno test`.
+   - This workflow is triggered on **push** or **pull request** events for the `main` and `deploy` branches.
+
+#### Workflow Triggers
+
+| Workflow                      | Branches         | Triggering Events    | Additional Conditions             |
+| ----------------------------- | ---------------- | -------------------- | --------------------------------- |
+| **Deploy**                    | `deploy`         | After a push         | All tests must pass successfully. |
+| **Playwright Test**           | `main`, `deploy` | Push or Pull Request | None                              |
+| **Integration and Unit Test** | `main`, `deploy` | Push or Pull Request | None                              |
 
 ---
 
 ## Show CI/CD status
 
 ![CI/CD](https://github.com/B9R9/quiz-game/actions/workflows/deploy.yml/badge.svg)
+![TESTS](https://github.com/B9R9/quiz-game/actions/workflows/playwright.yml/badge.svg)
+![UNIT-TESTS](https://github.com/B9R9/quiz-game/actions/workflows/test.yml/badge.svg)
 
 ---
 
