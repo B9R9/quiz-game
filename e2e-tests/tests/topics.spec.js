@@ -18,9 +18,12 @@ test.describe("Topics Page", () => {
       await page.goto("http://localhost:7777/auth/login");
       await page.fill("input[name='email']", userProfil.email);
       await page.fill("input[name='password']", userProfil.password);
-      await page.click("button:has-text('Login')");
 
-      await page.waitforNavigation();
+      await Promise.all([
+        page.waitForNavigation({ url: "http://localhost:7777/topics" }),
+        page.click("button:has-text('Login')"),
+      ]);
+
       expect(page.url()).toBe("http://localhost:7777/topics");
     });
     test("should display the topics header", async ({ page }) => {
@@ -46,9 +49,12 @@ test.describe("Topics Page", () => {
       await page.goto("http://localhost:7777/auth/login");
       await page.fill("input[name='email']", adminProfil.email);
       await page.fill("input[name='password']", adminProfil.password);
-      await page.click("button:has-text('Login')");
 
-      await page.waitforNavigation();
+      await Promise.all([
+        page.waitForNavigation({ url: "http://localhost:7777/topics" }),
+        page.click("button:has-text('Login')"),
+      ]);
+
       expect(page.url()).toBe("http://localhost:7777/topics");
     });
 

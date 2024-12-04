@@ -6,7 +6,6 @@ import postgres from "https://deno.land/x/postgresjs@v3.4.4/mod.js";
  */
 function getConfig(mode, env) {
   log(`Initializing database for mode: ${mode}`, "info", "database.js");
-  log(`Environment: ${JSON.stringify(env)}`, "info", "database.js");
   if (mode === "PROD") {
     return { client: "neon", databaseUrl: env.DATABASE_PROD_URL };
   } else if (mode === "DEV") {
