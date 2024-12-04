@@ -1,5 +1,5 @@
 const { test, expect } = require("@playwright/test");
-const { userProfil } = require("./utils/utils");
+const { userProfil, adminProfil } = require("./utils/utils");
 
 test.describe("Topics Page", () => {
   test.describe("When not authenticated", () => {
