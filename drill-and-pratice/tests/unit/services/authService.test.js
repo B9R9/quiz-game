@@ -4,14 +4,13 @@ import { assertEquals } from "jsr:@std/assert";
 // Mock SQL client
 const sql = (strings, ...values) => {
   const query = strings.join("?"); // Remplace les variables par des ?
-  if (
-    query === "INSERT INTO users (email, username, password) VALUES (?, ?, ?)"
-  ) {
-    const [email, username, password] = values;
+  if (query === "INSERT INTO users (email, username, password, admin) VALUES (?, ?, ?, ?)") {
+    const [email, username, password, admin] = values;
     if (
       email === "test@example.com" &&
       username === "testuser" &&
-      password === "hashedPassword"
+      password === "hashedPassword" &&
+      admin === false
     ) {
       return true;
     }

@@ -70,6 +70,7 @@ export const register = async ({ request, response }) => {
       username: params.get("username").trim(),
       password: params.get("password"),
       confirmPassword: params.get("confirmPW"),
+      admin: false,
     };
 
     if (registerData.password !== registerData.confirmPassword) {

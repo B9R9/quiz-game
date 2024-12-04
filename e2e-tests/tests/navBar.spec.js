@@ -76,10 +76,13 @@ test.describe("NavBar", () => {
       await page.goto("http://localhost:7777/auth/login");
       await page.fill('input[name="email"]', "admin@admin.admin");
       await page.fill('input[name="password"]', "Admin@4");
+
       await Promise.all([
-        page.waitForNavigation({ waitUntil: "load" }),
-        page.click('button[type="submit"]'),
+        page.waitForNavigation({ url: "http://localhost:7777/topics" }),
+        page.click("button:has-text('Login')"),
       ]);
+
+      expect(page.url()).toBe("http://localhost:7777/topics");
     });
 
     test("Statistics link should be visible", async ({ page }) => {
@@ -99,7 +102,7 @@ test.describe("NavBar", () => {
     });
 
     test("Should see welcome message with username", async ({ page }) => {
-      await expect(page.locator("text=Welcome Admin")).toBeVisible();
+      await expect(page.locator("text=Welcome Bob Dylan")).toBeVisible();
     });
 
     test("Logout button should be visible and functional", async ({ page }) => {

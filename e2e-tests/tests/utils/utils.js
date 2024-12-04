@@ -1,11 +1,11 @@
 export const userProfil = {
-  email: "test@test.test",
-  username: "Joe Dassin",
+  email: "valid@test.test",
+  username: "Jean Tigana",
   password: "Test@4",
 };
 
 export const adminProfil = {
   email: "admin@admin.admin",
-  username: "Admin",
+  username: "Bob Dylan",
   password: "Admin@4",
 };
