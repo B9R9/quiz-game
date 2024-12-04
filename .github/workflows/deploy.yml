@@ -1,5 +1,9 @@
 name: Deploy
 on:
+  workflow_run:
+    workflows: ["Integration Tests with Flyway", "Playwright Tests"]
+    types:
+      - completed
   push:
     branches:
       - deploy
@@ -9,23 +13,9 @@ on:
 
 jobs:
   deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: Deploy
     runs-on: ubuntu-latest
-
-    services:
-      postgres:
-        image: postgres:15
-        ports:
-          - 5432:5432
-        env:
-          POSTGRES_USER: testuser
-          POSTGRES_PASSWORD: testpassword
-          POSTGRES_DB: testdb
-        options: >-
-          --health-cmd "pg_isready -U testuser"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
 
     permissions:
       id-token: write # Needed for auth with Deno Deploy
@@ -45,215 +35,9 @@ jobs:
         with:
           node-version: "16"
 
-      - name: Wait for PostgreSQL to be ready
-        run: |
-          for i in {1..10}; do
-            if pg_isready -h localhost -p 5432 -U testuser; then
-              echo "PostgreSQL is ready!";
-              break;
-            fi;
-            echo "Waiting for PostgreSQL...";
-            sleep 3;
-          done
-
-      - name: Reset database
-        run: |
-          PGPASSWORD=testpassword psql -h localhost -U testuser -d postgres << EOF
-          DROP DATABASE IF EXISTS testdb;
-          CREATE DATABASE testdb;
-          EOF
-
-      - name: Run Flyway migrations
-        run: |
-          docker run --rm \
-            -v ${{ github.workspace }}/flyway/sql:/flyway/sql \
-            --network host \
-            flyway/flyway:latest \
-            -url=jdbc:postgresql://localhost:5432/testdb \
-            -user=testuser \
-            -password=testpassword \
-            migrate
-
-      - name: Insert test data
-        run: |
-          PGPASSWORD=testpassword psql -h localhost -U testuser -d testdb << EOF
-          TRUNCATE TABLE question_answer_options, questions, topics, users RESTART IDENTITY CASCADE;
-          INSERT INTO users (id, username, email, admin) VALUES (6, 'Admin', 'admin@admin.admin', true);
-          INSERT INTO topics (id, user_id, name) VALUES (800, 6, 'Test Topic with 1 question');
-          INSERT INTO topics (id, user_id, name) VALUES (801, 6, 'Topic test no question');
-          INSERT INTO topics (id, user_id, name) VALUES (802, 6, 'Topic with question and 1 option');
-          INSERT INTO topics (id, user_id, name) VALUES (1, 6, 'Topic test');
-          INSERT INTO questions (id, user_id, topic_id, question_text) VALUES (1, 6, 1, 'Test Question');
-          INSERT INTO questions (id, user_id, topic_id, question_text) VALUES (800, 6, 1, 'Test question without options');
-          INSERT INTO questions (id, user_id, topic_id, question_text) VALUES (801, 6, 800, 'Test question without options');
-          INSERT INTO questions (id, user_id, topic_id, question_text) VALUES (802, 6, 802, 'Question with one option');
-          INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (804, 802, 'Option 1', false);
-          INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (803, 801, 'Option 1', false);
-          INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (802, 801, 'Option 2', true);
-          INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (801, 1, 'Option 1', false);
-          INSERT INTO question_answer_options (id, question_id, option_text, is_correct) VALUES (800, 1, 'Option 2', true);
-          EOF
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: e2e-tests
-
-      - name: Install Playwright
-        run: npx playwright install --with-deps
-        working-directory: e2e-tests
-
-  e2e-tests:
-    needs: deploy
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        file:
-          [
-            "tests/login.spec.js",
-            "tests/main.spec.js",
-            "tests/navbar.spec.js",
-            "tests/quiz.spec.js",
-            "tests/footer.spec.js",
-            "tests/topics.spec.js",
-            "tests/question.spec.js",
-            "tests/register.spec.js",
-            "tests/topic.spec.js",
-          ]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16"
-
-      - name: Install dependencies
-        run: npm install
-        working-directory: e2e-tests
-
-      - name: Install Playwright
-        run: npx playwright install --with-deps
-        working-directory: e2e-tests
-
-      - name: Install Deno
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: v2.x
-
-      - name: Start Deno server
-        env:
-          DATABASE_URL: "postgres://testuser:testpassword@localhost:5432/testdb"
-          MODE: "LOCAL"
-        run: deno run --allow-net --allow-read --allow-env run-locally.js &
-        working-directory: drill-and-pratice
-
-      - name: Run Playwright tests
-        run: npx playwright test --reporter=dot -- ${{ matrix.file }}
-        working-directory: e2e-tests
-
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "c2495af1-50e0-48ad-a2f1-1ca52c1864ea"
           entrypoint: "run-locally.js"
           root: "drill-and-pratice"
-# name: Deploy
-
-# on:
-#   push:
-#     branches:
-#       - deploy
-#   pull_request:
-#     branches:
-#       - deploy
-
-# jobs:
-#   unit-tests:
-#     name: Run Unit Tests
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Check out code
-#         uses: actions/checkout@v3
-
-#       - name: Set up Deno
-#         uses: denoland/setup-deno@v2
-#         with:
-#           deno-version: v2.x
-
-#       - name: Run Unit Tests
-#         run: deno test --allow-net --allow-env --filter=unit
-
-#   integration-tests:
-#     name: Run Integration Tests
-#     runs-on: ubuntu-latest
-#     services:
-#       postgres:
-#         image: postgres:latest
-#         env:
-#           POSTGRES_USER: test_user
-#           POSTGRES_PASSWORD: test_password
-#           POSTGRES_DB: test_db
-#         ports:
-#           - 5432:5432
-#         options: >-
-#           --health-cmd="pg_isready -U test_user"
-#           --health-interval=10s
-#           --health-timeout=5s
-#           --health-retries=5
-#     steps:
-#       - name: Check out code
-#         uses: actions/checkout@v3
-
-#       - name: Set up Deno
-#         uses: denoland/setup-deno@v2
-#         with:
-#           deno-version: v2.x
-
-#       - name: Run Integration Tests
-#         run: deno test --allow-net --allow-env --filter=integration
-
-#   e2e-tests:
-#     name: Run E2E Tests
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Check out code
-#         uses: actions/checkout@v3
-
-#       - name: Set up Docker
-#         uses: docker/setup-buildx-action@v2
-
-#       - name: Build and Start Services
-#         run: docker-compose -f docker-compose.yml up --build -d app postgres e2e-tests
-
-#       - name: Run E2E Tests
-#         run: docker-compose -f docker-compose.yml run --rm e2e-tests
-
-#       - name: Shut Down Services
-#         run: docker-compose -f docker-compose.yml down
-
-#   deploy:
-#     name: Deploy to Deno Deploy
-#     needs: [unit-tests, integration-tests, e2e-tests]
-#     runs-on: ubuntu-latest
-
-#     permissions:
-#       id-token: write
-#       contents: read
-
-#     steps:
-#       - name: Check out code
-#         uses: actions/checkout@v3
-
-#       - name: Set up Deno
-#         uses: denoland/setup-deno@v2
-#         with:
-#           deno-version: v2.x
-
-#       - name: Deploy to Deno Deploy
-#         uses: denoland/deployctl@v1
-#         with:
-#           project: "YOUR_PROJECT_NAME"
-#           entrypoint: "run-locally.js"
-#           root: "drill-and-pratice"
-

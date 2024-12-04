@@ -1,4 +1,5 @@
 const { test, expect } = require("@playwright/test");
+const { userProfil, adminProfil } = require("./utils/utils");
 
 test.describe("Topics Page", () => {
   test.describe("when user is not authenticated", () => {
@@ -14,18 +15,13 @@ test.describe("Topics Page", () => {
   test.describe("when user is authenticated but not Admin", () => {
     test.beforeEach(async ({ page }) => {
       // Create and authenticate a user
-      await page.goto("http://localhost:7777/auth/register");
-      await page.fill("input[name='email']", "topics@testUser.test");
-      await page.fill("input[name='username']", "topicsTest");
-      await page.fill("input[name='password']", "Password123");
-      await page.fill("input[name='confirmPW']", "Password123");
-      await page.click("button:has-text('Create')");
       await page.goto("http://localhost:7777/auth/login");
-      await page.fill("input[name='email']", "topics@testUser.test");
-      await page.fill("input[name='password']", "Password123");
+      await page.fill("input[name='email']", userProfil.email);
+      await page.fill("input[name='password']", userProfil.password);
       await page.click("button:has-text('Login')");
 
-      await page.goto("http://localhost:7777/topics");
+      await page.waitforNavigation();
+      expect(page.url()).toBe("http://localhost:7777/topics");
     });
     test("should display the topics header", async ({ page }) => {
       const header = await page.locator("h1:has-text('Topics:')");
@@ -47,16 +43,13 @@ test.describe("Topics Page", () => {
   test.describe("when user is Admin", () => {
     test.beforeEach(async ({ page }) => {
       // Create and authenticate an admin user
-      await page.goto("http://localhost:7777/auth/register");
-      await page.fill("input[name='email']", "topics@testAdmin.test");
-      await page.fill("input[name='username']", "topicsTestAdmin");
-      await page.fill("input[name='password']", "Password123");
-      await page.fill("input[name='confirmPW']", "Password123");
-      await page.click("button:has-text('Create')");
       await page.goto("http://localhost:7777/auth/login");
-      await page.fill("input[name='email']", "topics@testAdmin.test");
-      await page.fill("input[name='password']", "Password123");
+      await page.fill("input[name='email']", adminProfil.email);
+      await page.fill("input[name='password']", adminProfil.password);
       await page.click("button:has-text('Login')");
+
+      await page.waitforNavigation();
+      expect(page.url()).toBe("http://localhost:7777/topics");
     });
 
     test("should display the create topic form if user is admin", async ({
@@ -68,7 +61,7 @@ test.describe("Topics Page", () => {
 
     test("should allow admin to create a new topic", async ({ page }) => {
       await page.goto("http://localhost:7777/topics");
-      await page.fill("input[name='name']", "New Topic");
+      await page.fill("input[name='name']", "Test adding new topic");
       await page.click("input[type='submit']");
       await page.waitForSelector(".topics__list__content ul li");
       const newTopic = await page.locator(
