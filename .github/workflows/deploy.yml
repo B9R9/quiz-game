@@ -1,7 +1,7 @@
 name: Deploy
 on:
   workflow_run:
-    workflows: ["Integration Tests with Flyway", "Playwright Tests"]
+    workflows: ["Integration && Unit Tests", "Playwright Tests"]
     types:
       - completed
   push:
