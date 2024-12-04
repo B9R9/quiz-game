@@ -11,22 +11,23 @@ test.describe("Topics Page", () => {
   test.describe("When authenticated ", () => {
     test.beforeEach(async ({ page }) => {
       // Create and authenticate a user
-      await page.goto("http://localhost:7777/auth/register");
-      await page.fill("input[name='email']", "topics@testAdmin.test");
-      await page.fill("input[name='username']", "topicsTest");
-      await page.fill("input[name='password']", "Password123");
-      await page.fill("input[name='confirmPW']", "Password123");
-      await page.click("button:has-text('Create')");
       await page.goto("http://localhost:7777/auth/login");
-      await page.fill("input[name='email']", "topics@testAdmin.test");
-      await page.fill("input[name='password']", "Password123");
-      await page.click("button:has-text('Login')");
+      await page.fill("input[name='email']", userProfil.email);
+      await page.fill("input[name='password']", userProfil.password);
 
-      await page.goto("http://localhost:7777/topics");
+      await Promise.all([
+        page.waitForNavigation({ url: "http://localhost:7777/topics" }),
+        page.click("button:has-text('Login')"),
+      ]);
+
+      expect(page.url()).toBe("http://localhost:7777/topics");
 
       // Create a topic
       await page.fill("input[name='name']", "New Topic");
-      await page.click("input[type='submit']");
+      awaitPromise.all([
+        page.waitForNavigation({ url: "http://localhost:7777/topics" }),
+        await page.click("input[type='submit']"),
+      ]);
 
       // Create a question
       await page.click("a:has-text('New Topic')");
