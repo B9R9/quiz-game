@@ -16,6 +16,12 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: Start Deno server
+        env:
+          MODE: "DEV"
+        run: deno run --allow-net --allow-read --allow-env run-locally.js &
+        working-directory: drill-and-pratice
+
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
