@@ -18,7 +18,7 @@ jobs:
 
       - name: Start Deno server
         env:
-          DATABASE_DEV_URL: "jdbc:postgresql://ep-polished-surf-a2g0y8sq-pooler.eu-central-1.aws.neon.tech:5432/drill-and-pratice"
+          DATABASE_DEV_URL: "postgresql://drill-and-pratice_owner:1GAwj8lPINCF@ep-polished-surf-a2g0y8sq.eu-central-1.aws.neon.tech/drill-and-pratice?options=endpoint%3Dep-polished-surf-a2g0y8sq"
           MODE: "DEV"
         run: deno run --allow-net --allow-read --allow-env run-locally.js &
         working-directory: drill-and-pratice
