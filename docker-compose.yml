@@ -87,14 +87,28 @@ services:
       - BASE_URL=http://localhost:7777
 
   e2e-tests:
-    entrypoint: "/bin/true"
-    build: e2e-tests
-    network_mode: host
+    build:
+      context: ./e2e-tests
+      dockerfile: Dockerfile
+    network_mode: service:app # Attach directly to the app service's network.
     depends_on:
       - app
     volumes:
       - ./e2e-tests/tests:/app/tests
       - ./e2e-tests/playwright-report:/app/playwright-report
+    command: sh -c "npx playwright test && cp -r playwright-report /app/playwright-report"
+    environment:
+      - BASE_URL=http://localhost:7777
+
+  # e2e-tests:
+  #   entrypoint: "/bin/true"
+  #   build: e2e-tests
+  #   network_mode: host
+  #   depends_on:
+  #     - app
+  #   volumes:
+  #     - ./e2e-tests/tests:/app/tests
+  #     - ./e2e-tests/playwright-report:/app/playwright-report
 
   # flyway_repair:
   #   image: flyway/flyway:7.3.0-alpine
@@ -112,3 +126,52 @@ services:
 
 volumes:
   pgdata:
+# services:
+#   app:
+#     build:
+#       context: ./drill-and-pratice
+#       dockerfile: Dockerfile
+#     image: app
+#     restart: "no"
+#     volumes:
+#       - ./drill-and-pratice:/app
+#       - ./app-cache:/app-cache
+#     ports:
+#       - 7777:7777
+#     depends_on:
+#       - postgres
+#       - flyway
+#     env_file:
+#       - .env
+#     environment:
+#       - PORT=7777
+#       - BASE_URL=http://localhost:7777
+
+#   postgres:
+#     image: postgres:latest
+#     container_name: postgres
+#     environment:
+#       POSTGRES_USER: ${PG_DEV_USER}
+#       POSTGRES_PASSWORD: ${PG_DEV_PASSWORD}
+#       POSTGRES_DB: ${PG_DEV_DB}
+#     volumes:
+#       - pgdata:/var/lib/postgresql/data
+#     ports:
+#       - 5432:5432
+
+#   e2e-tests:
+#     build:
+#       context: ./e2e-tests
+#       dockerfile: Dockerfile
+#     network_mode: service:app  # Attach directly to the app service's network.
+#     depends_on:
+#       - app
+#     volumes:
+#       - ./e2e-tests/tests:/app/tests
+#       - ./e2e-tests/playwright-report:/app/playwright-report
+#     command: playwright test --project=chromium --reporter=html
+#     environment:
+#       - BASE_URL=http://localhost:7777
+
+# volumes:
+#   pgdata:
