@@ -13,8 +13,6 @@ on:
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    name: Deploy
     runs-on: ubuntu-latest
 
     permissions:
@@ -22,6 +20,14 @@ jobs:
       contents: read # Needed to clone the repository
 
     steps:
+      - name: Check if triggered by workflow_run
+        if: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' }}
+        run: echo "Triggered by successful workflow_run"
+
+      - name: Check if triggered by push or pull_request
+        if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
+        run: echo "Triggered by push or pull_request"
+
       - name: Clone repository
         uses: actions/checkout@v3
 
