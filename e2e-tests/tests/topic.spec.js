@@ -13,8 +13,8 @@ test.describe("Topics Page", () => {
     test.beforeEach(async ({ page }) => {
       // Create and authenticate a user
       await page.goto("http://localhost:7777/auth/login");
-      await page.fill("input[name='email']", userProfil.email);
-      await page.fill("input[name='password']", userProfil.password);
+      await page.fill("input[name='email']", adminProfil.email);
+      await page.fill("input[name='password']", adminProfil.password);
 
       await Promise.all([
         page.waitForNavigation({ url: "http://localhost:7777/topics" }),
