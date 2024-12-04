@@ -25,7 +25,7 @@ test.describe("Topics Page", () => {
 
       // Create a topic
       await page.fill("input[name='name']", "New Topic");
-      awaitPromise.all([
+      await Promise.all([
         page.waitForNavigation({ url: "http://localhost:7777/topics" }),
         await page.click("input[type='submit']"),
       ]);
