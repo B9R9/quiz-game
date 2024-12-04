@@ -1,4 +1,5 @@
 const { test, expect } = require("@playwright/test");
+const { adminProfil } = require("./utils/utils");
 
 test.describe("NavBar", () => {
   test.beforeEach(async ({ page }) => {
@@ -74,8 +75,8 @@ test.describe("NavBar", () => {
     test.beforeEach(async ({ page }) => {
       // Simulate authentication by logging in
       await page.goto("http://localhost:7777/auth/login");
-      await page.fill('input[name="email"]', "admin@admin.admin");
-      await page.fill('input[name="password"]', "Admin@4");
+      await page.fill('input[name="email"]', adminProfil.email);
+      await page.fill('input[name="password"]', adminProfil.password);
 
       await Promise.all([
         page.waitForNavigation({ url: "http://localhost:7777/topics" }),

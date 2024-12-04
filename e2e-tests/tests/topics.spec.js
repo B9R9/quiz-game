@@ -68,8 +68,11 @@ test.describe("Topics Page", () => {
     test("should allow admin to create a new topic", async ({ page }) => {
       await page.goto("http://localhost:7777/topics");
       await page.fill("input[name='name']", "Test adding new topic");
-      await page.click("input[type='submit']");
-      await page.waitForSelector(".topics__list__content ul li");
+
+      await Promise.all([
+        await page.waitForSelector(".topics__list__content ul li"),
+        await page.click("input[type='submit']"),
+      ]);
       const newTopic = await page.locator(
         ".topics__list__content ul li:has-text('New Topic')"
       );
