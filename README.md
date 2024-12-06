@@ -8,6 +8,12 @@ with Docker Compose for a simplified development and production environment.
 
 ---
 
+## Live Demo
+
+The project is live at: [drill-and-practice.deno.dev](https://drill-and-practice.deno.dev/)
+
+---
+
 ## Main features
 
 - **Backend**: Developed with [Deno](https://deno.land/), secure and modern.
