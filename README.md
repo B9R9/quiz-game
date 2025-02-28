@@ -6,6 +6,9 @@ This project is a modern web application built with Deno for the backend and ETA
 It includes a suite of unit tests, integration tests, and end-to-end tests, all of which are orchestrated
 with Docker Compose for a simplified development and production environment.
 
+## Live Demo
+
+The project is live at: [drill-and-practice.deno.dev](https://drill-and-practice.deno.dev/)
 ---
 
 ## Main features
